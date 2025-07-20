@@ -15,6 +15,34 @@ public class PlayerController : MonoBehaviour
     private float playerHeight = 2f;
 
     private Vector3 lastInteractDirection;
+
+    private void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+    }
+
+    private void GameInput_OnInteractAction(object sender, EventArgs e)
+    {
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        Vector3 moveDirection = new Vector3(inputVector.x, 0f, inputVector.y);
+
+        if (moveDirection != Vector3.zero)
+        {
+            lastInteractDirection = moveDirection;
+        }
+
+        float interactDistance = 0.5f;
+
+        if (Physics.Raycast(transform.position, lastInteractDirection, out RaycastHit raycastHitObject, interactDistance))
+        {
+            if (raycastHitObject.transform.TryGetComponent(out ClearCounter clearCounter))
+            {
+                // Has ClearCounter component
+                clearCounter.Interact();
+            }
+        }
+    }
+
     private void Update()
     {
         HandleMovement(); 
@@ -38,7 +66,6 @@ public class PlayerController : MonoBehaviour
             if (raycastHitObject.transform.TryGetComponent(out ClearCounter clearCounter))
             {
                 // Has ClearCounter component
-                clearCounter.Interact();
             }
         }
     }

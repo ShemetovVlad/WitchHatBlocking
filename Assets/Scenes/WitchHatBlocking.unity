@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7208064527410020118, guid: 780a5a9742113b94c9191a08d2b80bd7, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
     - target: {fileID: 7571975064394226445, guid: 780a5a9742113b94c9191a08d2b80bd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.519
@@ -347,6 +351,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a0eae958fa599f47bd2a3c833057d37, type: 3}
+--- !u!1001 &188234764
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6596717962416790441, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
+    - target: {fileID: 4552060308235888572, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_Name
+      value: Berry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9090965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0125275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030915457390591600, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a671ae888d04ab42b02b4c9c6db998f, type: 3}
 --- !u!1 &254318158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1283,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d18c9e9b1553c41b10bd865793fd68, type: 3}
+--- !u!4 &1202159909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2546803880070913394, guid: 5650bd00fa8d02143aa528e8b6ccf9bf, type: 3}
+  m_PrefabInstance: {fileID: 673613483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1234149070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1396,6 +1466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 7208064527410020118, guid: 780a5a9742113b94c9191a08d2b80bd7, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
     - target: {fileID: 7571975064394226445, guid: 780a5a9742113b94c9191a08d2b80bd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0354841
@@ -1472,6 +1546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   gameInput: {fileID: 317779177}
+  kitchenObjectHoldPoint: {fileID: 1202159909}
 --- !u!4 &1553710334
 Transform:
   m_ObjectHideFlags: 0
@@ -1718,3 +1793,4 @@ SceneRoots:
   - {fileID: 165934426}
   - {fileID: 875454225}
   - {fileID: 1309909511}
+  - {fileID: 188234764}

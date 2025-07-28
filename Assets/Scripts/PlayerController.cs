@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
             SetSelectedCounter(null);
             
         }
-        Debug.Log(selectedCounter);
+        //Debug.Log(selectedCounter);
     }
     private void HandleMovement()
     {

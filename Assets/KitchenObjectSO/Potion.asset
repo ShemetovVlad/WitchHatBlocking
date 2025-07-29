@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a315efaed4374b04f9b7f037ab190d7c, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 7571975064394226445, guid: babe113b8551df44181f6b243c496101, type: 3}
   sprite: {fileID: 0}
-  objectName: 
+  objectName: Potion

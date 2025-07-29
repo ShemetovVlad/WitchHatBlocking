@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     {
         if (Instance != null)
         {
-            Debug.LogError("Больше одного игрока!");   
+            Debug.LogError("Больше одного игрока!");
         }
         Instance = this;
     }
@@ -41,6 +41,12 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     {
         gameInput.OnInteractAction += GameInput_OnInteractAction;
         gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
+        gameInput.OnDestroyObjectAction += GameInput_OnDestroyObjectAction;
+    }
+
+    private void GameInput_OnDestroyObjectAction(object sender, EventArgs e)
+    {
+        TryDestroyHeldObject();
     }
 
     private void GameInput_OnInteractAlternateAction(object sender, EventArgs e)
@@ -85,7 +91,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
                 if (baseCounter != selectedCounter)
                 {
                     SetSelectedCounter(baseCounter); // Has ClearCounter component
-                   
+
                 }
 
             }
@@ -97,7 +103,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         else
         {
             SetSelectedCounter(null);
-            
+
         }
         //Debug.Log(selectedCounter);
     }
@@ -179,5 +185,15 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     {
         return kitchenObject != null;
     }
+    private void TryDestroyHeldObject()
+    {
+        if (HasKitchenObject())
+        {
+            // Уничтожаем объект
+            GetKitchenObject().DestroySelf();
 
+            // Очищаем ссылку на объект
+            ClearKitchenObject();
+        }
+    }
 }

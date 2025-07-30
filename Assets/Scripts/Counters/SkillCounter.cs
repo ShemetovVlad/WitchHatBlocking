@@ -2,17 +2,24 @@ using UnityEngine;
 
 public class SkillCounter : BaseCounter
 {
-    public override void Interact(PlayerController player)
+    [SerializeField] private GameObject skillTree;
+    [SerializeField] private PlayerController playerController;
+
+    private void Awake()
     {
-        ;
-    }
-    private void Show()
-    {
-        gameObject.SetActive(true);
+        playerController.OnWalkingStateChanged += CloseSkillTree;
     }
 
-    private void Hide()
+    private void CloseSkillTree(bool isWalking)
     {
-        gameObject.SetActive(false);
+        if (isWalking)
+        {
+            skillTree.SetActive(false);
+        }
+    }
+    public override void Interact(PlayerController player)
+    {
+        skillTree.SetActive(true);
+        
     }
 }

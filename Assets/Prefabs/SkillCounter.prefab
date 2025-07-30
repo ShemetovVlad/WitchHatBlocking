@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2238014761024447496
 Transform:
   m_ObjectHideFlags: 0
@@ -218,7 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseCounter: {fileID: 0}
-  visualGameObjectArray: []
+  visualGameObjectArray:
+  - {fileID: 7388402624707857896}
 --- !u!1001 &5112640653626598249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,6 +310,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 193305574512967114}
   m_SourcePrefab: {fileID: 100100000, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+--- !u!4 &627829748230899024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+  m_PrefabInstance: {fileID: 5112640653626598249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3451640390882900068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7571975064394226445, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
@@ -331,4 +337,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd16006aff5bda4ebf7a78174ebf270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableTopPoint: {fileID: 0}
+  tableTopPoint: {fileID: 627829748230899024}

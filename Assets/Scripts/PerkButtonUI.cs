@@ -3,32 +3,38 @@ using UnityEngine.UI;
 
 public class PerkButtonUI : MonoBehaviour
 {
-    [SerializeField] private SpeedUpSO speedPerk;
+    [SerializeField] private PerkDataSO perk;
     private Image buttonImage;
     private Button button;
 
     private void Awake()
     {
-        button = GetComponent<Button>();
         buttonImage = GetComponent<Image>();
+        UpdateButtonColor();
+        button = GetComponent<Button>();
         button.onClick.AddListener(TogglePerk);
     }
 
-    private void TogglePerk()
+    public void TogglePerk()
     {
-        if (!speedPerk.isActive)
+        perk.isActive = !perk.isActive;
+
+        if (perk.isActive)
         {
-            // Активируем перк
-            SkillTreeManager.OnSpeedPerkActivated.Invoke(speedPerk.speedMultiplier);
-            speedPerk.isActive = true;
-            buttonImage.color = speedPerk.activeColor;
+            perk.ApplyEffect(true);
+            perk.OnActivated.Invoke();
         }
         else
         {
-            // Деактивируем перк (возвращаем базовую скорость)
-            SkillTreeManager.OnSpeedPerkActivated.Invoke(1f);
-            speedPerk.isActive = false;
-            buttonImage.color = speedPerk.inactiveColor;
+            perk.ApplyEffect(false);
+            perk.OnDeactivated.Invoke();
         }
+
+        UpdateButtonColor();
+    }
+
+    private void UpdateButtonColor()
+    {
+        buttonImage.color = perk.isActive ? perk.activeColor : perk.inactiveColor;
     }
 }

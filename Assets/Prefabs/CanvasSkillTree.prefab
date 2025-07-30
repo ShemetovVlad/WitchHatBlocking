@@ -358,10 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca4483adaed24b4d988e7165cf539fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPerk: {fileID: 11400000, guid: 32858bf5ed97e7344b3089d2a12e1ffd, type: 2}
-  buttonImage: {fileID: 5672850382666522547}
-  activeColor: {r: 0, g: 1, b: 0, a: 1}
-  inactiveColor: {r: 1, g: 1, b: 1, a: 1}
+  perk: {fileID: 0}
 --- !u!1 &4612454749947312313
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +450,6 @@ GameObject:
   - component: {fileID: 172546079436832038}
   - component: {fileID: 1637827682853624158}
   - component: {fileID: 4433814623981213362}
-  - component: {fileID: 2159356447294011185}
   m_Layer: 5
   m_Name: CanvasSkillTree
   m_TagString: Untagged
@@ -547,18 +543,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2159356447294011185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5837105303697109188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2adbdd4dda0870e45952fd2d9c60aaf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6226781410360498183
 GameObject:
   m_ObjectHideFlags: 0

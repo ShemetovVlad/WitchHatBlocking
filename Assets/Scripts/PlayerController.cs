@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Transform kitchenObjectHoldPoint;
+    private float currentSpeed;
 
     public event Action<bool> OnWalkingStateChanged;
 
@@ -30,6 +31,9 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
 
     private void Awake()
     {
+        currentSpeed = moveSpeed;
+        SkillTreeManager.OnSpeedPerkActivated.AddListener(ApplySpeedBoost);
+        
         if (Instance != null)
         {
             Debug.LogError("Больше одного игрока!");
@@ -112,11 +116,11 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
         Vector3 moveDirection = new Vector3(inputVector.x, 0f, inputVector.y);
 
-        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirection, moveSpeed * Time.deltaTime);
+        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirection, currentSpeed * Time.deltaTime);
         if (!canMove)
         {
             Vector3 moveDirectionX = new Vector3(moveDirection.x, 0f, 0f); // .normalized если нужна обычная скорость по диагонали
-            canMove = moveDirection.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionX, moveSpeed * Time.deltaTime);
+            canMove = moveDirection.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionX, currentSpeed * Time.deltaTime);
 
             if (canMove)
             {
@@ -125,7 +129,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
             else
             {
                 Vector3 moveDirectionZ = new Vector3(0f, 0f, moveDirection.z); //.normalized если нужна обычная скорость по диагонали
-                canMove = moveDirection.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionZ, moveSpeed * Time.deltaTime);
+                canMove = moveDirection.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionZ, currentSpeed * Time.deltaTime);
                 if (canMove)
                 {
                     moveDirection = moveDirectionZ;
@@ -139,7 +143,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
 
         if (canMove)
         {
-            transform.position += moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += moveDirection * currentSpeed * Time.deltaTime;
         }
 
         bool newState = moveDirection != Vector3.zero;
@@ -196,4 +200,20 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
             ClearKitchenObject();
         }
     }
+
+    private void OnDestroy()
+    {
+        // Важно отписаться!
+        SkillTreeManager.OnSpeedPerkActivated.RemoveListener(ApplySpeedBoost);
+    }
+    private void ApplySpeedBoost(float multiplier)
+    {
+        currentSpeed = moveSpeed * multiplier;
+        Debug.Log($"Скорость изменена: {currentSpeed}");
+    }
+    public void ResetSpeed()
+    {
+        currentSpeed = moveSpeed;
+    }
+
 }

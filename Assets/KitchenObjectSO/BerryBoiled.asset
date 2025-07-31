@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BerryBoiled
   m_EditorClassIdentifier: 
   prefab: {fileID: 5030915457390591600, guid: bcd7c47df74f6e84eb791962011a98cf, type: 3}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: c34cd61ed96ff9a40a54e159467c5155, type: 3}
   objectName: StrawberryBoiled

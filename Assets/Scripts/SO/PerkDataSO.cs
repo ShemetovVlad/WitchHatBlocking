@@ -7,6 +7,7 @@ public abstract class PerkDataSO : ScriptableObject
 {
     public string perkName;
     public Sprite icon;
+    public int cost;
     public Color activeColor = Color.green;
     public Color inactiveColor = Color.white;
     public bool isActive = false;

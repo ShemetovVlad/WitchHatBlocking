@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perkName: SpeedBustX2
   icon: {fileID: 0}
+  cost: 80
   activeColor: {r: 0, g: 1, b: 0, a: 1}
   inactiveColor: {r: 1, g: 1, b: 1, a: 1}
   isActive: 0

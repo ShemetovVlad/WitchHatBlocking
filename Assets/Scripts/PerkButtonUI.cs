@@ -21,16 +21,24 @@ public class PerkButtonUI : MonoBehaviour
 
         if (perk.isActive)
         {
-            perk.ApplyEffect(true);
-            perk.OnActivated.Invoke();
+            if (PlayerWallet.Instance.SpendMoney(perk.cost))
+            {
+                perk.ApplyEffect(true);
+                perk.OnActivated.Invoke();
+                UpdateButtonColor();
+                Debug.Log(PlayerWallet.Instance.GetBalance());
+            }
+            
+            
         }
         else
         {
             perk.ApplyEffect(false);
             perk.OnDeactivated.Invoke();
+            UpdateButtonColor();
+            perk.isActive = false;
         }
 
-        UpdateButtonColor();
     }
 
     private void UpdateButtonColor()

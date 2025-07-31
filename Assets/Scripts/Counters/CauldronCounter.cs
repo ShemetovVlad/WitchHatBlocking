@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CauldronCounter : BaseCounter
 {
-    [SerializeField] private List<PotionRecipeSO> possibleRecipes;
+    [SerializeField] private RecipesSO possibleRecipes;
     private List<KitchenObjectSO> cauldronIngredientsSOList;
 
     public event System.EventHandler<KitchenObjectSO> OnIngredientAdded;
@@ -39,7 +39,7 @@ public class CauldronCounter : BaseCounter
 
     private void Cook()
     {
-        foreach (var recipe in possibleRecipes)
+        foreach (var recipe in possibleRecipes.recipesSOList)
         {
             if (IsRecipeMatch(recipe.ingredients, cauldronIngredientsSOList))
             {

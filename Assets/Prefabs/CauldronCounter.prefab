@@ -682,9 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableTopPoint: {fileID: 9145511074590382938}
-  possibleRecipes:
-  - {fileID: 11400000, guid: ae5fe8337b11454468fd02324e9469ad, type: 2}
-  - {fileID: 11400000, guid: 2415c7152aa8ada419852366732a8129, type: 2}
+  possibleRecipes: {fileID: 11400000, guid: 777e9366afe961049bb2b19048021dbb, type: 2}
 --- !u!4 &6465953759717664366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7571975064394226445, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}

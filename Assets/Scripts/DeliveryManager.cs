@@ -11,12 +11,7 @@ public class DeliveryManager : MonoBehaviour {
     public event EventHandler OnRecipeSuccess;
     public event EventHandler OnRecipeFailed;
 
-
-    public static DeliveryManager Instance { get; private set; }
-
-
     [SerializeField] private RecipesSO recipeListSO;
-
 
     private List<PotionRecipeSO> waitingRecipeSOList;
     private float spawnRecipeTimer;
@@ -26,9 +21,6 @@ public class DeliveryManager : MonoBehaviour {
 
 
     private void Awake() {
-        
-        Instance = this;
-
 
         waitingRecipeSOList = new List<PotionRecipeSO>();
     }
@@ -42,6 +34,7 @@ public class DeliveryManager : MonoBehaviour {
             {
                 PotionRecipeSO waitingRecipeSO = recipeListSO.recipesSOList[UnityEngine.Random.Range(0, recipeListSO.recipesSOList.Count)];
                 waitingRecipeSOList.Add(waitingRecipeSO);
+                Debug.Log(waitingRecipeSO.name);
             }
         }
     }

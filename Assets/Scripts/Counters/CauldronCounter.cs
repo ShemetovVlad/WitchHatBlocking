@@ -7,7 +7,7 @@ public class CauldronCounter : BaseCounter
     [SerializeField] private List<PotionRecipeSO> possibleRecipes;
     private List<KitchenObjectSO> cauldronIngredientsSOList;
 
-    
+    public event System.EventHandler<KitchenObjectSO> OnIngredientAdded;
     private void Awake()
     {
         cauldronIngredientsSOList = new List<KitchenObjectSO>();
@@ -28,7 +28,9 @@ public class CauldronCounter : BaseCounter
     private void AddIgredient(KitchenObjectSO kitchenObjectSO)
     {
         cauldronIngredientsSOList.Add(kitchenObjectSO);
-        
+
+        OnIngredientAdded?.Invoke(this, kitchenObjectSO);
+
         if (cauldronIngredientsSOList.Count == 3)
             {
                 Cook();   
@@ -69,6 +71,8 @@ public class CauldronCounter : BaseCounter
             cauldronCopy.Remove(ingredient);
         }
 
-        return true;
+        return cauldronCopy.Count == 0;
     }
+
+    public List<KitchenObjectSO> GetIngredients() => new List<KitchenObjectSO>(cauldronIngredientsSOList);
 }

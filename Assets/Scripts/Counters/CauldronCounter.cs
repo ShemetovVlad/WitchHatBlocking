@@ -7,6 +7,8 @@ public class CauldronCounter : BaseCounter
     [SerializeField] private RecipesSO possibleRecipes;
     private List<KitchenObjectSO> cauldronIngredientsSOList;
 
+    private PlayerController lastPlayer;
+
     public event System.EventHandler<KitchenObjectSO> OnIngredientAdded;
     private void Awake()
     {
@@ -18,16 +20,18 @@ public class CauldronCounter : BaseCounter
         {
             KitchenObjectSO kitchenObjectSO = player.GetKitchenObject().GetKitchenObjectSO();
             
-            AddIgredient(kitchenObjectSO);
+            AddIgredient(kitchenObjectSO, player);
             
-            player.GetKitchenObject().DestroySelf();
+            //player.GetKitchenObject().DestroySelf();
  
         }
     }
 
-    private void AddIgredient(KitchenObjectSO kitchenObjectSO)
+    private void AddIgredient(KitchenObjectSO kitchenObjectSO, PlayerController player)
     {
         cauldronIngredientsSOList.Add(kitchenObjectSO);
+        player.GetKitchenObject().DestroySelf();
+        lastPlayer = player;   
 
         OnIngredientAdded?.Invoke(this, kitchenObjectSO);
 
@@ -43,9 +47,13 @@ public class CauldronCounter : BaseCounter
         {
             if (IsRecipeMatch(recipe.ingredients, cauldronIngredientsSOList))
             {
-                Debug.Log($"Сварен рецепт: {recipe.name}! Получено: {recipe.result.objectName}");
+                //Debug.Log($"Сварен рецепт: {recipe.name}! Получено: {recipe.result.objectName}");
                 // Тут можно создать результат (recipe.result) и выдать игроку.
-                KitchenObject.SpawnKitchenObject(recipe.result,this);
+                if (lastPlayer != null) 
+                { 
+                    KitchenObject.SpawnKitchenObject(recipe.result, lastPlayer); 
+                }
+                
                 cauldronIngredientsSOList.Clear();
                 return;
             }

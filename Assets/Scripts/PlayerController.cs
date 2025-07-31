@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     private void SetSpeed(float multiplier)
     {
         currentMoveSpeed = moveSpeed * multiplier;
-        Debug.Log($"Скорость изменена: {currentMoveSpeed}");
+        //Debug.Log($"Скорость изменена: {currentMoveSpeed}");
     }
 
 

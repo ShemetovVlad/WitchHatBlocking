@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5000899665397301505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5895039829073205965}
+  m_Layer: 0
+  m_Name: InteractPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5895039829073205965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000899665397301505}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00008040666}
+  m_LocalPosition: {x: 0, y: 0, z: -0.744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1301860536237252224}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.991, z: 0}
 --- !u!1 &6918244868359071581
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +433,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7571975064394226445, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4998998105997433287}
+    - targetCorrespondingSourceObject: {fileID: 7571975064394226445, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5895039829073205965}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2340568457753718401, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
       insertIndex: -1
@@ -435,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableTopPoint: {fileID: 3837608061917963188}
+  interactionPoint: {fileID: 5895039829073205965}
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: 4ba808f189fd9114bbd1f4b8e3d183f7, type: 2}
   - {fileID: 11400000, guid: 9ba4ccf3c0762f249896acaad8395a7a, type: 2}

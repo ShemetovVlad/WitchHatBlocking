@@ -5,6 +5,9 @@ public class CuttingCounter : BaseCounter, IHasProgress
 {
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     
+    [SerializeField] private Transform interactionPoint;
+    private Transform playerTransform;
+
     public event EventHandler OnCut;
 
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
@@ -17,6 +20,8 @@ public class CuttingCounter : BaseCounter, IHasProgress
             // There is no objects here
             if (player.HasKitchenObject())
             {
+                player.transform.position = interactionPoint.position;
+                player.transform.rotation = interactionPoint.rotation;
                 // Player carrying something
                 if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO())) {
                     // if player carrying something that can be cut

@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Witch_Hands
+  m_Mask: 00000000000000000000000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature_Witch
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/DFM_BunnyEarA01.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/DFM_BunnyEarA01.l/DFM_BunnyEarA02.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/DFM_BunnyEarB01.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/DFM_BunnyEarB01.l/DFM_BunnyEarB02.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/DFM_BunnyEarA01.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/DFM_BunnyEarA01.r/DFM_BunnyEarA02.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/DFM_BunnyEarB01.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/DFM_BunnyEarB01.r/DFM_BunnyEarB02.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2/mixamorig:LeftHandIndex3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1/mixamorig:LeftHandMiddle2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1/mixamorig:LeftHandMiddle2/mixamorig:LeftHandMiddle3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1/mixamorig:LeftHandPinky2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1/mixamorig:LeftHandPinky2/mixamorig:LeftHandPinky3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1/mixamorig:LeftHandRing2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1/mixamorig:LeftHandRing2/mixamorig:LeftHandRing3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1/mixamorig:LeftHandThumb2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1/mixamorig:LeftHandThumb2/mixamorig:LeftHandThumb3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/CTRL_Eyes
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/CTRL_Eyes/TRG_Eye.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/CTRL_Eyes/TRG_Eye.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Eye.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_HairFront01.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_HairFront01.r/DFM_HairFront02.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_HairFront01.r/DFM_HairFront02.r/DFM_HairFront03.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_Button01
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_Button01/DFM_Button02
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_Hat02
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_Hat02/DFM_Hat03
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_Hat02/DFM_Hat03/DFM_Hat04
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatFront
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatLeftSide
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatLeftSide/DFM_HatLeftRing
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatLeftSide/DFM_HatLeftRing/DFM_HatLeftPaper01
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatLeftSide/DFM_HatLeftRing/DFM_HatLeftPaper01/DFM_HatLeftPaper02
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatRightSide
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatRightSide/DFM_HatRightRing
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatRightSide/DFM_HatRightRing/DFM_HatRightPaper01
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/DFM_Hat01/DFM_HatRightSide/DFM_HatRightRing/DFM_HatRightPaper01/DFM_HatRightPaper02
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Eye.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Hair01
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Hair01/DFM_Hair02
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Hair01/DFM_Hair02/DFM_Hair03
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Hair01/DFM_Hair02/DFM_Hair03/DFM_Hair04
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_Hair01/DFM_Hair02/DFM_Hair03/DFM_Hair04/DFM_Hair05
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairBack01.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairBack01.l/DFM_HairBack02.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairBack01.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairBack01.r/DFM_HairBack02.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairFront01.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairFront01.l/DFM_HairFront02.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairFront01.l/DFM_HairFront02.l/DFM_HairFront03.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairSide01.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairSide01.l/DFM_HairSide02.l
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairSide01.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Neck/mixamorig:Head/Hair_base/DFM_HairSide01.r/DFM_HairSide02.r
+    m_Weight: 0
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2/mixamorig:RightHandIndex3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1/mixamorig:RightHandMiddle2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1/mixamorig:RightHandMiddle2/mixamorig:RightHandMiddle3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1/mixamorig:RightHandPinky2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1/mixamorig:RightHandPinky2/mixamorig:RightHandPinky3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1/mixamorig:RightHandRing2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1/mixamorig:RightHandRing2/mixamorig:RightHandRing3
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1/mixamorig:RightHandThumb2
+    m_Weight: 1
+  - m_Path: Armature_Witch/ROOT/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1/mixamorig:RightHandThumb2/mixamorig:RightHandThumb3
+    m_Weight: 1
+  - m_Path: Witch_body
+    m_Weight: 0
+  - m_Path: Witch_hat
+    m_Weight: 0
+  - m_Path: Witch_head
+    m_Weight: 0
+  - m_Path: Witch_skirt
+    m_Weight: 0

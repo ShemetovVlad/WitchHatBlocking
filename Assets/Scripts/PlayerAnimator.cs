@@ -16,10 +16,15 @@ public class PlayerAnimator : MonoBehaviour
         }
         
         player.OnWalkingStateChanged += HandleWalkingChange;
+        player.OnCarryStateChanged += HandleCarryChange;
     }
     private void HandleWalkingChange(bool isWalking)
     {
         animator.SetBool("IsWalking", isWalking);
+    }
+    private void HandleCarryChange(bool isCarry)
+    {
+        animator.SetBool("IsCarry", isCarry);
     }
 
     private void OnDestroy()

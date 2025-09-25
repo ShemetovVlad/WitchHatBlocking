@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private SpeedPerk speedPerk;
     private float currentMoveSpeed = 0f;
     public event Action<bool> OnWalkingStateChanged;
+    public event Action<bool> OnCarryStateChanged;
 
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     }
 
     private bool isWalking;
+    private bool isCarry;
 
     private float playerRadius = 0.2f;
     private float playerHeight = 2f;
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         if (selectedCounter != null)
         {
             selectedCounter.Interact(this);
+            
         }
     }
 
@@ -216,6 +219,11 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         currentMoveSpeed = moveSpeed * multiplier;
         //Debug.Log($"Скорость изменена: {currentMoveSpeed}");
     }
-
+    
+    public void SetCarryState(bool isCarry)
+    {
+        OnCarryStateChanged?.Invoke(isCarry);
+        Debug.Log(isCarry);
+    }
 
 }

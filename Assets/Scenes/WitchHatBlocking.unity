@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491897224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b2deb5d4958a2419da3b50bd87280a, type: 3}
   m_Name: 
@@ -1257,9 +1257,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1553710334}
     m_Modifications:
+    - target: {fileID: 1601253059711663921, guid: 5650bd00fa8d02143aa528e8b6ccf9bf, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1553710333}
     - target: {fileID: 2340568457753718401, guid: 5650bd00fa8d02143aa528e8b6ccf9bf, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428859109816007594, guid: 5650bd00fa8d02143aa528e8b6ccf9bf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7571975064394226445, guid: 5650bd00fa8d02143aa528e8b6ccf9bf, type: 3}
       propertyPath: m_LocalPosition.x

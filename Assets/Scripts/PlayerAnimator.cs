@@ -11,35 +11,39 @@ public class PlayerAnimator : MonoBehaviour
         
         if (player == null) 
         {
-            Debug.LogError("PlayerController не присвоен в инспекторе!", this);
+            Debug.LogError("PlayerController пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!", this);
             return;
         }
         
         player.OnWalkingStateChanged += HandleWalkingChange;
-        player.OnCarryStateChanged += HandleCarryChange;
+        player.OnKitchenObjectChanged += HandleKitchenObjectChange;
     }
     private void HandleWalkingChange(bool isWalking)
     {
         animator.SetBool("IsWalking", isWalking);
     }
-    private void HandleCarryChange(bool isCarry)
+    
+    private void HandleKitchenObjectChange(bool hasObject)
     {
-        animator.SetBool("IsCarry", isCarry);
+        animator.SetBool("HasObject", hasObject);
     }
 
     private void OnDestroy()
     {
-        // Отписываемся при уничтожении объекта (важно!)
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ!)
         PlayerController player = GetComponentInParent<PlayerController>();
         if (player != null)
+        {
             player.OnWalkingStateChanged -= HandleWalkingChange;
+            player.OnKitchenObjectChanged -= HandleKitchenObjectChange;
+        }
     }
     
     
     
     
     
-    // Опрашивает PlayerController каждый кадр, знает о его состоянии (инкапсуляция), изменяет значение переменной каждый кадр, даже на то же самое! Переделать на реакцию на событие.
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ PlayerController пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ), пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
     //private void Update()
     //{
     //    animator.SetBool("IsWalking", player.IsWalking());

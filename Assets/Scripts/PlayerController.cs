@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private SpeedPerk speedPerk;
     private float currentMoveSpeed = 0f;
     public event Action<bool> OnWalkingStateChanged;
+    public event Action<bool> OnKitchenObjectChanged;
 
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
 
         if (Instance != null)
         {
-            Debug.LogError("Больше одного игрока!");
+            Debug.LogError("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
         }
         Instance = this;
     }
@@ -118,7 +119,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirection, currentMoveSpeed * Time.deltaTime);
         if (!canMove)
         {
-            Vector3 moveDirectionX = new Vector3(moveDirection.x, 0f, 0f); // .normalized если нужна обычная скорость по диагонали
+            Vector3 moveDirectionX = new Vector3(moveDirection.x, 0f, 0f); // .normalized пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             canMove = moveDirection.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionX, currentMoveSpeed * Time.deltaTime);
 
             if (canMove)
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
             }
             else
             {
-                Vector3 moveDirectionZ = new Vector3(0f, 0f, moveDirection.z); //.normalized если нужна обычная скорость по диагонали
+                Vector3 moveDirectionZ = new Vector3(0f, 0f, moveDirection.z); //.normalized пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 canMove = moveDirection.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionZ, currentMoveSpeed * Time.deltaTime);
                 if (canMove)
                 {
@@ -172,6 +173,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     public void SetKitchenObject(KitchenObject kitchenObject)
     {
         this.kitchenObject = kitchenObject;
+        OnKitchenObjectChanged?.Invoke(true);
     }
 
     public KitchenObject GetKitchenObject()
@@ -182,6 +184,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     public void ClearKitchenObject()
     {
         kitchenObject = null;
+        OnKitchenObjectChanged?.Invoke(false);
     }
 
     public bool HasKitchenObject()
@@ -192,29 +195,29 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     {
         if (HasKitchenObject())
         {
-            // Уничтожаем объект
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             GetKitchenObject().DestroySelf();
 
-            // Очищаем ссылку на объект
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             ClearKitchenObject();
         }
     }
     private void OnEnable()
     {
-        // Подписываемся на изменение множителя
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         speedPerk.OnSpeedMultiplierChanged.AddListener(SetSpeed);
     }
 
     private void OnDisable()
     {
-        // Важно отписаться!
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!
         speedPerk.OnSpeedMultiplierChanged.RemoveListener(SetSpeed);
     }
 
     private void SetSpeed(float multiplier)
     {
         currentMoveSpeed = moveSpeed * multiplier;
-        //Debug.Log($"Скорость изменена: {currentMoveSpeed}");
+        //Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {currentMoveSpeed}");
     }
 
 

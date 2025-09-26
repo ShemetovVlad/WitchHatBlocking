@@ -32,75 +32,6 @@ Transform:
   - {fileID: 10505636629334282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7418925520519537115
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8215875639902614077}
-  - component: {fileID: 7739519964897254180}
-  - component: {fileID: 4647210127653186144}
-  m_Layer: 2
-  m_Name: VisionField
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8215875639902614077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418925520519537115}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.492, z: 2.717}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 10505636629334282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7739519964897254180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418925520519537115}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.0167685, y: 1, z: 4.0096188}
-  m_Center: {x: 0, y: 0, z: 0.0035744905}
---- !u!114 &4647210127653186144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418925520519537115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42c6febef1ea0ab41b5533b0cf018f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTarget: {fileID: 0}
-  aimConstraint: {fileID: 0}
-  debugMode: 1
 --- !u!1001 &553920417615785697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171,17 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a232d36496de188438b30fe38e1d7d9a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8215875639902614077}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a232d36496de188438b30fe38e1d7d9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3431153852674090981}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a232d36496de188438b30fe38e1d7d9a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6219804324736100064}
     - targetCorrespondingSourceObject: {fileID: 2304731993610991986, guid: a232d36496de188438b30fe38e1d7d9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1437072036888713257}
@@ -218,25 +143,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6219804324736100064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823739262651208624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a971606b1c6171a42af49d778a3eb4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minTimeBetweenBlinks: 2
-  maxTimeBetweenBlinks: 5
-  minTimeBetweenTailWags: 4
-  maxTimeBetweenTailWags: 8
-  catAnimator: {fileID: 3431153852674090981}
-  visionController: {fileID: 4647210127653186144}
-  debugMode: 0
 --- !u!1 &1752997734492280723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2304731993610991986, guid: a232d36496de188438b30fe38e1d7d9a, type: 3}

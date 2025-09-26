@@ -66,6 +66,7 @@ public class BlinkController : MonoBehaviour
         // Гарантированный сброс
         _faceMesh.SetBlendShapeWeight(_blinkShapeIndex, 0);
         _isBlinking = false;
+        
     }
 
 #if UNITY_EDITOR

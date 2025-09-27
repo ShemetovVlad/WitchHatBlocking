@@ -289,3 +289,4 @@ MonoBehaviour:
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: 4ba808f189fd9114bbd1f4b8e3d183f7, type: 2}
   - {fileID: 11400000, guid: 9ba4ccf3c0762f249896acaad8395a7a, type: 2}
+  - {fileID: 11400000, guid: 84e6bfbfca8d6604b81674e0aab4129d, type: 2}

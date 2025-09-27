@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a315efaed4374b04f9b7f037ab190d7c, type: 3}
-  m_Name: Strawberry_Cutted
+  m_Name: Mushroom_Blue_Cutted
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8643972219507792866, guid: 05561072ab5289e46921c416c8dc4207, type: 3}
-  sprite: {fileID: 21300000, guid: df96ba712ffdde74786fe2db21f25322, type: 3}
-  objectName: StrawberryCutted
+  prefab: {fileID: 8643972219507792866, guid: e18cdecaf95b8374698eef4c5022b1e8, type: 3}
+  sprite: {fileID: 21300000, guid: 44c4da9580716e44eb930d0b87e7fd95, type: 3}
+  objectName: Mushroom_Blue_Cutted

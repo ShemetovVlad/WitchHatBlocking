@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ff6a0b109b758d4a974acbf824e3969
+guid: fbd208416809fde40af7a65c80097fdb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -12,18 +12,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Decale
-    second: {fileID: 2100000, guid: e4693b53db14bef4dbc57f510c104a9a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: fe8bb0595a8e27c47a7d500042a4306f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ingredients
-    second: {fileID: 2100000, guid: d0fa2dd206c6ed8488b589a323f1a7bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

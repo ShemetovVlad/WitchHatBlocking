@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 2ff6a0b109b758d4a974acbf824e3969
+guid: a233a2cfa7f062747abc2a03237f746b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Counters
-    second: {fileID: 2100000, guid: addfba3668be41b438e04459a75a5622, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -17,13 +12,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: fe8bb0595a8e27c47a7d500042a4306f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Ingredients
-    second: {fileID: 2100000, guid: d0fa2dd206c6ed8488b589a323f1a7bf, type: 2}
+    second: {fileID: 2100000, guid: 64f7eba4f1d8dd74aa3e5b4f0c77db1b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -59,10 +49,10 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0

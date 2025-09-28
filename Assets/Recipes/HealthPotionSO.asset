@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35032c9f23b4168499923a67dd204365, type: 3}
   m_Name: HealthPotionSO
   m_EditorClassIdentifier: 
+  recipeName: 
   ingredients:
   - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
   - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
   - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
-  result: {fileID: 11400000, guid: cd0776aa5d9a4814084aad5cf7a27d1b, type: 2}
+  result: {fileID: 11400000, guid: 630e646bae3f6b743bb9eb488d1afcac, type: 2}

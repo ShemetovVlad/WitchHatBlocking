@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5dfd7f599ede64e92f55bfe8915855, type: 3}
-  m_Name: Berry-BoiledBerry
+  m_Script: {fileID: 11500000, guid: a315efaed4374b04f9b7f037ab190d7c, type: 3}
+  m_Name: Essence_Mushroom_Red
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
-  output: {fileID: 11400000, guid: 1ee1b27d05de971489967ca9dcf055e7, type: 2}
-  boilTimerMax: 5
+  prefab: {fileID: 1749788060095645923, guid: 7c9c6e0a1e854214e8a2c076155a76d3, type: 3}
+  sprite: {fileID: 0}
+  objectName: Essence_Mushroom_Red

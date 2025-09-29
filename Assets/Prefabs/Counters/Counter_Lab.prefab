@@ -5382,8 +5382,12 @@ MonoBehaviour:
   tableTopPoint: {fileID: 3450754578947073412}
   boilRecipeSOArray:
   - {fileID: 11400000, guid: b60d0a5c2470f8148a310e9a488c8ff5, type: 2}
+  - {fileID: 11400000, guid: a6453d08fd3520a409221d6b9b3a773f, type: 2}
+  - {fileID: 11400000, guid: 4f7a7f57c490c864495a6669a3d861be, type: 2}
   burningRecipeSOArray:
   - {fileID: 11400000, guid: ab1eb27fdf68ac443a98f2ab96931ae6, type: 2}
+  - {fileID: 11400000, guid: 677f80dbe5e4b734486407f7ee98f357, type: 2}
+  - {fileID: 11400000, guid: e64393e897bb1824aa35ff21020b7fb7, type: 2}
 --- !u!1001 &9065188403143074968
 PrefabInstance:
   m_ObjectHideFlags: 0

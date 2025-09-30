@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2461636229476f549a4fd224380debb7, type: 3}
   m_Name: Burning_Green
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 6e585c3033418cd4591de5f8d137d6f9, type: 2}
+  input: {fileID: 11400000, guid: 5c4da14e0fbc69741bde54430deff777, type: 2}
   output: {fileID: 11400000, guid: 76d2e58774fb02c448acdeb294277e2e, type: 2}
   burningTimerMax: 6

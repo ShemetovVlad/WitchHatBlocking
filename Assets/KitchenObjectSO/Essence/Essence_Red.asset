@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Essence_Red
   m_EditorClassIdentifier: 
   prefab: {fileID: 1749788060095645923, guid: dd33f3fc2ba6e2640960a17080a78579, type: 3}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 657b3d7f245a0eb44ae01a99a7238425, type: 3}
   objectName: Essence_Red

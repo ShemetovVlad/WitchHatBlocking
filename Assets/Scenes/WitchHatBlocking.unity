@@ -882,6 +882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CauldronCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 3892759509439581825, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6465953759717664366, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.018805783
@@ -921,6 +925,14 @@ PrefabInstance:
     - target: {fileID: 6465953759717664366, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896932686767040065, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640771058378780577, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4541,6 +4553,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cebab12ec0de7a40af20fa4aa62c8c3, type: 3}
       propertyPath: m_Name
       value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cebab12ec0de7a40af20fa4aa62c8c3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2325085273785259599, guid: 8cebab12ec0de7a40af20fa4aa62c8c3, type: 3}
       propertyPath: m_IsActive

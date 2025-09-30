@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     private float currentMoveSpeed = 0f;
     public event Action<bool> OnWalkingStateChanged;
     public event Action<bool> OnKitchenObjectChanged;
+    public event Action OnDestroyObjectAction;
 
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
 
         if (Instance != null)
         {
-            Debug.LogError("������ ������ ������!");
+            Debug.LogError("?????? ?????? ??????!");
         }
         Instance = this;
     }
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirection, currentMoveSpeed * Time.deltaTime);
         if (!canMove)
         {
-            Vector3 moveDirectionX = new Vector3(moveDirection.x, 0f, 0f); // .normalized ���� ����� ������� �������� �� ���������
+            Vector3 moveDirectionX = new Vector3(moveDirection.x, 0f, 0f); // .normalized ???? ????? ??????? ???????? ?? ?????????
             canMove = moveDirection.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionX, currentMoveSpeed * Time.deltaTime);
 
             if (canMove)
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
             }
             else
             {
-                Vector3 moveDirectionZ = new Vector3(0f, 0f, moveDirection.z); //.normalized ���� ����� ������� �������� �� ���������
+                Vector3 moveDirectionZ = new Vector3(0f, 0f, moveDirection.z); //.normalized ???? ????? ??????? ???????? ?? ?????????
                 canMove = moveDirection.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirectionZ, currentMoveSpeed * Time.deltaTime);
                 if (canMove)
                 {
@@ -195,29 +197,37 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     {
         if (HasKitchenObject())
         {
-            // ���������� ������
-            GetKitchenObject().DestroySelf();
-
-            // ������� ������ �� ������
-            ClearKitchenObject();
+            float DestroyAnimationTime = 0.5f;
+            OnDestroyObjectAction?.Invoke();
+            StartCoroutine(DestroyObjectWithDelay(DestroyAnimationTime));
         }
     }
     private void OnEnable()
     {
-        // ������������� �� ��������� ���������
+        // ????????????? ?? ????????? ?????????
         speedPerk.OnSpeedMultiplierChanged.AddListener(SetSpeed);
     }
 
+    private IEnumerator DestroyObjectWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (HasKitchenObject())
+        {
+            GetKitchenObject().DestroySelf();
+            ClearKitchenObject();
+        }
+    }
     private void OnDisable()
     {
-        // ����� ����������!
+        // ????? ??????????!s
         speedPerk.OnSpeedMultiplierChanged.RemoveListener(SetSpeed);
     }
 
     private void SetSpeed(float multiplier)
     {
         currentMoveSpeed = moveSpeed * multiplier;
-        //Debug.Log($"�������� ��������: {currentMoveSpeed}");
+        //Debug.Log($"???????? ????????: {currentMoveSpeed}");
     }
 
 

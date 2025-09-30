@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class PlayerAnimator : MonoBehaviour
         
         player.OnWalkingStateChanged += HandleWalkingChange;
         player.OnKitchenObjectChanged += HandleKitchenObjectChange;
+        player.OnDestroyObjectAction += HandleDestroyHeldObject;
+
     }
     private void HandleWalkingChange(bool isWalking)
     {
@@ -28,6 +30,11 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("HasObject", hasObject);
     }
 
+    private void HandleDestroyHeldObject()
+    {
+        animator.SetTrigger("Destroy");
+    }
+
     private void OnDestroy()
     {
         // ������������ ��� ����������� ������� (�����!)
@@ -36,6 +43,7 @@ public class PlayerAnimator : MonoBehaviour
         {
             player.OnWalkingStateChanged -= HandleWalkingChange;
             player.OnKitchenObjectChanged -= HandleKitchenObjectChange;
+            player.OnDestroyObjectAction -= HandleDestroyHeldObject;
         }
     }
     

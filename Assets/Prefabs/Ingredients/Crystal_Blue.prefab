@@ -68,11 +68,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.056
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.046
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80,19 +80,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7122638
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.00000001556711
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.000000015340822
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.701912
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -104,7 +104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -89.161
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc33a3ae7097d9148816330941614a9a, type: 3}
       propertyPath: m_ConstrainProportionsScale

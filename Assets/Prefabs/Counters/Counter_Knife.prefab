@@ -164,8 +164,24 @@ PrefabInstance:
       value: Counter_Knife
       objectReference: {fileID: 0}
     - target: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.8913
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640125499211228729, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7571975064394226445, guid: 181b01feb5d2a0849b17a7475abcc9ef, type: 3}
       propertyPath: m_LocalScale.x
@@ -293,6 +309,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4ba808f189fd9114bbd1f4b8e3d183f7, type: 2}
   - {fileID: 11400000, guid: 21be022bb5d20bf4baa9100f173c849a, type: 2}
   - {fileID: 11400000, guid: 84e6bfbfca8d6604b81674e0aab4129d, type: 2}
+  - {fileID: 11400000, guid: fdc7bd27306810d428efed69ff41ccca, type: 2}
+  - {fileID: 11400000, guid: a3a43c310733d5a4bbfe6a754d50072a, type: 2}
 --- !u!1001 &6226717785109328164
 PrefabInstance:
   m_ObjectHideFlags: 0

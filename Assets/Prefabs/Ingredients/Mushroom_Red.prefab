@@ -68,11 +68,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.051
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80,19 +80,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8841071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.4672843
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -104,7 +104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -55.716
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 162c73f2fb2f686488e367bb7c6f1845, type: 3}
       propertyPath: m_ConstrainProportionsScale

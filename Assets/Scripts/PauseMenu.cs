@@ -5,15 +5,16 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Button quiteButton;
+    [SerializeField] private ExitPopUp exitPopUp;
 
     private void Awake()
     {
         gameInput.OnPauseAction += GameInput_OnPauseAction;
         quiteButton.onClick.AddListener(() =>
         {
-            Application.Quit();
+            exitPopUp.gameObject.SetActive(true);
         });
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
     }
 
     private void GameInput_OnPauseAction(object sender, System.EventArgs e)
@@ -38,5 +39,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         gameObject.SetActive(false);
+        exitPopUp.gameObject.SetActive(false);
     }
 }

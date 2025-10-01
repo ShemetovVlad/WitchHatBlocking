@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class GameInput : MonoBehaviour
@@ -6,6 +6,7 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
     public event EventHandler OnDestroyObjectAction;
+    public event EventHandler OnPauseAction;
 
     private PlayerInputActions playerInputActions;
     private void Awake()
@@ -16,6 +17,7 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Interact.performed += Interact_performed;
         playerInputActions.Player.InteractAlternate.performed += InteractAlternate_performed;
         playerInputActions.Player.DestroyObject.performed += DestroyObject_performed;
+        playerInputActions.Player.Pause.performed += Pause_performed;   
     }
 
     private void DestroyObject_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -41,5 +43,10 @@ public class GameInput : MonoBehaviour
         inputVector = inputVector.normalized;
 
         return inputVector;
+    }
+
+    private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPauseAction?.Invoke(this, EventArgs.Empty);
     }
 }

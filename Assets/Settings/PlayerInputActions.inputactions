@@ -175,6 +175,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a26d9c8f-9040-4f7c-85f0-1fd93f0be56f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e80b304b-f2f0-4596-9512-15777395ca98",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -186,8 +197,30 @@
                 },
                 {
                     "name": "",
+                    "id": "d1c27d5a-2ee6-489d-ac56-c5f52612e69f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractAlternate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d3140fd7-34ec-41a1-87f8-05821ce80a86",
                     "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DestroyObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b09ba0a1-9925-46f9-825e-2ea2144c4ff0",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

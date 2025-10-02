@@ -410,7 +410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f0b81a8c41896540be3f4938a18d974, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9bbbafd612b1f647a6dc9bf9bd0de66, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -836,7 +836,7 @@ PrefabInstance:
     - target: {fileID: 11403584, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 96aa1ee9bd5a695438415224cdd4681e, type: 3}
+      objectReference: {fileID: 21300000, guid: 2e7cfe3445018124b8043626a3c14570, type: 3}
     - target: {fileID: 11403584, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -852,19 +852,35 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[0]'
       value: 
-      objectReference: {fileID: 21300000, guid: 96aa1ee9bd5a695438415224cdd4681e, type: 3}
+      objectReference: {fileID: 21300000, guid: 2e7cfe3445018124b8043626a3c14570, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[1]'
       value: 
-      objectReference: {fileID: 21300000, guid: 96022d69e02427c449fb91fc4cde0eb6, type: 3}
+      objectReference: {fileID: 21300000, guid: cfd72897879c3504aa191be367b58a92, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[2]'
       value: 
-      objectReference: {fileID: 21300000, guid: cc78803791b1bc64c8022e72e7b951a9, type: 3}
+      objectReference: {fileID: 21300000, guid: 2de8f19dbc6cc9b4ab8936d2a1cc0795, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[3]'
       value: 
-      objectReference: {fileID: 21300000, guid: 9d043c6a75bac7b45889bd171b253c70, type: 3}
+      objectReference: {fileID: 21300000, guid: 2ec22585bcd7b3949b728536d53c6982, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[4]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ea7652888b9a9c4e8cb59c7f6e2b3cd, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[5]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 11a15462084a8a845b14dce313a5d2a7, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[6]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c6580271f024584c8c2511aa5df2b1f, type: 3}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[7]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a4b8070361590b49a6b04940953d5ac, type: 3}
     - target: {fileID: 11430880, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_Sprite
       value: 

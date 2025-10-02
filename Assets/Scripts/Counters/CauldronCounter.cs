@@ -64,7 +64,7 @@ public class CauldronCounter : BaseCounter
                 return;
             }
         }
-        Debug.Log("Unknown recipe! Ingredients clear.");
+        //Debug.Log("Unknown recipe! Ingredients clear.");
         OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         cauldronIngredientsSOList.Clear();
         OnCauldronCleared?.Invoke(this, EventArgs.Empty);

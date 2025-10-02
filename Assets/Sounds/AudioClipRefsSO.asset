@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe80b4f7126b0694592d083d103cc783, type: 3}
+  m_Name: AudioClipRefsSO
+  m_EditorClassIdentifier: 
+  footstep: []
+  chopping:
+  - {fileID: 8300000, guid: 8557ed46156c2134a9822537d7843085, type: 3}
+  recipeSuccess:
+  - {fileID: 8300000, guid: 23575ab62d0dde941a1a13cf24be3197, type: 3}
+  recipeFail:
+  - {fileID: 8300000, guid: 11bf992316ba43b408220b277a4d42d5, type: 3}
+  objectDrop: []
+  objectPickup: []
+  labOn: []
+  labOff: []
+  warning: []

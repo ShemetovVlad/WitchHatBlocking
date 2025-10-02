@@ -2153,13 +2153,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 555634594}
+  - component: {fileID: 555634595}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &555634594
 Transform:
   m_ObjectHideFlags: 0
@@ -2169,13 +2170,27 @@ Transform:
   m_GameObject: {fileID: 555634593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.397501, y: -1.4715627, z: 0.34287465}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 879534327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555634595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555634593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400a3196797eea14782d8b134539ff8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cauldronCounter: {fileID: 1393645283}
+  audioClipRefsSO: {fileID: 11400000, guid: 0e9da877879d58940af93b1bdd3b350d, type: 2}
 --- !u!1001 &647539178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3983,6 +3998,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeListSO: {fileID: 11400000, guid: 777e9366afe961049bb2b19048021dbb, type: 2}
+--- !u!114 &1393645283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3329579117985784811, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+  m_PrefabInstance: {fileID: 165236800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393645281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4e57b7e7bf5b64fb8a92c8e07d9c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1396966577
 PrefabInstance:
   m_ObjectHideFlags: 0

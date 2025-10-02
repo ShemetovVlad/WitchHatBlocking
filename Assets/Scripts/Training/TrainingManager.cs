@@ -27,7 +27,7 @@ public class TrainingManager : MonoBehaviour
             interactPressed = true;
         }
 
-        if (interactTraining != null)
+        if (interactAlternateTraining != null)
         {
             gameInput.OnInteractAlternateAction += OnInteractAlternate;
         }
@@ -36,7 +36,7 @@ public class TrainingManager : MonoBehaviour
             interactAlternatePressed = true;
         }
 
-        if (interactTraining != null)
+        if (destroyObjectTraining != null)
         {
             gameInput.OnDestroyObjectAction += OnDestroyObject;
         }

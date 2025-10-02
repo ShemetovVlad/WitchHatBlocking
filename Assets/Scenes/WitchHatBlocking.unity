@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: ab32caeb9bf8301488cc9dfcc2d06603, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.467
+      value: -1.499
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: ab32caeb9bf8301488cc9dfcc2d06603, type: 3}
       propertyPath: m_LocalPosition.y
@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: ab32caeb9bf8301488cc9dfcc2d06603, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.872
+      value: -3.788
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: ab32caeb9bf8301488cc9dfcc2d06603, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2190,6 +2190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cauldronCounter: {fileID: 1393645283}
+  cuttingCounter: {fileID: 1713457770}
   audioClipRefsSO: {fileID: 11400000, guid: 0e9da877879d58940af93b1bdd3b350d, type: 2}
 --- !u!1001 &647539178
 PrefabInstance:
@@ -5659,6 +5660,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4113105285128736104, guid: e105e467268e4f144b448d62bc7309bc, type: 3}
   m_PrefabInstance: {fileID: 1713457768}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1713457770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8860442421058926284, guid: e105e467268e4f144b448d62bc7309bc, type: 3}
+  m_PrefabInstance: {fileID: 1713457768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446433eef7c986147b256119eff7b54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1716345246
 PrefabInstance:
   m_ObjectHideFlags: 0

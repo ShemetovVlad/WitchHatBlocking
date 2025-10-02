@@ -35,7 +35,7 @@ public class CauldronCounter : BaseCounter
         cauldronIngredientsSOList.Add(kitchenObjectSO);
         player.GetKitchenObject().DestroySelf();
         lastPlayer = player;   
-
+        
         OnIngredientAdded?.Invoke(this, kitchenObjectSO);
 
         if (cauldronIngredientsSOList.Count == 3)

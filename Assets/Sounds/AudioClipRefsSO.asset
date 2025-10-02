@@ -13,14 +13,28 @@ MonoBehaviour:
   m_Name: AudioClipRefsSO
   m_EditorClassIdentifier: 
   footstep: []
+  footstepVolume: 1
   chopping:
   - {fileID: 8300000, guid: 8557ed46156c2134a9822537d7843085, type: 3}
+  - {fileID: 8300000, guid: fa6fe2d3cebda46469ce53a01140fd35, type: 3}
+  choppingVolume: 1
   recipeSuccess:
   - {fileID: 8300000, guid: 23575ab62d0dde941a1a13cf24be3197, type: 3}
+  recipeSuccessVolume: 1
   recipeFail:
   - {fileID: 8300000, guid: 11bf992316ba43b408220b277a4d42d5, type: 3}
+  recipeFailVolume: 1
   objectDrop: []
+  objectDropVolume: 1
   objectPickup: []
+  objectPickupVolume: 1
   labOn: []
+  labOnVolume: 1
   labOff: []
+  labOffVolume: 1
   warning: []
+  warningVolume: 1
+  addIngredient: []
+  addIgredientVolume: 1
+  buttonClick: []
+  buttonClickVolume: 1

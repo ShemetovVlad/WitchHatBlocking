@@ -30,4 +30,10 @@ public class AudioClipRefsSO : ScriptableObject
     public AudioClip[] warning;
     [Range(0f, 2f)]
     public float warningVolume = 1f;
+    public AudioClip[] addIngredient;
+    [Range(0f, 2f)]
+    public float addIgredientVolume = 1f;
+    public AudioClip[] buttonClick;
+    [Range(0f, 2f)]
+    public float buttonClickVolume = 1f;
 }

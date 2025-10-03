@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d03daea20caa17d4f9f982ff84f2ad49, type: 3}
-  m_Name: Mushroom_Brown_Cutted
+  m_Script: {fileID: 11500000, guid: bb5dfd7f599ede64e92f55bfe8915855, type: 3}
+  m_Name: Essence_Red_Dust
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: c418713be947ce94aa91c25464df6423, type: 2}
-  output: {fileID: 11400000, guid: 1cacd92e017b05744b16db29d5087430, type: 2}
-  cuttingProgressMax: 6
+  input: {fileID: 11400000, guid: b6bee9f52379e134d85bc69ad51bb2c4, type: 2}
+  output: {fileID: 11400000, guid: f030056653e664946a6b7aacc0c375ec, type: 2}
+  boilTimerMax: 8

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d03daea20caa17d4f9f982ff84f2ad49, type: 3}
-  m_Name: Mushroom_Brown_Cutted
+  m_Name: Strawberry_Bowl
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: c418713be947ce94aa91c25464df6423, type: 2}
-  output: {fileID: 11400000, guid: 1cacd92e017b05744b16db29d5087430, type: 2}
+  input: {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
+  output: {fileID: 11400000, guid: 51dcd3b82687916408a6298253a305e7, type: 2}
   cuttingProgressMax: 6

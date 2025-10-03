@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1749788060095645923}
   - component: {fileID: -3187967008087482313}
   m_Layer: 0
-  m_Name: Essence_Red
+  m_Name: Essence_Red_Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b0dabf70f68cc48bf501ff993fe04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: 41e241f72d416004083c47301befd9ca, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: f030056653e664946a6b7aacc0c375ec, type: 2}
 --- !u!1001 &1874826464637898990
 PrefabInstance:
   m_ObjectHideFlags: 0

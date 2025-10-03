@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35032c9f23b4168499923a67dd204365, type: 3}
-  m_Name: HealthPotionSO
+  m_Name: Potion_Red_Barrel
   m_EditorClassIdentifier: 
-  recipeName: 
+  recipeName: Potion_Red_Barrel
   ingredients:
-  - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
-  - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
-  - {fileID: 11400000, guid: b88d8838ece3d36419c8ce0f26fcf63d, type: 2}
-  result: {fileID: 11400000, guid: 630e646bae3f6b743bb9eb488d1afcac, type: 2}
+  - {fileID: 11400000, guid: f030056653e664946a6b7aacc0c375ec, type: 2}
+  - {fileID: 11400000, guid: f8c78631ec23d614b805bb730d1be9b7, type: 2}
+  - {fileID: 11400000, guid: 6e585c3033418cd4591de5f8d137d6f9, type: 2}
+  result: {fileID: 11400000, guid: 991fb96abd6ace842bab26ae0f5c2cf6, type: 2}

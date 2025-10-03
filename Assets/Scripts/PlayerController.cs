@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     private float playerHeight = 2f;
 
     private Vector3 lastInteractDirection;
-
+    private Coroutine speedBoostCoroutine;
     private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
 
@@ -224,11 +224,30 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         speedPerk.OnSpeedMultiplierChanged.RemoveListener(SetSpeed);
     }
 
-    private void SetSpeed(float multiplier)
+    public void SetSpeed(float multiplier)
     {
         currentMoveSpeed = moveSpeed * multiplier;
         //Debug.Log($"???????? ????????: {currentMoveSpeed}");
     }
+    public void SpeedBuster(float multiplier, float duration)
+    {
+        // Останавливаем предыдущий бустер, если он активен
+        if (speedBoostCoroutine != null)
+        {
+            StopCoroutine(speedBoostCoroutine);
+        }
 
+        // Применяем бустер и запускаем корутину для сброса
+        speedBoostCoroutine = StartCoroutine(SpeedBoostRoutine(multiplier, duration));
+    }
+    private IEnumerator SpeedBoostRoutine(float multiplier, float duration)
+    {
+        currentMoveSpeed = moveSpeed * multiplier;
 
+        yield return new WaitForSeconds(duration);
+
+        // Возвращаем исходную скорость
+        currentMoveSpeed = moveSpeed;
+        speedBoostCoroutine = null;
+    }
 }

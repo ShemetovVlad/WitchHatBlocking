@@ -6302,6 +6302,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Counter_Trash
       objectReference: {fileID: 0}
+    - target: {fileID: 6086084984034560033, guid: 65d001ff3cdf50148854e5a43acef734, type: 3}
+      propertyPath: speedBoostItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086084984034560033, guid: 65d001ff3cdf50148854e5a43acef734, type: 3}
+      propertyPath: 'speedBoostItems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 86b19cace8d069e4ea1b34a7205e75ef, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

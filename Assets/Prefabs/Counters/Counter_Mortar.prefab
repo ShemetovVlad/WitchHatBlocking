@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4113105285128736104}
     m_Modifications:
-    - target: {fileID: -1574128645533152261, guid: df0d2d97f7333754bba81ef6390d2fa8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3821cca436013e44393acc5894308a32, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -75,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3821cca436013e44393acc5894308a32, type: 3}
       propertyPath: m_Name
       value: Counter_Mortar
+      objectReference: {fileID: 0}
+    - target: {fileID: -1574128645533152261, guid: df0d2d97f7333754bba81ef6390d2fa8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -578,6 +578,8 @@ MonoBehaviour:
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: 25454c3b51090234d8b72d4b63eec0d4, type: 2}
   - {fileID: 11400000, guid: c3b5fc447dcd9584390814f93407b46e, type: 2}
+  - {fileID: 11400000, guid: 921af73327da6114086a87c5202a0069, type: 2}
+  - {fileID: 11400000, guid: 2b1814237f3b188459fb51a13dc8ad9a, type: 2}
 --- !u!1001 &6343030542277497982
 PrefabInstance:
   m_ObjectHideFlags: 0

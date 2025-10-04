@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: BlackColor
     second: {fileID: 2100000, guid: 4e8248907788b9e42acfbe773fd1fcdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Counters
+    second: {fileID: 2100000, guid: 4bbbc4afd8912b34fa4ff9629ac580bd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

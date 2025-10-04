@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: A_checker3
+    second: {fileID: 2100000, guid: c0b1bc937fab549428db29fe47e2ad15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: A_checker4
+    second: {fileID: 2100000, guid: c0b1bc937fab549428db29fe47e2ad15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: A_checkerRed
+    second: {fileID: 2100000, guid: c0b1bc937fab549428db29fe47e2ad15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Counters
-    second: {fileID: 2100000, guid: addfba3668be41b438e04459a75a5622, type: 2}
+    second: {fileID: 2100000, guid: 4bbbc4afd8912b34fa4ff9629ac580bd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -23,7 +38,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ingredients
-    second: {fileID: 2100000, guid: d0fa2dd206c6ed8488b589a323f1a7bf, type: 2}
+    second: {fileID: 2100000, guid: 64f7eba4f1d8dd74aa3e5b4f0c77db1b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

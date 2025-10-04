@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Counters
-    second: {fileID: 2100000, guid: addfba3668be41b438e04459a75a5622, type: 2}
+    second: {fileID: 2100000, guid: 4bbbc4afd8912b34fa4ff9629ac580bd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

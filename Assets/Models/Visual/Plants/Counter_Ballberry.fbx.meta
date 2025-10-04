@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Decale
+    second: {fileID: 2100000, guid: e4693b53db14bef4dbc57f510c104a9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Ingredients
     second: {fileID: 2100000, guid: 64f7eba4f1d8dd74aa3e5b4f0c77db1b, type: 2}
   - first:

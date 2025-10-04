@@ -3,7 +3,17 @@ guid: 3f2073374454279449acb6493164ad8b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: A_checker4
+    second: {fileID: 2100000, guid: c0b1bc937fab549428db29fe47e2ad15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Decale
+    second: {fileID: 2100000, guid: e4693b53db14bef4dbc57f510c104a9a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

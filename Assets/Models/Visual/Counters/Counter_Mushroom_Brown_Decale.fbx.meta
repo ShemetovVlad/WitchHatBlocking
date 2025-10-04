@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90b38dade145c0d4ca3ec29859c69c89
+guid: fc1e121d4ba8383479763c399cdcd2bd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BlackColor
-    second: {fileID: 2100000, guid: 4e8248907788b9e42acfbe773fd1fcdc, type: 2}
+      name: Decale
+    second: {fileID: 2100000, guid: e4693b53db14bef4dbc57f510c104a9a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -44,10 +44,10 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0

@@ -3702,22 +3702,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2907458019463268436, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: cauldron
+      value: 
+      objectReference: {fileID: 1393645283}
+    - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: bookPages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: 'bookPages.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 107e3868064e5e448ba6a18235e2cb32, type: 2}
+      objectReference: {fileID: 11400000, guid: ae5fe8337b11454468fd02324e9469ad, type: 2}
     - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: 'bookPages.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: ec3b15aac08d9ca4593460f20c0aa4ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 81729d8742ef3ee4f889eebeee42e948, type: 2}
     - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: 'bookPages.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 687846fcd93038e44a54c19d410aee7c, type: 2}
+      objectReference: {fileID: 11400000, guid: 92166dfa3a761954f9237e821633f623, type: 2}
     - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: 'bookPages.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 3e157185a8802f84c89ce053a6880b6a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5837105303697109188, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: m_Name
       value: CanvasRecipesBook

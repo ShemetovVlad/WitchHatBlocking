@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -6,4 +6,5 @@ using UnityEngine;
 public class RecipesSO : ScriptableObject
 {
     public List<PotionRecipeSO> recipesSOList;
+
 }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Potion_Blue_Small_Page
   m_EditorClassIdentifier: 
   openRecipeSprite: {fileID: 21300000, guid: cfd72897879c3504aa191be367b58a92, type: 3}
-  closedRecipeSprite: {fileID: 21300000, guid: 2ec22585bcd7b3949b728536d53c6982, type: 3}
+  closedRecipeSprite: {fileID: 21300000, guid: 9ea7652888b9a9c4e8cb59c7f6e2b3cd, type: 3}
   isUnlocked: 0
+  unlockCost: 50

@@ -18,7 +18,7 @@ public class Book : MonoBehaviour {
     RectTransform BookPanel;
     public Sprite background;
 
-    public RecipePageSO[] bookPages;
+    public PotionRecipeSO[] bookPages;
     public bool[] unlockedStates;     // Array of Unlock states in SO objects
     public Button unlockLeftButton;    // Button for left page
     public Text unlockLeftCostText;    // Text for left button cost
@@ -188,7 +188,7 @@ public class Book : MonoBehaviour {
         if (leftPageHasClosedRecipe)
         {
             currentLeftUnlockTarget = currentPage - 1;
-            RecipePageSO recipe = bookPages[currentLeftUnlockTarget];
+            PotionRecipeSO recipe = bookPages[currentLeftUnlockTarget];
             unlockLeftCostText.text = recipe.unlockCost.ToString();
         }
 
@@ -199,7 +199,7 @@ public class Book : MonoBehaviour {
         if (rightPageHasClosedRecipe)
         {
             currentRightUnlockTarget = currentPage;
-            RecipePageSO recipe = bookPages[currentRightUnlockTarget];
+            PotionRecipeSO recipe = bookPages[currentRightUnlockTarget];
             unlockRightCostText.text = recipe.unlockCost.ToString();
         }
     }
@@ -466,7 +466,7 @@ public class Book : MonoBehaviour {
         if (pageIndex < 0 || pageIndex >= bookPages.Length)
             return background;
 
-        RecipePageSO recipe = bookPages[pageIndex];
+        PotionRecipeSO recipe = bookPages[pageIndex];
         if (recipe == null)
             return background;
 

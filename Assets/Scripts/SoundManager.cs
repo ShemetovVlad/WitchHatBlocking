@@ -33,7 +33,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         cauldronCounter.OnIngredientAdded += CauldronCounter_OnIngredientAdded;
-        cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;
+        //cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;
         cauldronCounter.OnRecipeFailed += CauldronCounter_OnRecipeFailed;
         cuttingCounter.OnCut += CuttingCounter_OnCut;
     }

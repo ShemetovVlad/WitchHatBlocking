@@ -575,6 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableTopPoint: {fileID: 2180973704072114268}
+  interactionPoint: {fileID: 2180973704072114268}
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: 25454c3b51090234d8b72d4b63eec0d4, type: 2}
   - {fileID: 11400000, guid: c3b5fc447dcd9584390814f93407b46e, type: 2}

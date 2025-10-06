@@ -3,38 +3,46 @@ using System;
 
 public class RecipeManager : MonoBehaviour
 {
-    public Book recipeBook;  // Book reference
-    public CauldronCounter cauldron;
+    public Book recipeBook;
+    public CauldronCounter cauldron; 
 
     public event EventHandler OnRecipeUnlocked;
 
     void Start()
     {
-        // Подписываемся на событие успешного создания зелья
         cauldron.OnRecipeSuccess += OnCauldronRecipeSuccess;
     }
-    private void OnCauldronRecipeSuccess(object sender, KitchenObjectSO createdPotion)
+    private void OnCauldronRecipeSuccess(object sender, PotionRecipeSO craftRecipe)
     {
         // Ищем этот рецепт в книге
         for (int i = 0; i < recipeBook.bookPages.Length; i++)
         {
-            if (recipeBook.bookPages[i] == createdPotion && !recipeBook.unlockedStates[i])
+            if (recipeBook.bookPages[i] == craftRecipe)
             {
-                // Открываем рецепт БЕСПЛАТНО (игнорируем стоимость)
-                UnlockRecipeByIndex(i, true);
+                //Debug.Log($"RecipeManager: Found unlock recipe on {i} page, unlocked: {recipeBook.unlockedStates[i]}");
+
+                if (!recipeBook.unlockedStates[i])
+                {
+                    //Debug.Log($"RecipeManager: Recipe unlock!");
+                    UnlockRecipeByIndex(i, true);
+                }
+                else
+                {
+                    //Debug.Log("RecipeManager: Recipe allready unlock");
+                }
                 break;
             }
         }
     }
 
-    // Метод для кнопки слева
+    // Left Button
     public void UnlockLeftRecipe()
     {
         int targetPage = recipeBook.GetLeftUnlockTarget();
         UnlockRecipeByIndex(targetPage);
     }
 
-    // Метод для кнопки справа  
+    // Right Button  
     public void UnlockRightRecipe()
     {
         int targetPage = recipeBook.GetRightUnlockTarget();
@@ -49,7 +57,7 @@ public class RecipeManager : MonoBehaviour
             //recipe.isUnlocked = true;
             recipeBook.unlockedStates[pageIndex] = true;
             recipeBook.UpdateSprites();
-            recipeBook.UpdateUnlockButton(); // Обновляем обе кнопки
+            recipeBook.UpdateUnlockButton(); // Refresh buttons
         }
     }
 

@@ -11,7 +11,7 @@ public class CauldronCounter : BaseCounter
 
     public event System.EventHandler<KitchenObjectSO> OnIngredientAdded;
     public event System.EventHandler OnCauldronCleared;
-    public event EventHandler<KitchenObjectSO> OnRecipeSuccess;
+    public event EventHandler<PotionRecipeSO> OnRecipeSuccess;
     public event EventHandler OnRecipeFailed;
     private void Awake()
     {
@@ -50,7 +50,7 @@ public class CauldronCounter : BaseCounter
         {
             if (IsRecipeMatch(recipe.ingredients, cauldronIngredientsSOList))
             {
-                OnRecipeSuccess?.Invoke(this, recipe.result);
+                OnRecipeSuccess?.Invoke(this, recipe);
 
                 //Debug.Log($"Сварен рецепт: {recipe.name}! Получено: {recipe.result.objectName}");
                 // Тут можно создать результат (recipe.result) и выдать игроку.

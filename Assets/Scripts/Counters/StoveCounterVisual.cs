@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StoveCounterVisual : MonoBehaviour
 {
     // On object with animator
 
-    [SerializeField] private GameObject particleGameObject;
+    [SerializeField] private GameObject[] effectGameObject;
     [SerializeField] private StoveCounter stoveCounter;
     private Animator animator;
 
@@ -22,6 +22,10 @@ public class StoveCounterVisual : MonoBehaviour
     {
         bool isCooking = e.state == StoveCounter.State.Boiling || e.state == StoveCounter.State.Boiled;
         animator.SetBool("isCooking", isCooking);
-        particleGameObject.SetActive(isCooking);
+        for (int i = 0; i < effectGameObject.Length; i++)
+        {
+            effectGameObject[i].SetActive(isCooking);
+        }
+        
     }
 }

@@ -17,7 +17,16 @@ public class Book : MonoBehaviour {
     [SerializeField]
     RectTransform BookPanel;
     public Sprite background;
-    public Sprite[] bookPages;
+
+    public RecipePageSO[] bookPages;
+    public bool[] unlockedStates;     // Array of Unlock states in SO objects
+    public Button unlockLeftButton;    // Button for left page
+    public Text unlockLeftCostText;    // Text for left button cost
+    public Button unlockRightButton;   // Button for right page
+    public Text unlockRightCostText;   // Text for right button cost
+    private int currentLeftUnlockTarget;  // Left recipe index
+    private int currentRightUnlockTarget; // Right recipe index
+
     public bool interactable=true;
     public bool enableShadowEffect=true;
     //represent the index of the sprite shown in the right page
@@ -69,6 +78,20 @@ public class Book : MonoBehaviour {
 
     void Start()
     {
+        if (bookPages != null && bookPages.Length > 0)
+        {
+            unlockedStates = new bool[bookPages.Length];
+            for (int i = 0; i < bookPages.Length; i++)
+            {
+                if (bookPages[i] != null)
+                    unlockedStates[i] = bookPages[i].isUnlocked;
+            }
+        }
+        else
+        {
+            Debug.LogError("BookPages array is empty or null!");
+            return; // Не продолжаем если нет страниц
+        }
         if (!canvas) canvas=GetComponentInParent<Canvas>();
         if (!canvas) Debug.LogError("Book should be a child to canvas");
 
@@ -142,6 +165,62 @@ public class Book : MonoBehaviour {
         {
             UpdateBook();
         }
+        else
+        {
+            //UpdateUnlockButton();  // Обновляем кнопку когда не листаем
+        }
+    }
+    void HideUnlockButtons()
+    {
+        //if (!Application.isPlaying) return;
+
+        if (unlockLeftButton != null) unlockLeftButton.gameObject.SetActive(false);
+        if (unlockRightButton != null) unlockRightButton.gameObject.SetActive(false);
+    }
+    public void UpdateUnlockButton()
+    {
+        if (unlockedStates == null) return;
+
+        // Checking left page (currentPage - 1)
+        bool leftPageHasClosedRecipe = CheckIfPageHasClosedRecipe(currentPage - 1);
+        unlockLeftButton.gameObject.SetActive(leftPageHasClosedRecipe);
+
+        if (leftPageHasClosedRecipe)
+        {
+            currentLeftUnlockTarget = currentPage - 1;
+            RecipePageSO recipe = bookPages[currentLeftUnlockTarget];
+            unlockLeftCostText.text = recipe.unlockCost.ToString();
+        }
+
+        // Checking right page (currentPage)
+        bool rightPageHasClosedRecipe = CheckIfPageHasClosedRecipe(currentPage);
+        unlockRightButton.gameObject.SetActive(rightPageHasClosedRecipe);
+
+        if (rightPageHasClosedRecipe)
+        {
+            currentRightUnlockTarget = currentPage;
+            RecipePageSO recipe = bookPages[currentRightUnlockTarget];
+            unlockRightCostText.text = recipe.unlockCost.ToString();
+        }
+    }
+    bool CheckIfPageHasClosedRecipe(int pageIndex)
+    {
+        if (unlockedStates == null) return false;
+        return pageIndex >= 0 &&
+               pageIndex < bookPages.Length &&
+               //!bookPages[pageIndex].isUnlocked;
+               !unlockedStates[pageIndex];
+    }
+
+    // Metods for buttons (call from RecipeManager)
+    public int GetLeftUnlockTarget() => currentLeftUnlockTarget;
+    public int GetRightUnlockTarget() => currentRightUnlockTarget;
+
+    // Вызывается при смене страницы (добавь вызов в методы перелистывания)
+    void OnPageChanged()
+    {
+        HideUnlockButtons(); //Hide Buttons after press next page
+        UpdateUnlockButton();
     }
     public void UpdateBook()
     {
@@ -278,6 +357,7 @@ public class Book : MonoBehaviour {
     {
         if (currentPage >= bookPages.Length) return;
         pageDragging = true;
+        HideUnlockButtons(); //Hide Buttons after press next page
         mode = FlipMode.RightToLeft;
         f = point;
 
@@ -289,15 +369,15 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(0, 0);
         Left.transform.position = RightNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage < bookPages.Length) ? bookPages[currentPage] : background;
+        Left.sprite = (currentPage < bookPages.Length) ? GetRecipeSprite(currentPage) : background;
         Left.transform.SetAsFirstSibling();
         
         Right.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
-        Right.sprite = (currentPage < bookPages.Length - 1) ? bookPages[currentPage + 1] : background;
+        Right.sprite = (currentPage < bookPages.Length - 1) ? GetRecipeSprite(currentPage + 1) : background;
 
-        RightNext.sprite = (currentPage < bookPages.Length - 2) ? bookPages[currentPage + 2] : background;
+        RightNext.sprite = (currentPage < bookPages.Length - 2) ? GetRecipeSprite(currentPage + 2) : background;
 
         LeftNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) Shadow.gameObject.SetActive(true);
@@ -306,13 +386,18 @@ public class Book : MonoBehaviour {
     public void OnMouseDragRightPage()
     {
         if (interactable)
-        DragRightPageToPoint(transformPoint(Input.mousePosition));
+        {
+            HideUnlockButtons(); //Hide Buttons after press next page
+            DragRightPageToPoint(transformPoint(Input.mousePosition));
+        }
+        
         
     }
     public void DragLeftPageToPoint(Vector3 point)
     {
         if (currentPage <= 0) return;
         pageDragging = true;
+        HideUnlockButtons(); //Hide Buttons after press next page
         mode = FlipMode.LeftToRight;
         f = point;
 
@@ -321,7 +406,7 @@ public class Book : MonoBehaviour {
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
-        Right.sprite = bookPages[currentPage - 1];
+        Right.sprite = GetRecipeSprite(currentPage - 1);
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetAsFirstSibling();
 
@@ -329,9 +414,9 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(1, 0);
         Left.transform.position = LeftNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage >= 2) ? bookPages[currentPage - 2] : background;
+        Left.sprite = (currentPage >= 2) ? GetRecipeSprite(currentPage - 2) : background;
 
-        LeftNext.sprite = (currentPage >= 3) ? bookPages[currentPage - 3] : background;
+        LeftNext.sprite = (currentPage >= 3) ? GetRecipeSprite(currentPage - 3) : background;
 
         RightNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) ShadowLTR.gameObject.SetActive(true);
@@ -340,7 +425,10 @@ public class Book : MonoBehaviour {
     public void OnMouseDragLeftPage()
     {
         if (interactable)
-        DragLeftPageToPoint(transformPoint(Input.mousePosition));
+        {
+            HideUnlockButtons(); //Hide Buttons after press next page
+            DragLeftPageToPoint(transformPoint(Input.mousePosition));
+        }
         
     }
     public void OnMouseRelease()
@@ -364,10 +452,27 @@ public class Book : MonoBehaviour {
         }
     }
     Coroutine currentCoroutine;
-    void UpdateSprites()
+    public void UpdateSprites()
     {
-        LeftNext.sprite= (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage-1] : background;
-        RightNext.sprite=(currentPage>=0 &&currentPage<bookPages.Length) ? bookPages[currentPage] : background;
+        LeftNext.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ?
+        GetRecipeSprite(currentPage - 1) : background;
+        RightNext.sprite = (currentPage >= 0 && currentPage < bookPages.Length) ?
+        GetRecipeSprite(currentPage) : background;
+
+        OnPageChanged();
+    }
+    private Sprite GetRecipeSprite(int pageIndex)
+    {
+        if (pageIndex < 0 || pageIndex >= bookPages.Length)
+            return background;
+
+        RecipePageSO recipe = bookPages[pageIndex];
+        if (recipe == null)
+            return background;
+
+        // If recipe open - take sprite, else - closed sprite.
+        //return recipe.isUnlocked ? recipe.openRecipeSprite : recipe.closedRecipeSprite;
+        return unlockedStates[pageIndex] ? recipe.openRecipeSprite : recipe.closedRecipeSprite;
     }
     public void TweenForward()
     {

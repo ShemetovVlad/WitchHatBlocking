@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a65f4b806942941b7487dbabe0c2fc, type: 3}
+  m_Name: Potion_Blue_Small_Page
+  m_EditorClassIdentifier: 
+  openRecipeSprite: {fileID: 21300000, guid: cfd72897879c3504aa191be367b58a92, type: 3}
+  closedRecipeSprite: {fileID: 21300000, guid: 2ec22585bcd7b3949b728536d53c6982, type: 3}
+  isUnlocked: 0

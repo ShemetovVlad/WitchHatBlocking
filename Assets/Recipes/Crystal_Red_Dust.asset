@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03daea20caa17d4f9f982ff84f2ad49, type: 3}
+  m_Name: Crystal_Red_Dust
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 5b4a6ce7c9641d742a38f1ddcd88ad15, type: 2}
+  output: {fileID: 11400000, guid: b6bee9f52379e134d85bc69ad51bb2c4, type: 2}
+  cuttingProgressMax: 6

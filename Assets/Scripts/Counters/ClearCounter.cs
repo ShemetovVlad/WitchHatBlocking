@@ -12,6 +12,7 @@ public class ClearCounter : BaseCounter
             {
                 // Player carrying something
                 player.GetKitchenObject().SetKitchenObjectParent(this);
+                
             }
 
         }
@@ -21,6 +22,7 @@ public class ClearCounter : BaseCounter
             {
                 // Player dont carrying anything
                 GetKitchenObject().SetKitchenObjectParent(player);
+                
             }
         }
     }

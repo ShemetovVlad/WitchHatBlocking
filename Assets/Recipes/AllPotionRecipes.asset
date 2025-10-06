@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313742fa6a72bb041acdb81428fec824, type: 3}
+  m_Name: AllPotionRecipes
+  m_EditorClassIdentifier: 
+  recipesSOList:
+  - {fileID: 11400000, guid: ae5fe8337b11454468fd02324e9469ad, type: 2}
+  - {fileID: 11400000, guid: 2415c7152aa8ada419852366732a8129, type: 2}
+  - {fileID: 11400000, guid: 74e05d472925da942b19dee51afc0b15, type: 2}
+  - {fileID: 11400000, guid: e429c2c9b026a284f973e6d711940b00, type: 2}
+  - {fileID: 11400000, guid: 00d988c25d3c82446b798b5244ba7411, type: 2}
+  - {fileID: 11400000, guid: 81729d8742ef3ee4f889eebeee42e948, type: 2}
+  - {fileID: 11400000, guid: 92166dfa3a761954f9237e821633f623, type: 2}

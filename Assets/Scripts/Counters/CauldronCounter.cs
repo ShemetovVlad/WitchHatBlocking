@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,9 @@ public class CauldronCounter : BaseCounter
     private PlayerController lastPlayer;
 
     public event System.EventHandler<KitchenObjectSO> OnIngredientAdded;
+    public event System.EventHandler OnCauldronCleared;
+    public event EventHandler OnRecipeSuccess;
+    public event EventHandler OnRecipeFailed;
     private void Awake()
     {
         cauldronIngredientsSOList = new List<KitchenObjectSO>();
@@ -32,7 +35,7 @@ public class CauldronCounter : BaseCounter
         cauldronIngredientsSOList.Add(kitchenObjectSO);
         player.GetKitchenObject().DestroySelf();
         lastPlayer = player;   
-
+        
         OnIngredientAdded?.Invoke(this, kitchenObjectSO);
 
         if (cauldronIngredientsSOList.Count == 3)
@@ -47,31 +50,36 @@ public class CauldronCounter : BaseCounter
         {
             if (IsRecipeMatch(recipe.ingredients, cauldronIngredientsSOList))
             {
-                //Debug.Log($"Сварен рецепт: {recipe.name}! Получено: {recipe.result.objectName}");
-                // Тут можно создать результат (recipe.result) и выдать игроку.
+                OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
+
+                //Debug.Log($"РЎРІР°СЂРµРЅ СЂРµС†РµРїС‚: {recipe.name}! РџРѕР»СѓС‡РµРЅРѕ: {recipe.result.objectName}");
+                // РўСѓС‚ РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ (recipe.result) Рё РІС‹РґР°С‚СЊ РёРіСЂРѕРєСѓ.
                 if (lastPlayer != null) 
                 { 
                     KitchenObject.SpawnKitchenObject(recipe.result, lastPlayer); 
                 }
                 
                 cauldronIngredientsSOList.Clear();
+                OnCauldronCleared?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
-        Debug.Log("Неизвестный рецепт! Ингредиенты сброшены.");
+        //Debug.Log("Unknown recipe! Ingredients clear.");
+        OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         cauldronIngredientsSOList.Clear();
-        
+        OnCauldronCleared?.Invoke(this, EventArgs.Empty);
+
     }
     private bool IsRecipeMatch(List<KitchenObjectSO> recipeIngredients, List<KitchenObjectSO> cauldronIngredients)
     {
         if (recipeIngredients.Count != cauldronIngredients.Count)
             return false;
 
-        // Создаём копии списков, чтобы не менять оригиналы.
+        // Make copy of lists to dont change origin lists.
         var recipeCopy = new List<KitchenObjectSO>(recipeIngredients);
         var cauldronCopy = new List<KitchenObjectSO>(cauldronIngredients);
 
-        // Удаляем совпадающие элементы из копий.
+        // Delete matched elements from list copy.
         foreach (var ingredient in recipeIngredients)
         {
             if (!cauldronCopy.Contains(ingredient))

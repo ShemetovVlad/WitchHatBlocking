@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a315efaed4374b04f9b7f037ab190d7c, type: 3}
+  m_Name: Essence_Strawberry
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1749788060095645923, guid: 7c3c7672fddf80e48bd183ece0d47e89, type: 3}
+  sprite: {fileID: 21300000, guid: c2175f34210751a42a0ad5d28002e277, type: 3}
+  objectName: Essence_Strawberry

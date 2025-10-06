@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 
 public class BudCounterVisual : MonoBehaviour
@@ -7,9 +6,6 @@ public class BudCounterVisual : MonoBehaviour
     [SerializeField] private BudCounter budCounter;
     [SerializeField] private Transform berryPoint1;
     [SerializeField] private Transform berryPoint2;
-    [SerializeField] private Transform berryPoint3;
-    [SerializeField] private Transform berryPoint4;
-
     [SerializeField] private Transform berryVisualPrefab;
 
     private List<GameObject> berryVisualGameObjectList;
@@ -18,7 +14,7 @@ public class BudCounterVisual : MonoBehaviour
     private void Awake()
     {
         berryVisualGameObjectList = new List<GameObject>();
-        berryPoints = new List<Transform> { berryPoint1, berryPoint2, berryPoint3, berryPoint4 };
+        berryPoints = new List<Transform> { berryPoint1, berryPoint2 };
     }
 
     private void Start()
@@ -29,9 +25,13 @@ public class BudCounterVisual : MonoBehaviour
 
     private void BudCounter_OnBerryRemoved(object sender, System.EventArgs e)
     {
-        GameObject berryGameObject = berryVisualGameObjectList[berryVisualGameObjectList.Count - 1];
-        berryVisualGameObjectList.Remove(berryGameObject);
-        Destroy(berryGameObject);
+        // ѕровер€ем, есть ли €годы дл€ удалени€
+        if (berryVisualGameObjectList.Count > 0)
+        {
+            GameObject berryGameObject = berryVisualGameObjectList[berryVisualGameObjectList.Count - 1];
+            berryVisualGameObjectList.Remove(berryGameObject);
+            Destroy(berryGameObject);
+        }
     }
 
     private void BudCounter_OnBerrySpawned(object sender, System.EventArgs e)
@@ -43,21 +43,23 @@ public class BudCounterVisual : MonoBehaviour
             Transform berryVisualTransform = Instantiate(berryVisualPrefab, freePoint);
             berryVisualGameObjectList.Add(berryVisualTransform.gameObject);
         }
-        else
+        /*else
         {
             Debug.LogWarning("No free berry points available!");
-        }
+        }*/
     }
 
     private Transform GetFirstFreeBerryPoint()
     {
+        // ѕроходим по всем точкам и находим первую пустую
         foreach (Transform point in berryPoints)
         {
-            // ѕровер€ем, есть ли уже €года в этой точке
             bool pointIsOccupied = false;
+
+            // ѕровер€ем, есть ли €года в этой точке
             foreach (GameObject berry in berryVisualGameObjectList)
             {
-                if (point.childCount > 0)
+                if (berry.transform.parent == point)
                 {
                     pointIsOccupied = true;
                     break;

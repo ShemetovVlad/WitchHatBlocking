@@ -39,7 +39,7 @@ public class SoundManager : MonoBehaviour
     }
     private void CauldronCounter_OnIngredientAdded(object sender, KitchenObjectSO ingredientSO)
     {
-        //PlaySound(ingredientSO.pickUpSound, cauldronCounter.transform.position);
+        PlaySound(audioClipRefsSO.addIngredient, cauldronCounter.transform.position);
     }
     private void CauldronCounter_OnRecipeSuccess(object sender, System.EventArgs e)
     {

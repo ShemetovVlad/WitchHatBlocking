@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365677048395885244}
   m_Layer: 0
-  m_Name: Book_Flying
+  m_Name: Book_Flying_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,9 +80,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6572165630369150864, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2206261319479042873, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       propertyPath: m_Name
       value: Book_Flying
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243938739552232287, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

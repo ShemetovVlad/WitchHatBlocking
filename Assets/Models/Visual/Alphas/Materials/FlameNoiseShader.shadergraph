@@ -5,6 +5,9 @@
     "m_Properties": [
         {
             "m_Id": "de108b46367e42c08481c459e92ad7db"
+        },
+        {
+            "m_Id": "2926b500ec214a3091b998c1448e811b"
         }
     ],
     "m_Keywords": [],
@@ -80,6 +83,9 @@
         },
         {
             "m_Id": "9db26d2eb84e4a3c99004d8e57500c4d"
+        },
+        {
+            "m_Id": "b976fa0bc6a04b64a54a003c4ff3a7c0"
         }
     ],
     "m_GroupDatas": [
@@ -272,6 +278,20 @@
                     "m_Id": "351d2e96d459402f8669c93f5062eb1d"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "b976fa0bc6a04b64a54a003c4ff3a7c0"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "2b9382b2a9e645c9bb39b4dedc8ba7ee"
+                },
+                "m_SlotId": 1
             }
         },
         {
@@ -544,6 +564,19 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
+    "m_ObjectId": "0ac65728cc254ccbb2fc565c4eb5f4c6",
+    "m_Id": 0,
+    "m_DisplayName": "Image",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.NormalMaterialSlot",
     "m_ObjectId": "0ce2107e4561497ba4da97879170a78c",
     "m_Id": 0,
@@ -702,8 +735,8 @@
     "m_ObjectId": "11b31c0240e74180a501955843a833b4",
     "m_Title": "Random Flame",
     "m_Position": {
-        "x": -3237.000244140625,
-        "y": -685.0000610351563
+        "x": -3237.0,
+        "y": -684.9998168945313
     }
 }
 
@@ -1075,6 +1108,36 @@
         "y": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
+    "m_ObjectId": "2926b500ec214a3091b998c1448e811b",
+    "m_Guid": {
+        "m_GuidSerialized": "ce2a75b2-e1b9-4c1c-9add-239a3cab5c54"
+    },
+    "m_Name": "Image",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Image",
+    "m_DefaultReferenceName": "_Image",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":10300,\"guid\":\"0000000000000000f000000000000000\",\"type\":0}}",
+        "m_Guid": ""
+    },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
+    "m_Modifiable": true,
+    "m_DefaultType": 0
 }
 
 {
@@ -2355,6 +2418,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "b976fa0bc6a04b64a54a003c4ff3a7c0",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -657.0,
+            "y": -110.00000762939453,
+            "width": 116.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "0ac65728cc254ccbb2fc565c4eb5f4c6"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "2926b500ec214a3091b998c1448e811b"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "bae5429f05d74b3eb60364643fdcf0b2",
     "m_Group": {
@@ -2582,6 +2681,9 @@
     "m_ChildObjectList": [
         {
             "m_Id": "de108b46367e42c08481c459e92ad7db"
+        },
+        {
+            "m_Id": "2926b500ec214a3091b998c1448e811b"
         }
     ]
 }
@@ -2777,8 +2879,8 @@
     "m_ObjectId": "eb6b87daeb874f4a960503d3385f8340",
     "m_Title": "Scrolling",
     "m_Position": {
-        "x": -2850.000244140625,
-        "y": 56.99982833862305
+        "x": -2850.0,
+        "y": 57.00016403198242
     }
 }
 

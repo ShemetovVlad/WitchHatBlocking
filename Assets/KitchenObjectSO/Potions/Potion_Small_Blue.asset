@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Potion_Small_Blue
   m_EditorClassIdentifier: 
   prefab: {fileID: 5716719715510264810, guid: c43b506f6e0c2ee409de5b34a911be3f, type: 3}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b25becbf7bd55e445870cc79739ce0ad, type: 3}
   objectName: Potion_Small_Blue
+  price: 0

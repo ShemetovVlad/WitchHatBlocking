@@ -34,7 +34,8 @@ MonoBehaviour:
   labOffVolume: 1
   warning: []
   warningVolume: 1
-  addIngredient: []
+  addIngredient:
+  - {fileID: 8300000, guid: b8c7f252f907d0d439e0cf6caf405901, type: 3}
   addIgredientVolume: 1
   buttonClick: []
   buttonClickVolume: 1

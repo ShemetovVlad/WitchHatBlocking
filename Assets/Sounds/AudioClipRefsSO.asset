@@ -26,6 +26,9 @@ MonoBehaviour:
   recipeFailVolume: 1
   objectDrop: []
   objectDropVolume: 1
+  objectDestroy:
+  - {fileID: 8300000, guid: 121c10adf7f7a884faad8a226fc6ebc9, type: 3}
+  objectDestroyVolume: 1
   objectPickup: []
   objectPickupVolume: 1
   labOn: []

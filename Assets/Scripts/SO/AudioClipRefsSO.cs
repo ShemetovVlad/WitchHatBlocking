@@ -18,6 +18,9 @@ public class AudioClipRefsSO : ScriptableObject
     public AudioClip[] objectDrop;
     [Range(0f, 2f)]
     public float objectDropVolume = 1f;
+    public AudioClip[] objectDestroy;
+    [Range(0f, 2f)]
+    public float objectDestroyVolume = 1f;
     public AudioClip[] objectPickup;
     [Range(0f, 2f)]
     public float objectPickupVolume = 1f;

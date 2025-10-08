@@ -198,8 +198,9 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
         if (HasKitchenObject())
         {
             float DestroyAnimationTime = 0.5f;
-            OnDestroyObjectAction?.Invoke();
+            
             StartCoroutine(DestroyObjectWithDelay(DestroyAnimationTime));
+            OnDestroyObjectAction?.Invoke();
         }
     }
     private void OnEnable()

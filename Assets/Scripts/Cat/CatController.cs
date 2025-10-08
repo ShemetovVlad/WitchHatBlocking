@@ -7,7 +7,7 @@ public class CatController : MonoBehaviour
     [SerializeField] private float blinkInterval = 3f;
     [SerializeField] private float tailWagInterval = 5f;
     [SerializeField] private float cleaningInterval = 10f;
-    [SerializeField] private Behaviour headAimConstraint; // Прокастываем Aim Constraint
+    [SerializeField] private HeadLookAt headLookAt;
 
     private Animator animator;
     private float blinkTimer;
@@ -44,12 +44,14 @@ public class CatController : MonoBehaviour
         cleaningTimer -= Time.deltaTime;
         if (cleaningTimer <= 0 && !isCleaning)
         {
-            StartCoroutine(DisableAimConstraintSmoothly());
+            //StartCleaning();
         }
     }
+    /*
     private void StartCleaning()
     {
         isCleaning = true;
+        headLookAt.ClearTarget();
         animator.SetTrigger("Cleaning");
 
         float cleaningDuration = animator.GetCurrentAnimatorStateInfo(0).length;
@@ -58,40 +60,8 @@ public class CatController : MonoBehaviour
     public void EndCleaning()
     {
         isCleaning = false;
-        StartCoroutine(EnableAimConstraintSmoothly());
+        headLookAt.SetTarget();
         cleaningTimer = cleaningInterval; 
     }
-    private IEnumerator DisableAimConstraintSmoothly()
-    {
-        AimConstraint aimConstraint = headAimConstraint as AimConstraint;
-        float startWeight = aimConstraint.weight;
-        float duration = 1f;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            aimConstraint.weight = Mathf.Lerp(startWeight, 0f, timer / duration);
-            yield return null;
-        }
-
-        aimConstraint.enabled = false;
-        StartCleaning();
-    }
-
-    private IEnumerator EnableAimConstraintSmoothly()
-    {
-        headAimConstraint.enabled = true;
-
-        AimConstraint aimConstraint = headAimConstraint as AimConstraint;
-        float duration = 1f;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            aimConstraint.weight = Mathf.Lerp(0f, 1f, timer / duration);
-            yield return null;
-        }
-    }
-}
+   */
+ }

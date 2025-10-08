@@ -12,8 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Counters
+    second: {fileID: 2100000, guid: 4bbbc4afd8912b34fa4ff9629ac580bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Decale
     second: {fileID: 2100000, guid: e4693b53db14bef4dbc57f510c104a9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enviroment
+    second: {fileID: 2100000, guid: c0b1bc937fab549428db29fe47e2ad15, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

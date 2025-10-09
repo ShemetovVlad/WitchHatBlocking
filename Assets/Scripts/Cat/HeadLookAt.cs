@@ -1,40 +1,52 @@
 ﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.Animations;
 
-public class HeadLookAt: MonoBehaviour
+public class HeadLookAt : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    private enum Mode
+    private LookAtConstraint lookAtConstraint;
+    private Coroutine weightCoroutine;
+
+    private void Start()
     {
-        LookAt,
-        LookAtInverted,
-        CameraForward,
-        CameraForwardInverted,
-        Y_forward,
+        lookAtConstraint = GetComponent<LookAtConstraint>();
     }
 
-    [SerializeField] private Mode mode;
-    private void LateUpdate()
+    public void EnableLookAt()
     {
-        switch (mode)
+        if (weightCoroutine != null)
+            StopCoroutine(weightCoroutine);
+
+        lookAtConstraint.weight = 0f;
+        lookAtConstraint.enabled = true;
+        weightCoroutine = StartCoroutine(ChangeWeight(1f));
+    }
+
+    public IEnumerator DisableLookAt()
+    {
+        if (weightCoroutine != null)
+            StopCoroutine(weightCoroutine);
+
+        yield return StartCoroutine(ChangeWeight(0f));
+    }
+
+    private IEnumerator ChangeWeight(float targetWeight)
+    {
+        float startWeight = lookAtConstraint.weight;
+        float time = 0f;
+
+        while (time < 1f)
         {
-            case Mode.LookAt:
-                transform.LookAt(target.transform);
-                break;
-            case Mode.LookAtInverted:
-                Vector3 dirFromCamera = transform.position - target.transform.position;
-                transform.LookAt(transform.position + dirFromCamera);
-                break;
-            case Mode.CameraForward:
-                transform.forward = target.transform.forward;
-                break;
-            case Mode.CameraForwardInverted:
-                transform.forward = -target.transform.forward;
-                break;
-            case Mode.Y_forward:
-                Vector3 direction = target.transform.position - transform.position;
-                transform.rotation = Quaternion.LookRotation(Vector3.up, direction);
-                break;
+            lookAtConstraint.weight = Mathf.Lerp(startWeight, targetWeight, time);
+            time += Time.deltaTime;
+            yield return null;
         }
 
+        lookAtConstraint.weight = targetWeight;
+
+        if (targetWeight == 0f)
+        {
+            lookAtConstraint.enabled = false;
+        }
     }
 }

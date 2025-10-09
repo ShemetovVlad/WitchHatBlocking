@@ -25,6 +25,7 @@ public class CatController : MonoBehaviour
 
     private void Update()
     {
+
         // Таймер для моргания
         blinkTimer -= Time.deltaTime;
         if (blinkTimer <= 0)
@@ -41,27 +42,33 @@ public class CatController : MonoBehaviour
             tailWagTimer = tailWagInterval;
         }
 
-        cleaningTimer -= Time.deltaTime;
-        if (cleaningTimer <= 0 && !isCleaning)
+        if (!isCleaning)
         {
-            //StartCleaning();
+            cleaningTimer -= Time.deltaTime;
+            if (cleaningTimer <= 0)
+            {
+                cleaningTimer = cleaningInterval;
+                StartCleaning();
+            }
         }
     }
-    /*
     private void StartCleaning()
     {
+        StartCoroutine(StartCleaningRoutine());
+    }
+
+    private IEnumerator StartCleaningRoutine()
+    {
+        yield return StartCoroutine(headLookAt.DisableLookAt());
         isCleaning = true;
-        headLookAt.ClearTarget();
         animator.SetTrigger("Cleaning");
 
-        float cleaningDuration = animator.GetCurrentAnimatorStateInfo(0).length;
-        Invoke("EndCleaning", 8f);
+        Invoke("EndCleaning", 5f);
     }
     public void EndCleaning()
     {
         isCleaning = false;
-        headLookAt.SetTarget();
+        headLookAt.EnableLookAt();
         cleaningTimer = cleaningInterval; 
     }
-   */
  }

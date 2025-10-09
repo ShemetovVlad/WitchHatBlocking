@@ -7629,10 +7629,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1553710333}
+    - target: {fileID: 3813704736332254266, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1553710333}
+    - target: {fileID: 3845701921703670373, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1553710333}
+    - target: {fileID: 5491019127454257973, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1553710333}
+    - target: {fileID: 7101665547480417994, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1553710333}
     - target: {fileID: 8520929157176729583, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
       propertyPath: m_Name
       value: Witch
       objectReference: {fileID: 0}
+    - target: {fileID: 9153467424210359940, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1553710333}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

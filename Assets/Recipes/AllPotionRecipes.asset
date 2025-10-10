@@ -14,9 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipesSOList:
   - {fileID: 11400000, guid: ae5fe8337b11454468fd02324e9469ad, type: 2}
-  - {fileID: 11400000, guid: 2415c7152aa8ada419852366732a8129, type: 2}
+  - {fileID: 11400000, guid: 37a8ac0e71cac5a4c9f8dab35ed7038e, type: 2}
   - {fileID: 11400000, guid: 74e05d472925da942b19dee51afc0b15, type: 2}
   - {fileID: 11400000, guid: e429c2c9b026a284f973e6d711940b00, type: 2}
   - {fileID: 11400000, guid: 00d988c25d3c82446b798b5244ba7411, type: 2}
   - {fileID: 11400000, guid: 81729d8742ef3ee4f889eebeee42e948, type: 2}
   - {fileID: 11400000, guid: 92166dfa3a761954f9237e821633f623, type: 2}
+  - {fileID: 11400000, guid: 2182be006c0b4524780ef637fdb7b62f, type: 2}
+  - {fileID: 11400000, guid: 1bcd10043ac3100498d0304485e2f570, type: 2}
+  - {fileID: 11400000, guid: 2c194e8845bf8c04698aa8c37ad3a2f7, type: 2}
+  - {fileID: 11400000, guid: 8ba8d9299b24ed347811f701df9314d3, type: 2}
+  - {fileID: 11400000, guid: 4635cabb3d3b7f3478c85adbd18b8039, type: 2}
+  - {fileID: 11400000, guid: 1cc671474447e354487f2865dfec39f2, type: 2}
+  - {fileID: 11400000, guid: 1ee510ec206c11f4392b96bbf1b4807f, type: 2}
+  - {fileID: 11400000, guid: c604a86502ccd2546ba8bf3741d04bee, type: 2}
+  - {fileID: 11400000, guid: f732e35dcd5d1304ea7a895040f8b181, type: 2}
+  - {fileID: 11400000, guid: 5943b2e11a95dab4aafb3c3617e59c25, type: 2}
+  - {fileID: 11400000, guid: 80c11cf071807d943b8f3bb1ae78e010, type: 2}

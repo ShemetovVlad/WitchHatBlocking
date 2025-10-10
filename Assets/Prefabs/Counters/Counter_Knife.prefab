@@ -305,13 +305,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableTopPoint: {fileID: 2180973704072114268}
-  interactionPoint: {fileID: 2180973704072114268}
   cuttingRecipeSOArray:
   - {fileID: 11400000, guid: 4ba808f189fd9114bbd1f4b8e3d183f7, type: 2}
   - {fileID: 11400000, guid: 21be022bb5d20bf4baa9100f173c849a, type: 2}
   - {fileID: 11400000, guid: 84e6bfbfca8d6604b81674e0aab4129d, type: 2}
   - {fileID: 11400000, guid: fdc7bd27306810d428efed69ff41ccca, type: 2}
   - {fileID: 11400000, guid: a3a43c310733d5a4bbfe6a754d50072a, type: 2}
+  - {fileID: 11400000, guid: ec5cafe1f3588524f8fe1e19f7522b5d, type: 2}
 --- !u!1001 &6226717785109328164
 PrefabInstance:
   m_ObjectHideFlags: 0

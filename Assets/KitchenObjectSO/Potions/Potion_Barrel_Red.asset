@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a315efaed4374b04f9b7f037ab190d7c, type: 3}
-  m_Name: Essence_Green
+  m_Name: Potion_Barrel_Red
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1749788060095645923, guid: eb6bb783669da0c478f90cf6db2a5803, type: 3}
-  sprite: {fileID: 21300000, guid: 4ae666e21d563a1478ceab17b78b6043, type: 3}
-  objectName: Essence_Green
+  prefab: {fileID: 5716719715510264810, guid: 97c99041c2f9385438b84569d17c4910, type: 3}
+  sprite: {fileID: 21300000, guid: 9ad36d8169459674ebca9e5bb7f4d781, type: 3}
+  objectName: Potion_Barrel_Red
+  price: 0

@@ -5606,17 +5606,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tableTopPoint: {fileID: 3450754578947073412}
   boilRecipeSOArray:
-  - {fileID: 11400000, guid: b60d0a5c2470f8148a310e9a488c8ff5, type: 2}
-  - {fileID: 11400000, guid: a6453d08fd3520a409221d6b9b3a773f, type: 2}
-  - {fileID: 11400000, guid: 4f7a7f57c490c864495a6669a3d861be, type: 2}
   - {fileID: 11400000, guid: 6aad17a9fde134848a2a69a5a49135b0, type: 2}
+  - {fileID: 11400000, guid: 40eb22330d0ee644484796bde1602aec, type: 2}
+  - {fileID: 11400000, guid: a6453d08fd3520a409221d6b9b3a773f, type: 2}
+  - {fileID: 11400000, guid: 359614d734b7e60478e197743fe1b8e5, type: 2}
+  - {fileID: 11400000, guid: b60d0a5c2470f8148a310e9a488c8ff5, type: 2}
+  - {fileID: 11400000, guid: da3ee8b4ff7eb4e4ca2b308222a9f320, type: 2}
+  - {fileID: 11400000, guid: fc87e9dab549bea4793b2c54f45c0f5c, type: 2}
   - {fileID: 11400000, guid: e73fc51380746b24591d624980a094ae, type: 2}
+  - {fileID: 11400000, guid: 462e6f7eb15290e47b46c79bb5cbd984, type: 2}
+  - {fileID: 11400000, guid: ca96dfd8c60dece4482c30958ed2ff42, type: 2}
+  - {fileID: 11400000, guid: d9b622f61abb6e345ae18f29c8fedbeb, type: 2}
+  - {fileID: 11400000, guid: 7e19f8ba4e7a05249959aedc24788156, type: 2}
+  - {fileID: 11400000, guid: 4f7a7f57c490c864495a6669a3d861be, type: 2}
+  - {fileID: 11400000, guid: b8052f3cbba8d68448c873d47a81fd8b, type: 2}
   burningRecipeSOArray:
-  - {fileID: 11400000, guid: ab1eb27fdf68ac443a98f2ab96931ae6, type: 2}
-  - {fileID: 11400000, guid: 677f80dbe5e4b734486407f7ee98f357, type: 2}
-  - {fileID: 11400000, guid: e64393e897bb1824aa35ff21020b7fb7, type: 2}
   - {fileID: 11400000, guid: eb448a4f7aaecbc429ec7d8fc4b02ed2, type: 2}
+  - {fileID: 11400000, guid: 83f68ae9045d58640aca13cb66d957a2, type: 2}
+  - {fileID: 11400000, guid: 677f80dbe5e4b734486407f7ee98f357, type: 2}
+  - {fileID: 11400000, guid: 36e600cdd1ca051478134d0d7de9c555, type: 2}
+  - {fileID: 11400000, guid: ab1eb27fdf68ac443a98f2ab96931ae6, type: 2}
+  - {fileID: 11400000, guid: 3a2ecc8dd985d34498f069ba13e89a2b, type: 2}
+  - {fileID: 11400000, guid: 5b958eb75f971c5478b3e08af8129a4a, type: 2}
   - {fileID: 11400000, guid: 3cf5b8a9ad8947942b27a2634a604a4e, type: 2}
+  - {fileID: 11400000, guid: 141bea3c09bd2464ba1c3abc96a004b1, type: 2}
+  - {fileID: 11400000, guid: a4a37c614d5c27547bfe0919c8e495c6, type: 2}
+  - {fileID: 11400000, guid: b06b50de66b688c4fa15469acb92e1bc, type: 2}
+  - {fileID: 11400000, guid: a803a87c56ae1ec4384f0a89d5de6d07, type: 2}
+  - {fileID: 11400000, guid: e64393e897bb1824aa35ff21020b7fb7, type: 2}
+  - {fileID: 11400000, guid: 23a14d50e096a4d4dae68a6b065c81f5, type: 2}
 --- !u!1001 &9065188403143074968
 PrefabInstance:
   m_ObjectHideFlags: 0

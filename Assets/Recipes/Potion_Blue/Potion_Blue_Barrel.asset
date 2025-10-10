@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35032c9f23b4168499923a67dd204365, type: 3}
   m_Name: Potion_Blue_Barrel
   m_EditorClassIdentifier: 
-  recipeName: Potion_Red_Barrel
+  recipeName: Potion_Blue_Barrel
   ingredients:
-  - {fileID: 11400000, guid: f030056653e664946a6b7aacc0c375ec, type: 2}
-  - {fileID: 11400000, guid: f8c78631ec23d614b805bb730d1be9b7, type: 2}
-  - {fileID: 11400000, guid: 6e585c3033418cd4591de5f8d137d6f9, type: 2}
-  result: {fileID: 11400000, guid: 991fb96abd6ace842bab26ae0f5c2cf6, type: 2}
+  - {fileID: 11400000, guid: 1def7af53aa5d6f48a78a10ea4205750, type: 2}
+  - {fileID: 11400000, guid: 41e241f72d416004083c47301befd9ca, type: 2}
+  - {fileID: 11400000, guid: 56b0d89bd3b59ea4bb8da7df0fed0cdc, type: 2}
+  result: {fileID: 11400000, guid: ec83407cc49d4a245bdb42a7bb58aaed, type: 2}
+  openRecipeSprite: {fileID: 0}
+  closedRecipeSprite: {fileID: 0}
+  isUnlocked: 0
+  unlockCost: 0

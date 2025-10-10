@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5dfd7f599ede64e92f55bfe8915855, type: 3}
+  m_Name: Essence_Mushroom_Red_Cutted
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 7d4eb254169e3704c9c100015106bb16, type: 2}
+  output: {fileID: 11400000, guid: 2bdd9b5b327edcf488b2f31d49839d68, type: 2}
+  boilTimerMax: 6

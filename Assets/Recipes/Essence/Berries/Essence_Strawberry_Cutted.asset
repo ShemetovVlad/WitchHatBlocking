@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2461636229476f549a4fd224380debb7, type: 3}
-  m_Name: Burning_Green
+  m_Script: {fileID: 11500000, guid: bb5dfd7f599ede64e92f55bfe8915855, type: 3}
+  m_Name: Essence_Strawberry_Cutted
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 5c4da14e0fbc69741bde54430deff777, type: 2}
-  output: {fileID: 11400000, guid: 76d2e58774fb02c448acdeb294277e2e, type: 2}
-  burningTimerMax: 6
+  input: {fileID: 11400000, guid: bccbf7d4da13db4408b660d0bd9c3ef1, type: 2}
+  output: {fileID: 11400000, guid: 6c294b7a84879ae48a0ad987e195889a, type: 2}
+  boilTimerMax: 6

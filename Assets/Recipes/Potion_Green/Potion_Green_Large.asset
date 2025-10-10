@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Potion_Green_Large
   ingredients:
-  - {fileID: 11400000, guid: ae502b4d99db6c34696fb1fd7f1b90cb, type: 2}
+  - {fileID: 11400000, guid: 7d4eb254169e3704c9c100015106bb16, type: 2}
   - {fileID: 11400000, guid: d8c9e12ff94245d4dad795d3eaf4de45, type: 2}
-  - {fileID: 11400000, guid: 56b0d89bd3b59ea4bb8da7df0fed0cdc, type: 2}
+  - {fileID: 11400000, guid: 2dc458ff1c85e4144878715684e084c9, type: 2}
   result: {fileID: 11400000, guid: a474bfc728eee234881f42425eaac9c0, type: 2}
   openRecipeSprite: {fileID: 0}
   closedRecipeSprite: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   recipeName: Potion_Blue_Large
   ingredients:
   - {fileID: 11400000, guid: 1def7af53aa5d6f48a78a10ea4205750, type: 2}
-  - {fileID: 11400000, guid: 6ffce580355aa0848882b340875fff62, type: 2}
+  - {fileID: 11400000, guid: 2dc458ff1c85e4144878715684e084c9, type: 2}
   - {fileID: 11400000, guid: d6b48138be8fd234bb1bb93e629568e5, type: 2}
   result: {fileID: 11400000, guid: 905b83db017d211439b1d0d11fd49373, type: 2}
   openRecipeSprite: {fileID: 0}

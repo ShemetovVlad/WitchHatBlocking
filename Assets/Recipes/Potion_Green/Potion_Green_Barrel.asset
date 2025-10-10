@@ -15,9 +15,9 @@ MonoBehaviour:
   recipeName: Potion_Green_Barrel
   ingredients:
   - {fileID: 11400000, guid: 5c4da14e0fbc69741bde54430deff777, type: 2}
-  - {fileID: 11400000, guid: 5c4da14e0fbc69741bde54430deff777, type: 2}
+  - {fileID: 11400000, guid: 8d76db35798c46b4490e5834dbc77924, type: 2}
   - {fileID: 11400000, guid: a474bfc728eee234881f42425eaac9c0, type: 2}
-  result: {fileID: 11400000, guid: ec83407cc49d4a245bdb42a7bb58aaed, type: 2}
+  result: {fileID: 11400000, guid: f39fb2ed48192f34fb6b7b6d05d3b76f, type: 2}
   openRecipeSprite: {fileID: 0}
   closedRecipeSprite: {fileID: 0}
   isUnlocked: 0

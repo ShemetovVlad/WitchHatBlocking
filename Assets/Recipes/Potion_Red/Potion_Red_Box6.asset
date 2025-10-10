@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Potion_Red_Box6
   ingredients:
-  - {fileID: 11400000, guid: 7d4eb254169e3704c9c100015106bb16, type: 2}
+  - {fileID: 11400000, guid: 1cacd92e017b05744b16db29d5087430, type: 2}
   - {fileID: 11400000, guid: 51dcd3b82687916408a6298253a305e7, type: 2}
   - {fileID: 11400000, guid: f030056653e664946a6b7aacc0c375ec, type: 2}
   result: {fileID: 11400000, guid: 5ec5996c2cac75b46a43d371a0f05fd4, type: 2}
+  openRecipeSprite: {fileID: 0}
+  closedRecipeSprite: {fileID: 0}
+  isUnlocked: 0
+  unlockCost: 0

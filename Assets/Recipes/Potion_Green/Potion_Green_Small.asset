@@ -15,7 +15,7 @@ MonoBehaviour:
   recipeName: Potion_Green_Small
   ingredients:
   - {fileID: 11400000, guid: 1cacd92e017b05744b16db29d5087430, type: 2}
-  - {fileID: 11400000, guid: a7e422afa79c29b4a9d55622f3ce93b9, type: 2}
+  - {fileID: 11400000, guid: 203c04127aa19e844bd1b28a7228e1db, type: 2}
   - {fileID: 11400000, guid: 5b4a6ce7c9641d742a38f1ddcd88ad15, type: 2}
   result: {fileID: 11400000, guid: 2d78cd72c0b1bde46a5433ca2fcaf402, type: 2}
   openRecipeSprite: {fileID: 21300000, guid: 2e7cfe3445018124b8043626a3c14570, type: 3}

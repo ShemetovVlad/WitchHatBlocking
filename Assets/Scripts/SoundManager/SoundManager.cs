@@ -17,6 +17,7 @@ public enum SoundType
     SecretRecipe,
     MortarKnock,
     BerryHarvest,
+    Poof,
 }
 
 public class SoundManager : MonoBehaviour
@@ -159,5 +160,13 @@ public class SoundManager : MonoBehaviour
     {
         if (counterLab != null)
             counterLab.OnStateChanged -= CounterLab_OnStateChanged;
+    }
+    public void SetCauldronVolume(float volume)
+    {
+        AudioSource audioSource = cauldronCounter.GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.volume = volume * masterVolume * sfxVolume;
+        }
     }
 }

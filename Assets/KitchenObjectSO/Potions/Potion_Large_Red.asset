@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5716719715510264810, guid: c72a0982ab34e23409c3c4d2655c7f4a, type: 3}
   sprite: {fileID: 21300000, guid: c824c46d58d78844a9216bd9d455f7dc, type: 3}
   objectName: Potion_Large_Red
-  price: 0
+  price: 500

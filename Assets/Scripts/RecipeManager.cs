@@ -68,7 +68,7 @@ public class RecipeManager : MonoBehaviour
             recipeBook.UpdateUnlockButton(); // Refresh buttons
             if (unlockRecipeSound != null)
             {
-                AudioSource.PlayClipAtPoint(unlockRecipeSound, Camera.main.transform.position, unlockRecipeSoundVolume);
+                SoundManager.Instance.PlaySound(SoundType.RecipeUnlock, Camera.main.transform.position);
             }
             else
             {

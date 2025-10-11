@@ -78,20 +78,7 @@ public class Book : MonoBehaviour {
 
     void Start()
     {
-        if (bookPages != null && bookPages.Length > 0)
-        {
-            unlockedStates = new bool[bookPages.Length];
-            for (int i = 0; i < bookPages.Length; i++)
-            {
-                if (bookPages[i] != null)
-                    unlockedStates[i] = bookPages[i].isUnlocked;
-            }
-        }
-        else
-        {
-            Debug.LogError("BookPages array is empty or null!");
-            return; // Не продолжаем если нет страниц
-        }
+        
         if (!canvas) canvas=GetComponentInParent<Canvas>();
         if (!canvas) Debug.LogError("Book should be a child to canvas");
 
@@ -119,6 +106,19 @@ public class Book : MonoBehaviour {
 
     }
 
+    public void InitializeBook()
+    {
+        if (unlockedStates == null || unlockedStates.Length != bookPages.Length)
+        {
+            unlockedStates = new bool[bookPages.Length];
+            for (int i = 0; i < bookPages.Length; i++)
+            {
+                if (bookPages[i] != null)
+                    unlockedStates[i] = bookPages[i].isUnlocked;
+            }
+            Debug.Log("Book initialized!");
+        }
+    }
     private void CalcCurlCriticalPoints()
     {
         sb = new Vector3(0, -BookPanel.rect.height / 2);
@@ -454,6 +454,7 @@ public class Book : MonoBehaviour {
     Coroutine currentCoroutine;
     public void UpdateSprites()
     {
+
         LeftNext.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ?
         GetRecipeSprite(currentPage - 1) : background;
         RightNext.sprite = (currentPage >= 0 && currentPage < bookPages.Length) ?

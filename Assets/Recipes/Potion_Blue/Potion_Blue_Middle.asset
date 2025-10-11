@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6b48138be8fd234bb1bb93e629568e5, type: 2}
   - {fileID: 11400000, guid: 56b0d89bd3b59ea4bb8da7df0fed0cdc, type: 2}
   result: {fileID: 11400000, guid: e5a43fe1788701449bb4aca11b7e3b9d, type: 2}
-  openRecipeSprite: {fileID: 21300000, guid: 2e7cfe3445018124b8043626a3c14570, type: 3}
-  closedRecipeSprite: {fileID: 21300000, guid: 3c6580271f024584c8c2511aa5df2b1f, type: 3}
+  openRecipeSprite: {fileID: 21300000, guid: 9ecd33a368005d541a09a792f469d217, type: 3}
+  closedRecipeSprite: {fileID: 21300000, guid: 0bc806833c6b0834580f7cadd10f4b19, type: 3}
   isUnlocked: 0
   unlockCost: 200

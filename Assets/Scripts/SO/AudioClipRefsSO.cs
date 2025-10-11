@@ -39,4 +39,13 @@ public class AudioClipRefsSO : ScriptableObject
     public AudioClip[] buttonClick;
     [Range(0f, 2f)]
     public float buttonClickVolume = 1f;
+    public AudioClip[] sellingIngredient;
+    [Range(0f, 2f)]
+    public float sellingIngredientVolume = 1f;
+    public AudioClip[] sellingPotionCheap;
+    [Range(0f, 2f)]
+    public float sellingPotionCheapVolume = 1f;
+    public AudioClip[] sellingPotionExpensive;
+    [Range(0f, 2f)]
+    public float sellingPotionExpensiveVolume = 1f;
 }

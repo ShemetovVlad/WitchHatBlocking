@@ -9,7 +9,10 @@ public enum SoundType
     RecipeFail,
     Chop,
     ButtonClick,
-    ObjectDestroy
+    ObjectDestroy,
+    SellingIngredient,
+    SellingPotionCheap,
+    SellingPotionExpensive,
 }
 
 public class SoundManager : MonoBehaviour
@@ -52,7 +55,7 @@ public class SoundManager : MonoBehaviour
     private void Player_OnDestroyObjectAction()
     {
         float delay = 0.3f;
-        PlaySoundWithDelay(audioClipRefsSO.objectDestroy, player.transform.position, delay, 2);
+        PlaySoundWithDelay(audioClipRefsSO.objectDestroy, player.transform.position, delay, 2f);
     }
     private void CuttingCounter_OnCut(object sender, System.EventArgs e)
     {
@@ -73,6 +76,9 @@ public class SoundManager : MonoBehaviour
             SoundType.Chop => audioClipRefsSO.chopping,
             SoundType.ButtonClick => audioClipRefsSO.buttonClick,
             SoundType.ObjectDestroy => audioClipRefsSO.objectDestroy,
+            SoundType.SellingIngredient => audioClipRefsSO.sellingIngredient,
+            SoundType.SellingPotionCheap => audioClipRefsSO.sellingPotionCheap,
+            SoundType.SellingPotionExpensive => audioClipRefsSO.sellingPotionExpensive,
             _ => null
         };
 

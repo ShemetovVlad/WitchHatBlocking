@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2907458019463268436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
         m_MethodName: UnlockRightRecipe
         m_Mode: 1
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2907458019463268436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
         m_MethodName: UnlockLeftRecipe
         m_Mode: 1
@@ -935,7 +935,6 @@ GameObject:
   - component: {fileID: 172546079436832038}
   - component: {fileID: 1637827682853624158}
   - component: {fileID: 4433814623981213362}
-  - component: {fileID: 2907458019463268436}
   m_Layer: 5
   m_Name: CanvasRecipesBook
   m_TagString: Untagged
@@ -1032,19 +1031,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2907458019463268436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5837105303697109188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a56b51a3cc4706b4b8e38e5ea7b143ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipeBook: {fileID: 5784825093825125987}
 --- !u!1 &6581649020384390591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,17 +1468,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 22443772, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
   m_PrefabInstance: {fileID: 5784825093831553231}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5784825093825125987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
-  m_PrefabInstance: {fileID: 5784825093831553231}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5784825093831708559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4446b7192d8bf914ebaf797b64fe8b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5784825093831708559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 180032, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}

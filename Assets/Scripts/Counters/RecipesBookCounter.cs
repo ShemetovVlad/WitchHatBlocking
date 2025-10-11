@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RecipesBookCounter : BaseCounter
 {
@@ -20,6 +20,6 @@ public class RecipesBookCounter : BaseCounter
     public override void Interact(PlayerController player)
     {
         bookCanvas.SetActive(true);
-        Debug.Log("Recipes!");
+        //Debug.Log("Recipes!");
     }
 }

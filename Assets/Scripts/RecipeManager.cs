@@ -4,12 +4,19 @@ using System;
 public class RecipeManager : MonoBehaviour
 {
     public Book recipeBook;
-    public CauldronCounter cauldron; 
+    public CauldronCounter cauldron;
+    [SerializeField] private AudioClip unlockRecipeSound;
+
+    private float unlockRecipeSoundVolume = 2f;
 
     public event EventHandler OnRecipeUnlocked;
 
     void Start()
     {
+        if (recipeBook != null)
+        {
+            recipeBook.InitializeBook();
+        }
         cauldron.OnRecipeSuccess += OnCauldronRecipeSuccess;
     }
     private void OnCauldronRecipeSuccess(object sender, PotionRecipeSO craftRecipe)
@@ -19,16 +26,17 @@ public class RecipeManager : MonoBehaviour
         {
             if (recipeBook.bookPages[i] == craftRecipe)
             {
+                Debug.Log($"RecipeManager: Recipe: {recipeBook.unlockedStates[i]}");
                 //Debug.Log($"RecipeManager: Found unlock recipe on {i} page, unlocked: {recipeBook.unlockedStates[i]}");
 
                 if (!recipeBook.unlockedStates[i])
                 {
-                    //Debug.Log($"RecipeManager: Recipe unlock!");
+                    Debug.Log($"RecipeManager: Recipe unlock!");
                     UnlockRecipeByIndex(i, true);
                 }
                 else
                 {
-                    //Debug.Log("RecipeManager: Recipe allready unlock");
+                    Debug.Log("RecipeManager: Recipe allready unlock");
                 }
                 break;
             }
@@ -58,6 +66,14 @@ public class RecipeManager : MonoBehaviour
             recipeBook.unlockedStates[pageIndex] = true;
             recipeBook.UpdateSprites();
             recipeBook.UpdateUnlockButton(); // Refresh buttons
+            if (unlockRecipeSound != null)
+            {
+                AudioSource.PlayClipAtPoint(unlockRecipeSound, Camera.main.transform.position, unlockRecipeSoundVolume);
+            }
+            else
+            {
+                Debug.LogWarning("Unlock recipe sound is not assigned!");
+            }
         }
     }
 

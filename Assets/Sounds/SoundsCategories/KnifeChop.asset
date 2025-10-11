@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
-  m_Name: RecipeSecret
+  m_Name: KnifeChop
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 35d3ae487ec90a6498efdc7baa4b9933, type: 3}
-  volume: 1.5
-  soundType: 10
+  - {fileID: 8300000, guid: 8557ed46156c2134a9822537d7843085, type: 3}
+  - {fileID: 8300000, guid: fa6fe2d3cebda46469ce53a01140fd35, type: 3}
+  volume: 1
+  soundType: 3

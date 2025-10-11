@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class BudCounter : BaseCounter
@@ -33,6 +33,7 @@ public class BudCounter : BaseCounter
             if (spawnBerryAmount > 0)
             {
                 spawnBerryAmount--;
+                SoundManager.Instance.PlaySound(SoundType.BerryHarvest, transform.position, 2f);
                 KitchenObject.SpawnKitchenObject(berryKitchenObjectSO, player);
                 OnBerryRemoved?.Invoke(this, EventArgs.Empty);
                 spawnBerryTimer = 0f;

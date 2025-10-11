@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
-  m_Name: ChopSounds
+  m_Name: DestroyObject
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 8557ed46156c2134a9822537d7843085, type: 3}
-  - {fileID: 8300000, guid: fa6fe2d3cebda46469ce53a01140fd35, type: 3}
+  - {fileID: 8300000, guid: 121c10adf7f7a884faad8a226fc6ebc9, type: 3}
   volume: 1
-  soundType: 3
+  soundType: 5

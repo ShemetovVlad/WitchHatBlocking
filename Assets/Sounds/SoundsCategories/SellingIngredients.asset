@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
-  m_Name: MortarKnockSounds
+  m_Name: SellingIngredients
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 2806bfd2b901bfb4f92e7e027274faea, type: 3}
-  - {fileID: 8300000, guid: d4e1c7e787a2c8d488b1fc89dbe1ed46, type: 3}
+  - {fileID: 8300000, guid: 94cd1d0ad991e5a4f845cf256641baab, type: 3}
   volume: 1
-  soundType: 0
+  soundType: 6

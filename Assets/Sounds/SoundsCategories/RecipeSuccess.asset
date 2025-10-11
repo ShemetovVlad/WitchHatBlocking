@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
   m_Name: RecipeSuccess
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 23575ab62d0dde941a1a13cf24be3197, type: 3}
   volume: 1
-  soundType: 0
+  soundType: 1

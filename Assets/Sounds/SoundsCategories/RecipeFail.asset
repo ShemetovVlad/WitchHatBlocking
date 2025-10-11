@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
-  m_Name: RecipeUnlockSound
+  m_Name: RecipeFail
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: d368621b94d24a54da332332d18d372d, type: 3}
-  volume: 2
-  soundType: 9
+  - {fileID: 8300000, guid: 11bf992316ba43b408220b277a4d42d5, type: 3}
+  volume: 1
+  soundType: 2

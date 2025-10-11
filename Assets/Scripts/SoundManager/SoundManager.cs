@@ -15,6 +15,8 @@ public enum SoundType
     SellingPotionExpensive,
     RecipeUnlock,
     SecretRecipe,
+    MortarKnock,
+    BerryHarvest,
 }
 
 public class SoundManager : MonoBehaviour
@@ -33,20 +35,60 @@ public class SoundManager : MonoBehaviour
     }
 
     [SerializeField] private CauldronCounter cauldronCounter;
-    [SerializeField] private CuttingCounter cuttingCounter;
+    [SerializeField] private CuttingCounter counterKnife;
+    [SerializeField] private CuttingCounter counterMortar;
+    [SerializeField] private StoveCounter counterLab;
     [SerializeField] private PlayerController player;
     [SerializeField] private AudioClipRefsSO audioClipRefsSO;
 
     [Range(0f, 1f)][SerializeField] private float sfxVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float masterVolume = 1f;
+    private Coroutine boilingSoundCoroutine;
+
 
     private void Start()
     {
         cauldronCounter.OnIngredientAdded += CauldronCounter_OnIngredientAdded;
         cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;
         cauldronCounter.OnRecipeFailed += CauldronCounter_OnRecipeFailed;
-        cuttingCounter.OnCut += CuttingCounter_OnCut;
+        counterKnife.OnCut += CounterKnife_OnCut;
+        counterMortar.OnCut += CounterMortar_OnCut;
         player.OnDestroyObjectAction += Player_OnDestroyObjectAction;
+        counterLab.OnStateChanged += CounterLab_OnStateChanged;
+    }
+    private void CounterLab_OnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
+    {
+        StopBoilingSound(); // Всегда останавливаем предыдущий звук
+
+        if (e.state == StoveCounter.State.Boiling)
+        {
+            StartBoilingSound(counterLab.transform.position);
+        }
+    }
+    private void StartBoilingSound(Vector3 position)
+    {
+        if (boilingSoundCoroutine == null)
+        {
+            boilingSoundCoroutine = StartCoroutine(PlayBoilingLoop(position));
+        }
+    }
+
+    private void StopBoilingSound()
+    {
+        if (boilingSoundCoroutine != null)
+        {
+            StopCoroutine(boilingSoundCoroutine);
+            boilingSoundCoroutine = null;
+        }
+    }
+
+    private IEnumerator PlayBoilingLoop(Vector3 position)
+    {
+        while (true)
+        {
+            PlaySound(SoundType.RecipeFail, position);
+            yield return new WaitForSeconds(1f); // интервал между звуками
+        }
     }
     private void CauldronCounter_OnIngredientAdded(object sender, KitchenObjectSO ingredientSO)
     {
@@ -68,9 +110,13 @@ public class SoundManager : MonoBehaviour
         float delay = 0.3f;
         PlaySoundWithDelay(SoundType.ObjectDestroy, player.transform.position, delay, 2f);
     }
-    private void CuttingCounter_OnCut(object sender, System.EventArgs e)
+    private void CounterKnife_OnCut(object sender, System.EventArgs e)
     {
-        PlaySound(SoundType.Chop, cuttingCounter.transform.position);
+        PlaySound(SoundType.Chop, counterKnife.transform.position);
+    }
+    private void CounterMortar_OnCut(object sender, System.EventArgs e)
+    {
+        PlaySound(SoundType.MortarKnock, counterMortar.transform.position);
     }
     private void CauldronCounter_OnRecipeFailed(object sender, System.EventArgs e)
     {
@@ -108,5 +154,10 @@ public class SoundManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         PlaySound(soundType, position, volumeMultiplier);
+    }
+    private void OnDestroy()
+    {
+        if (counterLab != null)
+            counterLab.OnStateChanged -= CounterLab_OnStateChanged;
     }
 }

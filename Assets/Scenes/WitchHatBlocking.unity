@@ -1158,27 +1158,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 14613075284332086, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 70014970254609670, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1388,6 +1388,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7161275414170151878, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
   m_PrefabInstance: {fileID: 4270049126334266044}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &224223576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8860442421058926284, guid: 9a27a6ecfa851e742a4513ba12c2f5a6, type: 3}
+  m_PrefabInstance: {fileID: 58766319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446433eef7c986147b256119eff7b54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &254318158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,9 +3288,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cauldronCounter: {fileID: 1393645283}
-  cuttingCounter: {fileID: 1713457770}
+  counterKnife: {fileID: 1713457770}
+  counterMortar: {fileID: 224223576}
+  counterLab: {fileID: 554689705}
   player: {fileID: 1553710333}
-  audioClipRefsSO: {fileID: 11400000, guid: 0e9da877879d58940af93b1bdd3b350d, type: 2}
+  audioClipRefsSO: {fileID: 11400000, guid: dcfffb6b238c8de45adb882ca601c083, type: 2}
+  sfxVolume: 1
+  masterVolume: 1
 --- !u!1001 &565880723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5057,7 +5072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &879534327
 Transform:
   m_ObjectHideFlags: 0
@@ -5086,7 +5101,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 07e211f9341a9984ea7449be1f6b44cc, type: 3}
   m_Resource: {fileID: 8300000, guid: 07e211f9341a9984ea7449be1f6b44cc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7656,6 +7671,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1553710334}
     m_Modifications:
     - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -7694,6 +7721,10 @@ PrefabInstance:
     - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644397087699519669, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2807282698977552454, guid: 07eee4146f5e7b74890c11c7ccdb77cc, type: 3}
       propertyPath: player

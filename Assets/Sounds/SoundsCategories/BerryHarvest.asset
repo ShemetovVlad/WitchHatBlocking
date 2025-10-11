@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 944b4c1548f71b24b9d4b46d18f0565d, type: 3}
-  m_Name: AddIngredientsSounds
+  m_Name: BerryHarvest
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 4f1572b6264a4af4fa738d1a3e07123a, type: 3}
-  - {fileID: 8300000, guid: b8c7f252f907d0d439e0cf6caf405901, type: 3}
-  volume: 1
-  soundType: 0
+  - {fileID: 8300000, guid: 7c6c7289fe782894ba0f06a886b75a3c, type: 3}
+  volume: 5
+  soundType: 12

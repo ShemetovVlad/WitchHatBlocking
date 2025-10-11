@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -103,18 +103,6 @@ public class StoveCounter : BaseCounter, IHasProgress
             //Debug.Log(state);
         }
     }
-
-    /* Coroutine for timer
-    private void Start()
-    {
-        StartCoroutine(HandleBoilTimer());
-    }
-
-    private IEnumerator HandleBoilTimer()
-    {
-        yield return new WaitForSeconds(1f);
-    }
-    */
     public override void Interact(PlayerController player)
     {
         if (!HasKitchenObject())
@@ -164,25 +152,11 @@ public class StoveCounter : BaseCounter, IHasProgress
             }
         }
     }
-
     private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         BoilRecipeSO boilRecipeSO = GetBoilRecipeSOWithInput(inputKitchenObjectSO);
         return boilRecipeSO != null;
     }
-
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
-    {
-        BoilRecipeSO boilRecipeSO = GetBoilRecipeSOWithInput(inputKitchenObjectSO);
-        if (boilRecipeSO != null)
-        {
-            return boilRecipeSO.output;
-        }
-        else { 
-            return null;
-        }
-    }
-
     private BoilRecipeSO GetBoilRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         foreach (BoilRecipeSO boilRecipeSO in boilRecipeSOArray)
@@ -194,7 +168,6 @@ public class StoveCounter : BaseCounter, IHasProgress
         }
         return null;
     }
-
     private BurningRecipeSO GetBurningRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         foreach (BurningRecipeSO burningRecipeSO in burningRecipeSOArray)

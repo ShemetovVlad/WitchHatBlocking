@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 733665302323431264}
-  - component: {fileID: 69569456940233781}
+  - component: {fileID: 536589529660851317}
   m_Layer: 0
-  m_Name: Books_Flying_Effect
+  m_Name: Books_Flying_Effect_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,23 +33,23 @@ Transform:
   - {fileID: 7016276391800415983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &69569456940233781
-Animation:
+--- !u!114 &536589529660851317
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2546300236879151391}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 755e6e08ac330b047aef27c5e80fc231, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 755e6e08ac330b047aef27c5e80fc231, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2300d18e96a07b348b591bd443f6b0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 1
+  rotationTime: 5
+  rotateOnStart: 1
+  coordinateSpace: 1
+  isRotating: 1
 --- !u!1001 &7227704980887522387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -80,35 +80,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6830127
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6830127
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.1830127
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1830127
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 365677048395885244, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -132,7 +132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884151562689886743, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_Name
-      value: Book_Flying
+      value: Book_Flying_Brown
       objectReference: {fileID: 0}
     - target: {fileID: 3884151562689886743, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -141,6 +141,10 @@ PrefabInstance:
     - target: {fileID: 3973353117768802367, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821982884150154237, guid: 961fdd345856eaf4682752509c2d97b8, type: 3}
+      propertyPath: maxStartTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

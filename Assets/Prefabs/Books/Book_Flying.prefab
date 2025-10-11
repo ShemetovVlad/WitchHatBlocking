@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365677048395885244}
   m_Layer: 0
-  m_Name: Book_Flying_Blue
+  m_Name: Book_Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,13 +80,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6572165630369150864, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -2206261319479042873, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       propertyPath: m_Name
@@ -103,6 +99,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6800501085285385657}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4821982884150154237}
   m_SourcePrefab: {fileID: 100100000, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
 --- !u!4 &359857401259072651 stripped
 Transform:
@@ -136,3 +135,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4821982884150154237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131996470135211569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89efff29aaa08ea43a3c9dc3649ef4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeEmptyStates: 1
+  randomizeOnStart: 1
+  showDebugInfo: 0

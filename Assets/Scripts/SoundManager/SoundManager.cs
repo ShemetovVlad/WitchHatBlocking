@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum SoundType
@@ -18,6 +19,7 @@ public enum SoundType
     MortarKnock,
     BerryHarvest,
     Poof,
+    LabOpen,
 }
 
 public class SoundManager : MonoBehaviour
@@ -59,9 +61,14 @@ public class SoundManager : MonoBehaviour
     }
     private void CounterLab_OnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
     {
+        if (e.state != StoveCounter.State.Boiled)
+        {
+            PlaySound(SoundType.LabOpen, counterLab.transform.position);
+        }
+        
         StopBoilingSound(); // Всегда останавливаем предыдущий звук
 
-        if (e.state == StoveCounter.State.Boiling)
+        if (e.state == StoveCounter.State.Boiling || e.state == StoveCounter.State.Boiled)
         {
             StartBoilingSound(counterLab.transform.position);
         }

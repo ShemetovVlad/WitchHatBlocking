@@ -50,28 +50,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/scene_gamePlay.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/Main_menu.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/scene_gamePlay.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/Main_menu.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/scene_gamePlay.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/Main_menu.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/scene_gamePlay.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/Main_menu.unity
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/Magic Menu Free/Example/Scenes/scene_gamePlay.unity
     guid: 00000000000000000000000000000000
   m_configObjects:

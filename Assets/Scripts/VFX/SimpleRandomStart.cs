@@ -19,7 +19,7 @@ public class SimpleRandomStart : MonoBehaviour
             AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
             animator.Play(state.fullPathHash, 0, randomTime);
 
-            Debug.Log($"Book {gameObject.name} starting at time: {randomTime}");
+            //Debug.Log($"Book {gameObject.name} starting at time: {randomTime}");
         }
     }
 }

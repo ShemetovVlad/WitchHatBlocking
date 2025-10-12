@@ -5,11 +5,11 @@ public class RecipeManager : MonoBehaviour
 {
     public Book recipeBook;
     public CauldronCounter cauldron;
-    [SerializeField] private AudioClip unlockRecipeSound;
 
     private float unlockRecipeSoundVolume = 2f;
 
     public event EventHandler OnRecipeUnlocked;
+    public event EventHandler<int> OnNotEnoughMoney;
 
     void Start()
     {
@@ -31,12 +31,12 @@ public class RecipeManager : MonoBehaviour
 
                 if (!recipeBook.unlockedStates[i])
                 {
-                    Debug.Log($"RecipeManager: Recipe unlock!");
+                    //Debug.Log($"RecipeManager: Recipe unlock!");
                     UnlockRecipeByIndex(i, true);
                 }
                 else
                 {
-                    Debug.Log("RecipeManager: Recipe allready unlock");
+                    //Debug.Log("RecipeManager: Recipe allready unlock");
                 }
                 break;
             }
@@ -47,14 +47,44 @@ public class RecipeManager : MonoBehaviour
     public void UnlockLeftRecipe()
     {
         int targetPage = recipeBook.GetLeftUnlockTarget();
-        UnlockRecipeByIndex(targetPage);
+        int cost = recipeBook.GetLeftRecipeCost();
+        if (PlayerWallet.Instance.HasEnoughMoney(cost))
+        {
+            if (PlayerWallet.Instance.SpendMoney(cost))
+            {
+                UnlockRecipeByIndex(targetPage, false);
+                // bye sound
+            }
+           
+            
+        }
+        else 
+        { 
+            OnNotEnoughMoney?.Invoke(this, cost);
+
+            Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
+        }
+        
     }
 
     // Right Button  
     public void UnlockRightRecipe()
     {
         int targetPage = recipeBook.GetRightUnlockTarget();
-        UnlockRecipeByIndex(targetPage);
+        int cost = recipeBook.GetRightRecipeCost();
+
+        if (PlayerWallet.Instance.HasEnoughMoney(cost))
+        {
+            if (PlayerWallet.Instance.SpendMoney(cost))
+            {
+                UnlockRecipeByIndex(targetPage, false);
+            }
+        }
+        else
+        {
+            OnNotEnoughMoney?.Invoke(this, cost);
+            Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
+        }
     }
 
     private void UnlockRecipeByIndex(int pageIndex, bool isFree = false)
@@ -66,14 +96,9 @@ public class RecipeManager : MonoBehaviour
             recipeBook.unlockedStates[pageIndex] = true;
             recipeBook.UpdateSprites();
             recipeBook.UpdateUnlockButton(); // Refresh buttons
-            if (unlockRecipeSound != null)
-            {
-                SoundManager.Instance.PlaySound(SoundType.RecipeUnlock, Camera.main.transform.position);
-            }
-            else
-            {
-                Debug.LogWarning("Unlock recipe sound is not assigned!");
-            }
+            OnRecipeUnlocked?.Invoke(this, EventArgs.Empty);
+            SoundManager.Instance.PlaySound(SoundType.RecipeUnlock, PlayerController.Instance.transform.position);
+            
         }
     }
 

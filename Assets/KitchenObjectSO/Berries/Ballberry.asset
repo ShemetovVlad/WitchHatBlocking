@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 8643972219507792866, guid: 43c9b25355b80f848878d1f6b9a91df2, type: 3}
   sprite: {fileID: 21300000, guid: ce26d79f77ae6534191fe5e933f84a14, type: 3}
   objectName: Ballberry
+  price: 2

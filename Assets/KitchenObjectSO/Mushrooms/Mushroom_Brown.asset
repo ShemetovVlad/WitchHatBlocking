@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 8643972219507792866, guid: 64cd13df630f8b94b880a654a8c4c2e7, type: 3}
   sprite: {fileID: 21300000, guid: 7847f9f5ae39fa54f838c61b6052cc57, type: 3}
   objectName: Mushroom_Brown
+  price: 2

@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1749788060095645923, guid: f02f9991c90c96b40a9c55dd2bab9805, type: 3}
   sprite: {fileID: 21300000, guid: c2175f34210751a42a0ad5d28002e277, type: 3}
   objectName: Essence_Strawberry_Cutted
-  price: 0
+  price: 15

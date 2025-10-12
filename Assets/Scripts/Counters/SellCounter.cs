@@ -23,7 +23,7 @@ public class SellCounter : BaseCounter
             }
             PlayerWallet.Instance.AddMoney(sellPrice);
             int balance = PlayerWallet.Instance.GetBalance();
-            Debug.Log(balance);
+            //Debug.Log(balance);
         }
     }
 

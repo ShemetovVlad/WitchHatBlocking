@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1749788060095645923, guid: 2acce7b20bac9764bb5d7bd736fb75b0, type: 3}
   sprite: {fileID: 21300000, guid: fc173bdbae45de24d8d640e25364e36e, type: 3}
   objectName: Essence_Mushroom_Blue
-  price: 0
+  price: 10

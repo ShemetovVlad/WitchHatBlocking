@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 8643972219507792866, guid: 2e3fe3208832c4c488df9d91820a41b7, type: 3}
   sprite: {fileID: 21300000, guid: 23f7f357d900ca64d855756fc40e4827, type: 3}
   objectName: Mushroom_Red_Cutted
+  price: 5

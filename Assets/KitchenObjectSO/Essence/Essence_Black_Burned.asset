@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1749788060095645923, guid: 98eebe8454a81154992e57d925f10277, type: 3}
   sprite: {fileID: 21300000, guid: f0f802664450bd142b71ce649fb3ed3c, type: 3}
   objectName: Essence_Black
+  price: 2

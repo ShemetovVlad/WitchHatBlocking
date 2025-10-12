@@ -1,28 +1,27 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using System;
 
-// Скрипт должен быть в папке Resources, если используем автоматическое создание
 public class PlayerWallet : MonoBehaviour
 {
-    [Header("Настройки")]
+    [Header("РќР°СЃС‚СЂРѕР№РєРё")]
     [SerializeField] private int startingBalance = 0;
     [SerializeField] private int maxBalance = 999999;
 
-    [Header("Только для отладки")]
+    [Header("РўРѕР»СЊРєРѕ РґР»СЏ РѕС‚Р»Р°РґРєРё")]
     [SerializeField] private int currentBalance;
 
-    // События
+    // РЎРѕР±С‹С‚РёСЏ
     public static event Action<int, int> OnMoneyChanged;      // (old, new)
     public static event Action<int> OnMoneyAdded;
     public static event Action<int> OnMoneySpent;
     public static event Action<int> OnNotEnoughMoney;
 
-    // Синглтон
+    // РЎРёРЅРіР»С‚РѕРЅ
     public static PlayerWallet Instance { get; private set; }
 
     private void Awake()
     {
-        // Обеспечиваем единственный экземпляр
+        // РћР±РµСЃРїРµС‡РёРІР°РµРј РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№ СЌРєР·РµРјРїР»СЏСЂ
         if (Instance == null)
         {
             Instance = this;
@@ -37,12 +36,12 @@ public class PlayerWallet : MonoBehaviour
 
     private void Start()
     {
-        // Уведомляем UI и другие системы о начальном балансе
+        // РЈРІРµРґРѕРјР»СЏРµРј UI Рё РґСЂСѓРіРёРµ СЃРёСЃС‚РµРјС‹ Рѕ РЅР°С‡Р°Р»СЊРЅРѕРј Р±Р°Р»Р°РЅСЃРµ
         OnMoneyChanged?.Invoke(0, currentBalance);
     }
 
     /// <summary>
-    /// Добавляет деньги. Если превышен лимит — устанавливается maxBalance.
+    /// Р”РѕР±Р°РІР»СЏРµС‚ РґРµРЅСЊРіРё. Р•СЃР»Рё РїСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚ вЂ” СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ maxBalance.
     /// </summary>
     public void AddMoney(int amount)
     {
@@ -56,7 +55,7 @@ public class PlayerWallet : MonoBehaviour
     }
 
     /// <summary>
-    /// Пытается потратить деньги. Возвращает true, если успешно.
+    /// РџС‹С‚Р°РµС‚СЃСЏ РїРѕС‚СЂР°С‚РёС‚СЊ РґРµРЅСЊРіРё. Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё СѓСЃРїРµС€РЅРѕ.
     /// </summary>
     public bool SpendMoney(int amount)
     {
@@ -78,7 +77,7 @@ public class PlayerWallet : MonoBehaviour
         }
     }
 
-    // Геттеры
+    // Р“РµС‚С‚РµСЂС‹
     public int GetBalance() => currentBalance;
     public bool HasEnoughMoney(int amount) => currentBalance >= amount;
 }

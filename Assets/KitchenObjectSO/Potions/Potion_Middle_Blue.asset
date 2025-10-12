@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5716719715510264810, guid: 1b989181cfc8fa44085385ae41abe952, type: 3}
   sprite: {fileID: 21300000, guid: 3886cb4833679d74aadb5212a6f55bd5, type: 3}
   objectName: Potion_Middle_Blue
-  price: 0
+  price: 100

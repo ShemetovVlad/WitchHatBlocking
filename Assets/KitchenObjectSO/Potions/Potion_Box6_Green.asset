@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5716719715510264810, guid: f6e05dfb13349f84e8b7669a400a92f8, type: 3}
   sprite: {fileID: 0}
   objectName: Potion_Box6_Green
-  price: 0
+  price: 300

@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1749788060095645923, guid: bbee3666324c25442976a02cfa713338, type: 3}
   sprite: {fileID: 21300000, guid: 4ae666e21d563a1478ceab17b78b6043, type: 3}
   objectName: Essence_Ballberry_Cutted
-  price: 0
+  price: 15

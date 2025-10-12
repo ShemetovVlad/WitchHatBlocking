@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 8643972219507792866, guid: 310efe2126d90464ab2d52712d26c593, type: 3}
   sprite: {fileID: 21300000, guid: 9d26c5607075fd4448841f18ec79c525, type: 3}
   objectName: Crystal_Blue
+  price: 2

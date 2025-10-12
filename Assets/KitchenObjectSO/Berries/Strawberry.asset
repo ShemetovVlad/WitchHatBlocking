@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 8643972219507792866, guid: dfae717c2a5953a489c3d486e8a14f04, type: 3}
   sprite: {fileID: 21300000, guid: 28e8b061d5af92f45831c70c8864586e, type: 3}
   objectName: Strawberry
+  price: 2

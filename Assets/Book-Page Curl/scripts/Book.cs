@@ -215,8 +215,22 @@ public class Book : MonoBehaviour {
     // Metods for buttons (call from RecipeManager)
     public int GetLeftUnlockTarget() => currentLeftUnlockTarget;
     public int GetRightUnlockTarget() => currentRightUnlockTarget;
+    public int GetLeftRecipeCost()
+    {
+        int leftPageIndex = currentPage - 1;
+        if (leftPageIndex >= 0 && leftPageIndex < bookPages.Length)
+            return bookPages[leftPageIndex].unlockCost;
+        return 0;
+    }
 
-    // Вызывается при смене страницы (добавь вызов в методы перелистывания)
+    public int GetRightRecipeCost()
+    {
+        if (currentPage >= 0 && currentPage < bookPages.Length)
+            return bookPages[currentPage].unlockCost;
+        return 0;
+    }
+
+    // Вызывается при смене страницы 
     void OnPageChanged()
     {
         HideUnlockButtons(); //Hide Buttons after press next page
@@ -454,6 +468,11 @@ public class Book : MonoBehaviour {
     Coroutine currentCoroutine;
     public void UpdateSprites()
     {
+        if (currentPage < 0 || currentPage > bookPages.Length)
+        {
+            Debug.LogWarning($"CurrentPage {currentPage} is out of bounds!");
+            return;
+        }
 
         LeftNext.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ?
         GetRecipeSprite(currentPage - 1) : background;

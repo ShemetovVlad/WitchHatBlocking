@@ -1469,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 1527024379142492310}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: bookPages.Array.size
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[0]'
@@ -1505,6 +1505,34 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1bcd10043ac3100498d0304485e2f570, type: 2}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ba8d9299b24ed347811f701df9314d3, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4635cabb3d3b7f3478c85adbd18b8039, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 80c11cf071807d943b8f3bb1ae78e010, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f732e35dcd5d1304ea7a895040f8b181, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[12]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c604a86502ccd2546ba8bf3741d04bee, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[13]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ee510ec206c11f4392b96bbf1b4807f, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[14]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cc671474447e354487f2865dfec39f2, type: 2}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
+      propertyPath: 'bookPages.Array.data[15]'
       value: 
       objectReference: {fileID: 11400000, guid: 2c194e8845bf8c04698aa8c37ad3a2f7, type: 2}
     - target: {fileID: 11430880, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}

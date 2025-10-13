@@ -25,7 +25,7 @@ public class GameSaveManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        Debug.Log("=== GameSaveManager Awake ===");
+        //Debug.Log("=== GameSaveManager Awake ===");
 
         // Загружаем данные при старте
         LoadGame();
@@ -33,9 +33,9 @@ public class GameSaveManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("=== GameSaveManager Start ===");
+        //Debug.Log("=== GameSaveManager Start ===");
         CheckReferences();
-        Debug.Log($"Перед подпиской: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
+        //Debug.Log($"Перед подпиской: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
         // Подписываемся на события изменений
         SubscribeToEvents();
 
@@ -62,7 +62,7 @@ public class GameSaveManager : MonoBehaviour
         if (recipeManager != null)
         {
             recipeManager.OnRecipeUnlocked += OnRecipeUnlocked;
-            Debug.Log("Подписались на события RecipeManager");
+            //Debug.Log("Подписались на события RecipeManager");
         }
         else
         {
@@ -122,7 +122,7 @@ public class GameSaveManager : MonoBehaviour
     {
         if (isApplyingLoadedData) return;
 
-        Debug.Log("Рецепт открыт - сохраняем игру");
+        //Debug.Log("Рецепт открыт - сохраняем игру");
         // Сохраняем когда открывается новый рецепт
         StartCoroutine(SaveAfterRecipeUnlock());
     }
@@ -133,15 +133,15 @@ public class GameSaveManager : MonoBehaviour
     {
         try
         {
-            Debug.Log("=== Сохранение игры ===");
+            //Debug.Log("=== Сохранение игры ===");
             // Обновляем актуальные данные перед сохранением
             UpdateSaveDataFromSystems();
-            Debug.Log($"Сохраняемые данные: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
+            //Debug.Log($"Сохраняемые данные: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
 
             string jsonData = JsonUtility.ToJson(currentSaveData);
             PlayerPrefs.SetString(SAVE_KEY, jsonData);
             PlayerPrefs.Save();
-            Debug.Log("Игра сохранена успешно! JSON: " + jsonData);
+            //Debug.Log("Игра сохранена успешно! JSON: " + jsonData);
 
             //Debug.Log("Игра сохранена успешно!");
         }
@@ -155,11 +155,11 @@ public class GameSaveManager : MonoBehaviour
     {
         try
         {
-            Debug.Log("=== Загрузка игры ===");
+            //Debug.Log("=== Загрузка игры ===");
             if (PlayerPrefs.HasKey(SAVE_KEY))
             {
                 string jsonData = PlayerPrefs.GetString(SAVE_KEY);
-                Debug.Log("Найдено сохранение: " + jsonData);
+                //Debug.Log("Найдено сохранение: " + jsonData);
                 currentSaveData = JsonUtility.FromJson<GameSaveData>(jsonData);
 
                 if (!currentSaveData.IsValid())
@@ -169,15 +169,15 @@ public class GameSaveManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log($"Загружено: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
+                    //Debug.Log($"Загружено: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
                 }
-                Debug.Log("Игра загружена успешно!");
+                //Debug.Log("Игра загружена успешно!");
             }
             else
             {
                 // Первый запуск - создаем новые данные
                 currentSaveData = new GameSaveData();
-                Debug.Log("Создано новое сохранение!");
+                //Debug.Log("Создано новое сохранение!");
             }
         }
         catch (System.Exception e)
@@ -191,14 +191,14 @@ public class GameSaveManager : MonoBehaviour
 
     private void UpdateSaveDataFromSystems()
     {
-        Debug.Log("=== Обновление данных для сохранения ===");
+        //Debug.Log("=== Обновление данных для сохранения ===");
         // Получаем актуальные данные из всех систем
         if (soundManager != null)
         {
             // Нужно добавить геттеры в SoundManager!
             float currentMusic = soundManager.GetMusicVolume();
             float currentSfx = soundManager.GetSfxVolume();
-            Debug.Log($"Текущие настройки звука: Музыка={currentMusic}, SFX={currentSfx}");
+            //Debug.Log($"Текущие настройки звука: Музыка={currentMusic}, SFX={currentSfx}");
             currentSaveData.musicVolume = currentMusic;
             currentSaveData.sfxVolume = currentSfx;
         }
@@ -209,49 +209,49 @@ public class GameSaveManager : MonoBehaviour
         if (playerWallet != null)
         {
             int currentBalance = playerWallet.GetBalance();
-            Debug.Log($"Текущий баланс кошелька: {currentBalance}");
+            //Debug.Log($"Текущий баланс кошелька: {currentBalance}");
             currentSaveData.playerBalance = currentBalance;
         }
         else
         {
-            Debug.LogError("PlayerWallet не найден!");
+            //Debug.LogError("PlayerWallet не найден!");
         }
         if (recipeBook != null)
         {
             bool[] unlockedStates = recipeBook.GetUnlockedStates();
             currentSaveData.unlockedRecipes = unlockedStates;
-            Debug.Log($"Сохранено состояний рецептов: {unlockedStates?.Length ?? 0}");
+            //Debug.Log($"Сохранено состояний рецептов: {unlockedStates?.Length ?? 0}");
         }
     }
 
     private void ApplyLoadedData()
     {
-        Debug.Log("=== Применение загруженных данных ===");
+        //Debug.Log("=== Применение загруженных данных ===");
         isApplyingLoadedData = true;
-        Debug.Log($"Применяем: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
+        //Debug.Log($"Применяем: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}, Баланс={currentSaveData.playerBalance}");
         // Применяем загруженные данные к игровым системам
 
         if (soundManager != null)
         {
-            Debug.Log($"Устанавливаем громкость: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}");
+            //Debug.Log($"Устанавливаем громкость: Музыка={currentSaveData.musicVolume}, SFX={currentSaveData.sfxVolume}");
             soundManager.SetMusicVolume(currentSaveData.musicVolume);
             soundManager.SetSfxVolume(currentSaveData.sfxVolume);
         }
 
         if (playerWallet != null)
         {
-            Debug.Log($"Устанавливаем баланс: {currentSaveData.playerBalance}");
+            //Debug.Log($"Устанавливаем баланс: {currentSaveData.playerBalance}");
             // Для кошелька нужно аккуратно установить баланс
             ApplyWalletBalance(currentSaveData.playerBalance);
         }
         if (recipeBook != null && currentSaveData.unlockedRecipes != null)
         {
-            Debug.Log($"Применяем состояния рецептов: {currentSaveData.unlockedRecipes.Length}");
+            //Debug.Log($"Применяем состояния рецептов: {currentSaveData.unlockedRecipes.Length}");
             recipeBook.SetUnlockedStates(currentSaveData.unlockedRecipes);
         }
         else if (recipeBook != null)
         {
-            Debug.Log("Создаем начальные состояния рецептов");
+            //Debug.Log("Создаем начальные состояния рецептов");
             recipeBook.InitializeBook(); // Инициализируем если нет сохранения
         }
         StartCoroutine(EnableAutoSaveAfterDelay());
@@ -260,47 +260,47 @@ public class GameSaveManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f); // Ждем пока все системы применят данные
         isApplyingLoadedData = false;
-        Debug.Log("Автосохранение включено");
+        //Debug.Log("Автосохранение включено");
     }
 
     private void ApplyWalletBalance(int targetBalance)
     {
         // Получаем текущий баланс
         int currentBalance = playerWallet.GetBalance();
-        Debug.Log($"Корректировка баланса: Текущий={currentBalance}, Целевой={targetBalance}");
+        //Debug.Log($"Корректировка баланса: Текущий={currentBalance}, Целевой={targetBalance}");
 
         // Если балансы отличаются - корректируем
         if (currentBalance != targetBalance)
         {
             int difference = targetBalance - currentBalance;
-            Debug.Log($"Разница: {difference}");
+            //Debug.Log($"Разница: {difference}");
 
             if (difference > 0)
             {
                 playerWallet.AddMoney(difference);
-                Debug.Log($"Добавлено денег: {difference}");
+                //Debug.Log($"Добавлено денег: {difference}");
             }
             else
             {
                 // Для уменьшения баланса используем SpendMoney
                 // Но будем осторожны - если денег недостаточно, просто установим нужную сумму
                 playerWallet.SpendMoney(-difference);
-                Debug.Log($"Потрачено денег: {-difference}");
+                //Debug.Log($"Потрачено денег: {-difference}");
             }
         }
         else
         {
-            Debug.Log("Баланс уже соответствует целевому");
+            //Debug.Log("Баланс уже соответствует целевому");
         }
     }
     private void CheckReferences()
     {
-        Debug.Log("=== Проверка ссылок ===");
-        Debug.Log($"SoundManager: {soundManager != null}");
-        Debug.Log($"PlayerWallet: {playerWallet != null}");
-        Debug.Log($"RecipeBook: {recipeBook != null}");
+        //Debug.Log("=== Проверка ссылок ===");
+        //Debug.Log($"SoundManager: {soundManager != null}");
+        //Debug.Log($"PlayerWallet: {playerWallet != null}");
+        //Debug.Log($"RecipeBook: {recipeBook != null}");
 
-        if (soundManager == null || playerWallet == null)
+        if (soundManager == null || playerWallet == null || recipeBook == null)
         {
             Debug.LogError("Не все ссылки установлены в инспекторе!");
         }

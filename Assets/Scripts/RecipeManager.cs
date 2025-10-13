@@ -6,7 +6,7 @@ public class RecipeManager : MonoBehaviour
     public Book recipeBook;
     public CauldronCounter cauldron;
 
-    private float unlockRecipeSoundVolume = 2f;
+    //private float unlockRecipeSoundVolume = 2f;
 
     public event EventHandler OnRecipeUnlocked;
     public event EventHandler<int> OnNotEnoughMoney;

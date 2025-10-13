@@ -41,9 +41,9 @@ public class CandleFlame : MonoBehaviour
     private void CalculateVelocity()
     {
         Vector3 currentPosition = playerController.transform.position;
-        Vector3 rawVelocity = (currentPosition - lastPlayerPosition) / Time.deltaTime;
+        Vector3 rawVelocity = (currentPosition - lastPlayerPosition) / Time.unscaledDeltaTime;
 
-        currentVelocity = Vector3.Lerp(currentVelocity, rawVelocity, Time.deltaTime * 10f);
+        currentVelocity = Vector3.Lerp(currentVelocity, rawVelocity, Time.unscaledDeltaTime * 10f);
         lastPlayerPosition = currentPosition;
 
         isMoving = currentVelocity.magnitude > 0.1f;
@@ -57,7 +57,7 @@ public class CandleFlame : MonoBehaviour
         }
         else
         {
-            idleTimer += Time.deltaTime;
+            idleTimer += Time.unscaledDeltaTime;
             if (idleTimer >= returnDelay)
             {
                 ReturnToInitialState();
@@ -94,7 +94,7 @@ public class CandleFlame : MonoBehaviour
         transform.localScale = Vector3.Lerp(
             transform.localScale,
             targetScale,
-            stretchSensitivity * Time.deltaTime
+            stretchSensitivity * Time.unscaledDeltaTime
         );
     }
     private void ReturnToInitialState()
@@ -103,7 +103,7 @@ public class CandleFlame : MonoBehaviour
         transform.localScale = Vector3.Lerp(
             transform.localScale,
             initialScale,
-            returnSpeed * Time.deltaTime
+            returnSpeed * Time.unscaledDeltaTime
         );
         // Возвращаем наклон, но сохраняем текущий поворот вокруг Y
         Vector3 currentEuler = transform.rotation.eulerAngles;
@@ -119,7 +119,7 @@ public class CandleFlame : MonoBehaviour
         transform.rotation = Quaternion.Lerp(
             transform.rotation,
             targetRotation,
-            returnSpeed * Time.deltaTime
+            returnSpeed * Time.unscaledDeltaTime
         );
     }
 }

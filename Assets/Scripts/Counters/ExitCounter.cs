@@ -7,10 +7,10 @@ public class ExitCounter : BaseCounter
 
     private void Awake()
     {
-        playerController.OnWalkingStateChanged += CloseSkillTree;
+        playerController.OnWalkingStateChanged += CloseExitMenu;
     }
 
-    private void CloseSkillTree(bool isWalking)
+    private void CloseExitMenu(bool isWalking)
     {
         if (isWalking)
         {
@@ -20,6 +20,6 @@ public class ExitCounter : BaseCounter
     public override void Interact(PlayerController player)
     {
         exitPopUp.SetActive(true);
-
+        //Debug.Log(exitPopUp.gameObject.active);
     }
 }

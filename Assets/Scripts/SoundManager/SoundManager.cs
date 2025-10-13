@@ -43,14 +43,18 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private StoveCounter counterLab;
     [SerializeField] private PlayerController player;
     [SerializeField] private AudioClipRefsSO audioClipRefsSO;
+    [SerializeField] private AudioSource musicAudioSource;
 
-    [Range(0f, 1f)][SerializeField] private float sfxVolume = 1f;
     [Range(0f, 1f)][SerializeField] private float masterVolume = 1f;
+    [Range(0f, 1f)] public float musicVolume = 1f;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
     private Coroutine boilingSoundCoroutine;
-
+    public event System.Action<float> OnSfxVolumeChanged;
+    public event System.Action<float> OnMusicVolumeChanged;
 
     private void Start()
     {
+        UpdateAllVolumes();
         cauldronCounter.OnIngredientAdded += CauldronCounter_OnIngredientAdded;
         cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;
         cauldronCounter.OnRecipeFailed += CauldronCounter_OnRecipeFailed;
@@ -58,6 +62,7 @@ public class SoundManager : MonoBehaviour
         counterMortar.OnCut += CounterMortar_OnCut;
         player.OnDestroyObjectAction += Player_OnDestroyObjectAction;
         counterLab.OnStateChanged += CounterLab_OnStateChanged;
+
     }
     private void CounterLab_OnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
     {
@@ -72,6 +77,39 @@ public class SoundManager : MonoBehaviour
         {
             StartBoilingSound(counterLab.transform.position);
         }
+    }
+    public void SetSfxVolume(float volume)
+    {
+        sfxVolume = Mathf.Clamp01(volume);
+        UpdateAllVolumes();
+        OnSfxVolumeChanged?.Invoke(sfxVolume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = Mathf.Clamp01(volume);
+        UpdateMusicVolume();
+        OnMusicVolumeChanged?.Invoke(musicVolume);
+    }
+
+    private void UpdateAllVolumes()
+    {
+        UpdateMusicVolume();
+        // SFX звуки обновляются в момент проигрывания через GetFinalSfxVolume()
+    }
+
+    private void UpdateMusicVolume()
+    {
+        if (musicAudioSource != null)
+        {
+            musicAudioSource.volume = musicVolume * masterVolume;
+        }
+    }
+
+    // Метод для получения финальной громкости SFX
+    public float GetFinalSfxVolume(float originalVolume = 1f)
+    {
+        return originalVolume * sfxVolume * masterVolume;
     }
     private void StartBoilingSound(Vector3 position)
     {
@@ -136,7 +174,7 @@ public class SoundManager : MonoBehaviour
 
         if (category != null && category.clips != null && category.clips.Length > 0)
         {
-            float finalVolume = volumeMultiplier * category.volume * sfxVolume * masterVolume;
+            float finalVolume = GetFinalSfxVolume(volumeMultiplier * category.volume);
             AudioClip randomClip = category.clips[Random.Range(0, category.clips.Length)];
             AudioSource.PlayClipAtPoint(randomClip, position, finalVolume);
         }

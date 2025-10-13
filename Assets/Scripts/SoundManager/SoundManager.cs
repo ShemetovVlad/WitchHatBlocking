@@ -54,6 +54,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"SoundManager Start: музыка={musicVolume}, SFX={sfxVolume}");
         UpdateAllVolumes();
         cauldronCounter.OnIngredientAdded += CauldronCounter_OnIngredientAdded;
         cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;
@@ -80,6 +81,7 @@ public class SoundManager : MonoBehaviour
     }
     public void SetSfxVolume(float volume)
     {
+        Debug.Log($"SoundManager: установка SFX с {sfxVolume} на {volume}");
         sfxVolume = Mathf.Clamp01(volume);
         UpdateAllVolumes();
         OnSfxVolumeChanged?.Invoke(sfxVolume);
@@ -214,4 +216,7 @@ public class SoundManager : MonoBehaviour
             audioSource.volume = volume * masterVolume * sfxVolume;
         }
     }
+    // Геттеры для системы сохранений
+    public float GetMusicVolume() => musicVolume;
+    public float GetSfxVolume() => sfxVolume;
 }

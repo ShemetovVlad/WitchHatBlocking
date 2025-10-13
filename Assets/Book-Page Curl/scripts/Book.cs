@@ -494,6 +494,33 @@ public class Book : MonoBehaviour {
         //return recipe.isUnlocked ? recipe.openRecipeSprite : recipe.closedRecipeSprite;
         return unlockedStates[pageIndex] ? recipe.openRecipeSprite : recipe.closedRecipeSprite;
     }
+    public bool[] GetUnlockedStates()
+    {
+        if (unlockedStates == null || unlockedStates.Length != bookPages.Length)
+        {
+            InitializeBook();
+        }
+        return unlockedStates;
+    }
+    public void SetUnlockedStates(bool[] states)
+    {
+        if (states != null && states.Length == bookPages.Length)
+        {
+            unlockedStates = states;
+            UpdateSprites(); // Обновляем отображение
+            UpdateUnlockButton(); // Обновляем кнопки
+            Debug.Log("Book: состояния рецептов загружены из сохранения");
+        }
+        else
+        {
+            Debug.LogWarning("Book: невалидные данные для загрузки состояний");
+        }
+    }
+    public int GetRecipeCount()
+    {
+        return bookPages != null ? bookPages.Length : 0;
+    }
+
     public void TweenForward()
     {
         if(mode== FlipMode.RightToLeft)

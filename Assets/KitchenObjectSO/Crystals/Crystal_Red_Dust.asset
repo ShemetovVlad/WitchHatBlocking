@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Crystal_Red_Dust
   m_EditorClassIdentifier: 
   prefab: {fileID: 8643972219507792866, guid: 5f9d415cc7415e94eaa363b74243e392, type: 3}
-  sprite: {fileID: 21300000, guid: a9c99153e631ea54a99cea987183c7f4, type: 3}
+  sprite: {fileID: 21300000, guid: f32f65bf2dcd38e44a3291eaf010ad67, type: 3}
   objectName: Crystal_Red_Dust
   price: 10

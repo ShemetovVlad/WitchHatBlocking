@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Ballberry_Bowl
   m_EditorClassIdentifier: 
   prefab: {fileID: 8643972219507792866, guid: f88dbfd671b24fc44b1bc1b1ca518ba2, type: 3}
-  sprite: {fileID: 21300000, guid: f8cc579fc2701a54dbe5515742211f04, type: 3}
+  sprite: {fileID: 21300000, guid: dddfec15e4855a249a630efe941696c8, type: 3}
   objectName: Ballberry_Bowl
   price: 5

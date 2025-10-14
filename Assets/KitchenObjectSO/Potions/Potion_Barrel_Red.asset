@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Potion_Barrel_Red
   m_EditorClassIdentifier: 
   prefab: {fileID: 5716719715510264810, guid: 97c99041c2f9385438b84569d17c4910, type: 3}
-  sprite: {fileID: 21300000, guid: 9ad36d8169459674ebca9e5bb7f4d781, type: 3}
+  sprite: {fileID: 21300000, guid: e0e8b6d0895798841b7fb0a0a1b586f3, type: 3}
   objectName: Potion_Barrel_Red
   price: 500

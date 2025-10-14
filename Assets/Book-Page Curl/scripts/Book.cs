@@ -234,6 +234,7 @@ public class Book : MonoBehaviour {
     void OnPageChanged()
     {
         HideUnlockButtons(); //Hide Buttons after press next page
+        
         UpdateUnlockButton();
     }
     public void UpdateBook()

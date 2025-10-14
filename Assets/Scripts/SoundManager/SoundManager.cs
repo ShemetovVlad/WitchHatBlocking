@@ -20,6 +20,7 @@ public enum SoundType
     BerryHarvest,
     Poof,
     LabOpen,
+    PageRotating,
 }
 
 public class SoundManager : MonoBehaviour

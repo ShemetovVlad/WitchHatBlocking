@@ -24,6 +24,8 @@ public class TrashCounter : BaseCounter
             {
                 animator.SetTrigger(DestroyTrigger);
             }
+
+            SoundManager.Instance.PlaySound(SoundType.Trash_Bite, PlayerController.Instance.transform.position);
         }
     }
     private bool IsSpeedBoostItem(KitchenObjectSO kitchenObjectSO)

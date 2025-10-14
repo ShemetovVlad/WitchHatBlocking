@@ -21,6 +21,7 @@ public enum SoundType
     Poof,
     LabOpen,
     PageRotating,
+    Trash_Bite
 }
 
 public class SoundManager : MonoBehaviour

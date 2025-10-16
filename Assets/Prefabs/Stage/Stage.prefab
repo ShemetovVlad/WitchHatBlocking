@@ -646,9 +646,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7959a33bfff353b4788ff9bde4e571fb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 96e3bbf15633cc54083d9f2ef3271208, type: 2}
     - target: {fileID: 919132149155446097, guid: 7959a33bfff353b4788ff9bde4e571fb, type: 3}
       propertyPath: m_Name
       value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7959a33bfff353b4788ff9bde4e571fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7959a33bfff353b4788ff9bde4e571fb, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -732,6 +740,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bdc4007cee083e649b3447a7118e3a6f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 96e3bbf15633cc54083d9f2ef3271208, type: 2}
     - target: {fileID: -6397192105511657311, guid: bdc4007cee083e649b3447a7118e3a6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -760,6 +772,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4690384321647060065, guid: bdc4007cee083e649b3447a7118e3a6f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 96e3bbf15633cc54083d9f2ef3271208, type: 2}
+    - target: {fileID: 4690384321647060065, guid: bdc4007cee083e649b3447a7118e3a6f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 96e3bbf15633cc54083d9f2ef3271208, type: 2}
     - target: {fileID: 5616023884266301789, guid: bdc4007cee083e649b3447a7118e3a6f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -15.46

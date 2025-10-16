@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Trash_Bite
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 121c10adf7f7a884faad8a226fc6ebc9, type: 3}
+  - {fileID: 8300000, guid: f95722d72cd540148a76fe04542c40ad, type: 3}
   volume: 1
-  soundType: 5
+  soundType: 16

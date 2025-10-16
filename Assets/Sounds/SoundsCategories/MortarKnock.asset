@@ -16,5 +16,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2806bfd2b901bfb4f92e7e027274faea, type: 3}
   - {fileID: 8300000, guid: d4e1c7e787a2c8d488b1fc89dbe1ed46, type: 3}
   - {fileID: 8300000, guid: 5f5b9501ea3114345ac4917e2c1760e7, type: 3}
-  volume: 2
+  volume: 1
   soundType: 11

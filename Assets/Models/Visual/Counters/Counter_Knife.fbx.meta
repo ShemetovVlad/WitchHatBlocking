@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Books
+    second: {fileID: 2100000, guid: 54f07536fd700854ebb06910772a6fb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Counters
     second: {fileID: 2100000, guid: 4bbbc4afd8912b34fa4ff9629ac580bd, type: 2}
   - first:
@@ -17,8 +22,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: fe8bb0595a8e27c47a7d500042a4306f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Ingredients
     second: {fileID: 2100000, guid: 64f7eba4f1d8dd74aa3e5b4f0c77db1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plants
+    second: {fileID: 2100000, guid: be33a0aabccc68346be3b0fba8ebd026, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

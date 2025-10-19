@@ -441,7 +441,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: DFM_Eye.l
+    - boneName: DFM_HatLeftSide
       humanName: LeftEye
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -449,7 +449,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: DFM_Eye.r
+    - boneName: DFM_HatRightSide
       humanName: RightEye
       limit:
         min: {x: 0, y: 0, z: 0}

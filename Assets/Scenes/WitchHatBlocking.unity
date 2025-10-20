@@ -21930,7 +21930,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -21983,7 +21983,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 20
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -37102,7 +37102,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6437311956326680112, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 8842234232274508882, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 5750634588625735857, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 7369366621889503054, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 41409856212262298, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 7452791705554759582, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 3122535689112926325, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 2444751816010289864, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 8425429192657547939, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 263736174423435718, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 7155934037076370, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 8687098465030775391, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+    - {fileID: 7377641345506441788, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}

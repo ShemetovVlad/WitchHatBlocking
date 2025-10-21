@@ -116,7 +116,7 @@ public class Book : MonoBehaviour {
                 if (bookPages[i] != null)
                     unlockedStates[i] = bookPages[i].isUnlocked;
             }
-            Debug.Log("Book initialized!");
+            //Debug.Log("Book initialized!");
         }
     }
     private void CalcCurlCriticalPoints()

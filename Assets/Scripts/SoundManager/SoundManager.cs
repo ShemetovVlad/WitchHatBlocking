@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"SoundManager Start: музыка={musicVolume}, SFX={sfxVolume}");
+        //Debug.Log($"SoundManager Start: музыка={musicVolume}, SFX={sfxVolume}");
         UpdateAllVolumes();
         cauldronCounter.OnIngredientAdded += CauldronCounter_OnIngredientAdded;
         cauldronCounter.OnRecipeSuccess += CauldronCounter_OnRecipeSuccess;

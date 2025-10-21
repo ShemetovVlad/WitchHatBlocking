@@ -7638,7 +7638,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.98485136, b: 0.93396217, a: 1}
+  m_Color: {r: 0.7201257, g: 0.91019547, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -10469,7 +10469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10482,7 +10482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IsGlobal: 0
+  m_IsGlobal: 1
   priority: 0
   blendDistance: 0
   weight: 1
@@ -39262,6 +39262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1497204470}
     m_Modifications:
+    - target: {fileID: 447316398738110195, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 600009578833122223, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
       propertyPath: m_CastShadows
       value: 1
@@ -39278,9 +39282,29 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1123738589310529528, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775463140350050755, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615364640154304003, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771469415122987632, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4924826555459470947, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
       propertyPath: m_Name
       value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532558861686298340, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7161275414170151878, guid: eca064e1a6646ee4693b0ab00b49def2, type: 3}
       propertyPath: m_LocalPosition.x

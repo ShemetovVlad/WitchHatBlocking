@@ -124,7 +124,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7396f127cba42304aba782cb8adec9b6, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -147,6 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89efff29aaa08ea43a3c9dc3649ef4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  includeEmptyStates: 1
   randomizeOnStart: 1
-  showDebugInfo: 0
+  maxStartTime: 10

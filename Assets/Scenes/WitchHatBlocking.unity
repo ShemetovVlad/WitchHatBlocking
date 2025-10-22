@@ -163,6 +163,10 @@ PrefabInstance:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 7400000, guid: 1a5ba4c7aaf152b4486129b4b6e647e9, type: 2}
+    - target: {fileID: 7978669094788533561, guid: c1dfe269e0c7087469334b9514010710, type: 3}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8028805273429307739, guid: c1dfe269e0c7087469334b9514010710, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -900,7 +904,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  cullingMode: 0
+  cullingMode: 2
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
@@ -6173,6 +6177,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 190460162625562927, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: cullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 275653523409927769, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -6197,6 +6205,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2505171212139210949, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: cullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2592133098897576241, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -6212,6 +6224,14 @@ PrefabInstance:
     - target: {fileID: 3892759509439581825, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892759509439581825, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045279688236687596, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: cullingMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4293275431943225474, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6289,6 +6309,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8640771058378780577, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8681443648418109673, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       propertyPath: m_Name
       value: Bubbles_Green
@@ -6312,9 +6336,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 998965576}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1213156053460653026, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1393645282}
     - targetCorrespondingSourceObject: {fileID: 1213156053460653026, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1393645285}
@@ -17179,7 +17200,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  cullingMode: 0
+  cullingMode: 2
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
@@ -28270,19 +28291,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1213156053460653026, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
   m_PrefabInstance: {fileID: 165236800}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1393645282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393645281}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ebe3105e49e8a479283717eb850741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipeListSO: {fileID: 11400000, guid: 777e9366afe961049bb2b19048021dbb, type: 2}
 --- !u!114 &1393645283 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3329579117985784811, guid: 7539d5494eef762438a7a49c37164cd6, type: 3}
@@ -32180,6 +32188,10 @@ PrefabInstance:
     - target: {fileID: 2475164854033370189, guid: 65d001ff3cdf50148854e5a43acef734, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244184234041966637, guid: 65d001ff3cdf50148854e5a43acef734, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3802802574557152660, guid: 65d001ff3cdf50148854e5a43acef734, type: 3}
       propertyPath: m_Layer

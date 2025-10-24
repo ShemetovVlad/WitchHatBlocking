@@ -101,6 +101,17 @@ public class UIManager : MonoBehaviour
             SetPauseState(true);
         }
     }
+    public void ToggleWindow(GameObject window)
+    {
+        if (window.activeInHierarchy)
+        {
+            CloseWindow(window);
+        }
+        else
+        {
+            OpenWindow(window);
+        }
+    }
 
     private void CloseWindow(GameObject window)
     {

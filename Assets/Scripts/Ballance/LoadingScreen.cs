@@ -5,7 +5,7 @@ using System.Collections;
 public class LoadingScreen : MonoBehaviour
 {
     [Header("Настройки загрузки")]
-    [SerializeField] private float showDuration = 3f;    // Общее время показа
+    //[SerializeField] private float showDuration = 3f;    // Общее время показа
     [SerializeField] private float fadeDuration = 1f;    // Длительность исчезновения
 
     [Header("Ссылки")]

@@ -27,7 +27,7 @@ public class CandleFlame : MonoBehaviour
     private void Start()
     {
         if (playerController == null)
-            playerController = FindObjectOfType<PlayerController>();
+            playerController = FindFirstObjectByType<PlayerController>();
 
         initialScale = transform.localScale;
         initialRotation = transform.localRotation;

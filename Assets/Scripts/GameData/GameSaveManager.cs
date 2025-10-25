@@ -58,7 +58,7 @@ public class GameSaveManager : MonoBehaviour
             PlayerWallet.OnMoneyChanged += OnMoneyChanged;
         }
         // Подписываемся на открытие рецептов
-        RecipeManager recipeManager = FindObjectOfType<RecipeManager>();
+        RecipeManager recipeManager = FindFirstObjectByType<RecipeManager>();
         if (recipeManager != null)
         {
             recipeManager.OnRecipeUnlocked += OnRecipeUnlocked;
@@ -89,7 +89,7 @@ public class GameSaveManager : MonoBehaviour
         {
             PlayerWallet.OnMoneyChanged -= OnMoneyChanged;
         }
-        RecipeManager recipeManager = FindObjectOfType<RecipeManager>();
+        RecipeManager recipeManager = FindFirstObjectByType<RecipeManager>();
         if (recipeManager != null)
         {
             recipeManager.OnRecipeUnlocked -= OnRecipeUnlocked;

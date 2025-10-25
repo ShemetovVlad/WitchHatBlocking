@@ -26,7 +26,13 @@ public class PlayerWallet : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            //currentBalance = startingBalance;
+
+            // Сохраняем значение из инспектора, если оно было изменено
+            if (currentBalance == 0 && startingBalance > 0)
+            {
+                currentBalance = startingBalance;
+            }
+            // Если currentBalance был изменен в инспекторе - он сохраняется
         }
         else
         {
@@ -36,15 +42,11 @@ public class PlayerWallet : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"PlayerWallet Start: текущий баланс = {currentBalance}, startingBalance = {startingBalance}");
-        if (currentBalance == 0 && startingBalance > 0)
-        {
-            currentBalance = startingBalance;
-            Debug.Log($"Установлен startingBalance: {currentBalance}");
-        }
+        //Debug.Log($"PlayerWallet Start: текущий баланс = {currentBalance}, startingBalance = {startingBalance}");
+
         // Уведомляем UI и другие системы о начальном балансе
         OnMoneyChanged?.Invoke(0, currentBalance);
-        Debug.Log($"PlayerWallet финальный баланс: {currentBalance}");
+        //Debug.Log($"PlayerWallet финальный баланс: {currentBalance}");
     }
 
     /// <summary>

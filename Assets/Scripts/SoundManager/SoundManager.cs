@@ -83,7 +83,7 @@ public class SoundManager : MonoBehaviour
     }
     public void SetSfxVolume(float volume)
     {
-        Debug.Log($"SoundManager: установка SFX с {sfxVolume} на {volume}");
+        //Debug.Log($"SoundManager: установка SFX с {sfxVolume} на {volume}");
         sfxVolume = Mathf.Clamp01(volume);
         UpdateAllVolumes();
         OnSfxVolumeChanged?.Invoke(sfxVolume);

@@ -26,7 +26,7 @@ public class RecipeManager : MonoBehaviour
         {
             if (recipeBook.bookPages[i] == craftRecipe)
             {
-                Debug.Log($"RecipeManager: Recipe: {recipeBook.unlockedStates[i]}");
+                //Debug.Log($"RecipeManager: Recipe: {recipeBook.unlockedStates[i]}");
                 //Debug.Log($"RecipeManager: Found unlock recipe on {i} page, unlocked: {recipeBook.unlockedStates[i]}");
 
                 if (!recipeBook.unlockedStates[i])
@@ -62,7 +62,7 @@ public class RecipeManager : MonoBehaviour
         { 
             OnNotEnoughMoney?.Invoke(this, cost);
 
-            Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
+            //Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
         }
         
     }
@@ -83,7 +83,7 @@ public class RecipeManager : MonoBehaviour
         else
         {
             OnNotEnoughMoney?.Invoke(this, cost);
-            Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
+            //Debug.Log($"Не хватает денег! Нужно: {cost}, есть: {PlayerWallet.Instance.GetBalance()}");
         }
     }
 

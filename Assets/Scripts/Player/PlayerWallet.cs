@@ -85,6 +85,12 @@ public class PlayerWallet : MonoBehaviour
             return false;
         }
     }
+    public void SetBalanceFromSave(int savedBalance)
+    {
+        int oldBalance = currentBalance;
+        currentBalance = Mathf.Clamp(savedBalance, 0, maxBalance);
+        OnMoneyChanged?.Invoke(oldBalance, currentBalance);
+    }
 
     // Геттеры
     public int GetBalance() => currentBalance;

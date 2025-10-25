@@ -1,0 +1,15 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 21,
+    "musicVolume": 1.0,
+    "sfxVolume": 1.0,
+    "playerBalance": 610,
+    "unlockedRecipes": []
+}

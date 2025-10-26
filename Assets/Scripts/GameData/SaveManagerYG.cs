@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using YG;
+using YG.Insides;
 
 public class SaveManagerYG : MonoBehaviour
 {
@@ -135,4 +136,5 @@ public class SaveManagerYG : MonoBehaviour
             Debug.Log($"SaveManagerYG: loaded {YG2.saves.unlockedRecipes.Length} recipes");
         }
     }
+
 }

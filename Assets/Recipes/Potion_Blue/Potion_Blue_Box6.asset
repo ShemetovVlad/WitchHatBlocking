@@ -20,5 +20,5 @@ MonoBehaviour:
   result: {fileID: 11400000, guid: 38eb2c50ecf5e8a45930b041f2bc27d5, type: 2}
   openRecipeSprite: {fileID: 21300000, guid: 70c214ad018417a4488c12a10bb0e552, type: 3}
   closedRecipeSprite: {fileID: 21300000, guid: 61f845ca4726aff4eb63689d26fcfd5a, type: 3}
-  isUnlocked: 0
+  isUnlocked: 1
   unlockCost: 6000

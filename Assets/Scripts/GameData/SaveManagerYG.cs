@@ -1,55 +1,138 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using YG;
 
 public class SaveManagerYG : MonoBehaviour
 {
+    private bool isInitialized;
+    private bool saveVolumeScheduled;
+    private bool saveRecipesScheduled;
+    [SerializeField] private RecipeManager recipeManager;
+    [SerializeField] private Book book; 
+
     private void OnEnable()
     {
-        YG2.onGetSDKData += GetData;
+        YG2.onGetSDKData += OnSDKDataReceived;
+        PlayerWallet.OnMoneyChanged += OnMoneyChanged;
+
+        // Подписываемся на изменения громкости
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.OnMusicVolumeChanged += OnVolumeChanged;
+            SoundManager.Instance.OnSfxVolumeChanged += OnVolumeChanged;
+        }
+        // Подписываемся на события книги рецептов
+        if (recipeManager != null)
+        {
+            recipeManager.OnRecipeUnlocked += OnRecipeUnlocked;
+        }
+            
     }
 
-    // Отписываемся от ивента onGetSDKData
     private void OnDisable()
     {
-        YG2.onGetSDKData -= GetData;
+        YG2.onGetSDKData -= OnSDKDataReceived;
+        PlayerWallet.OnMoneyChanged -= OnMoneyChanged;
+
+        // Отписываемся от изменений громкости
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.OnMusicVolumeChanged -= OnVolumeChanged;
+            SoundManager.Instance.OnSfxVolumeChanged -= OnVolumeChanged;
+        }
+        if (recipeManager != null)
+        {
+            recipeManager.OnRecipeUnlocked -= OnRecipeUnlocked;
+        }
+
     }
 
-    private void Awake()
+    private void OnSDKDataReceived()
     {
-        GetData();
-    }
-    void Start()
-    {
-        PlayerWallet.OnMoneyChanged += onMoneyChanged;
-        if (YG2.isSDKEnabled == true)
+        if (isInitialized) return;
+
+        if (PlayerWallet.Instance != null && YG2.saves != null && SoundManager.Instance != null)
         {
-            GetData();
+            LoadAllData();
+            isInitialized = true;
+        }
+        else
+        {
+            Invoke(nameof(OnSDKDataReceived), 0.1f);
         }
     }
-    public void GetData()
+
+    private void LoadAllData()
     {
-        if (PlayerWallet.Instance == null)
-        {
-            Debug.LogWarning("SaveManagerYG: PlayerWallet instance is null. Cannot load player balance.");
-            Invoke(nameof(GetData), 0.2f); // Пытаемся снова через полсекунды
-            return;
-        }
-        if (YG2.saves == null)
-        {
-            Debug.LogWarning("SaveManagerYG: YG2.saves is null. Cannot load player balance.");
-            Invoke(nameof(GetData), 0.2f); // Пытаемся снова через полсекунды
-            return;
-        }
-        // Получаем сохранённый баланс игрока из YG2.saves и устанавливаем его в PlayerWallet
+        // Загружаем баланс
         int savedBalance = YG2.saves.playerBalance;
         PlayerWallet.Instance.SetBalanceFromSave(savedBalance);
-        Debug.Log("SaveManagerYG: loaded player balance: " + savedBalance);
-    }
-    private void onMoneyChanged(int oldBalance, int newBalance)
-    {
-        YG2.saves.playerBalance = newBalance;
-        YG2.SaveProgress();
-        Debug.Log("SaveManagerYG: saved player balance: " + newBalance);
+
+        // Загружаем громкость в SoundManager
+        SoundManager.Instance.SetMusicVolume(YG2.saves.musicVolume);
+        SoundManager.Instance.SetSfxVolume(YG2.saves.sfxVolume);
+
+        // Загружаем состояния рецептов
+        LoadRecipes();
     }
 
+    private void OnMoneyChanged(int oldBalance, int newBalance)
+    {
+        if (!isInitialized) return;
+        YG2.saves.playerBalance = newBalance;
+        YG2.SaveProgress();
+    }
+
+    // Вызывается при изменении громкости
+    private void OnVolumeChanged(float volume)
+    {
+        if (!isInitialized) return;
+
+        // Отменяем предыдущее запланированное сохранение
+        if (saveVolumeScheduled)
+        {
+            CancelInvoke(nameof(SaveVolumes));
+        }
+
+        // Запланировать новое сохранение через секунду
+        Invoke(nameof(SaveVolumes), 1f);
+        saveVolumeScheduled = true;
+    }
+    private void OnRecipeUnlocked(object sender, EventArgs e)
+    {
+        if (!isInitialized) return;
+        SaveRecipes();
+    }
+
+    private void SaveVolumes()
+    {
+        if (SoundManager.Instance != null && YG2.saves != null)
+        {
+            YG2.saves.musicVolume = SoundManager.Instance.GetMusicVolume();
+            YG2.saves.sfxVolume = SoundManager.Instance.GetSfxVolume();
+            YG2.SaveProgress();
+        }
+        saveVolumeScheduled = false;
+    }
+    private void SaveRecipes()
+    {
+        if (recipeManager != null && YG2.saves != null)
+        {
+            bool[] unlockedRecipes = book.GetUnlockedStates();
+            if (unlockedRecipes != null)
+            {
+                YG2.saves.unlockedRecipes = unlockedRecipes;
+                YG2.SaveProgress();
+                Debug.Log($"SaveManagerYG: saved {unlockedRecipes.Length} recipes");
+            }
+        }
+    }
+    private void LoadRecipes()
+    {
+        if (book != null && YG2.saves != null && YG2.saves.unlockedRecipes != null)
+        {
+            book.SetUnlockedStates(YG2.saves.unlockedRecipes);
+            Debug.Log($"SaveManagerYG: loaded {YG2.saves.unlockedRecipes.Length} recipes");
+        }
+    }
 }

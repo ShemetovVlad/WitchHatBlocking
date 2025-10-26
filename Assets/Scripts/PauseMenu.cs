@@ -11,8 +11,8 @@ public class PauseMenu : MonoBehaviour
         // Инициализируем слайдеры текущими значениями
         if (SoundManager.Instance != null)
         {
-            musicVolumeSlider.value = SoundManager.Instance.musicVolume;
-            sfxVolumeSlider.value = SoundManager.Instance.sfxVolume;
+            musicVolumeSlider.value = SoundManager.Instance.GetMusicVolume();
+            sfxVolumeSlider.value = SoundManager.Instance.GetSfxVolume();
         }
 
         // Подписываемся на изменения слайдеров
@@ -27,14 +27,6 @@ public class PauseMenu : MonoBehaviour
     private void OnSfxVolumeChanged(float value)
     {
         SoundManager.Instance.SetSfxVolume(value);
-    }
-    private void OnEnable()
-    {
-        if (SoundManager.Instance != null)
-        {
-            musicVolumeSlider.SetValueWithoutNotify(SoundManager.Instance.musicVolume);
-            sfxVolumeSlider.SetValueWithoutNotify(SoundManager.Instance.sfxVolume);
-        }
     }
 
     private void OnDestroy()

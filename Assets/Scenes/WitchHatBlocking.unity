@@ -17205,6 +17205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5347dfba08799e468f870bb6692b0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recipeManager: {fileID: 1047722534}
+  book: {fileID: 2099388613}
 --- !u!4 &1148119169
 Transform:
   m_ObjectHideFlags: 0

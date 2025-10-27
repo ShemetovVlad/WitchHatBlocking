@@ -7,9 +7,26 @@
         false,
         false
     ],
-    "idSave": 31,
-    "musicVolume": 1.0,
+    "idSave": 40,
+    "musicVolume": 0.4992179274559021,
     "sfxVolume": 1.0,
-    "playerBalance": 752,
-    "unlockedRecipes": []
+    "playerBalance": 327,
+    "unlockedRecipes": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+    ]
 }

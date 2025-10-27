@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Transform kitchenObjectHoldPoint;
     [SerializeField] private SpeedPerk speedPerk;
+    [SerializeField] private ParticleSystem speedBoosterVFX;
     private float currentMoveSpeed = 0f;
     public event Action<bool> OnWalkingStateChanged;
     public event Action<bool> OnKitchenObjectChanged;
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     private void Awake()
     {
         currentMoveSpeed = moveSpeed;
+        speedBoosterVFX.gameObject.SetActive(false);
 
         if (Instance != null)
         {
@@ -244,11 +246,13 @@ public class PlayerController : MonoBehaviour, IKitchenObjectParent
     private IEnumerator SpeedBoostRoutine(float multiplier, float duration)
     {
         currentMoveSpeed = moveSpeed * multiplier;
+        speedBoosterVFX.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(duration);
 
         // Возвращаем исходную скорость
         currentMoveSpeed = moveSpeed;
+        speedBoosterVFX.gameObject.SetActive(false);
         speedBoostCoroutine = null;
     }
 }

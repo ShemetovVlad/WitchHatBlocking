@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5716719715510264810, guid: ebfa5911f1602744dadf30e75c111555, type: 3}
   sprite: {fileID: 21300000, guid: b8b3d4348be6e794d8cc79b91a3735c5, type: 3}
   objectName: Potion_Small_Green
-  price: 50
+  price: 25

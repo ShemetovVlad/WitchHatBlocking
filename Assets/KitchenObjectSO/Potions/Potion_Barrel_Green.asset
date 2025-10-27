@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5716719715510264810, guid: 6194cda9e195420409500822e882bd16, type: 3}
   sprite: {fileID: 21300000, guid: 33873c06a9bc4c643a0c157c1a4a0350, type: 3}
   objectName: Potion_Barrel_Green
-  price: 500
+  price: 400

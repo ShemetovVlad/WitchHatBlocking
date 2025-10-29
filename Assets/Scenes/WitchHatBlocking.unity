@@ -15075,6 +15075,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 472882625}
     m_Modifications:
+    - target: {fileID: 180944879153842303, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180944879153842303, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 426932328797433351, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15171,6 +15179,10 @@ PrefabInstance:
       propertyPath: unlockRecipeSound
       value: 
       objectReference: {fileID: 8300000, guid: d368621b94d24a54da332332d18d372d, type: 3}
+    - target: {fileID: 5054981263215999192, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a92819fe2d70d747a2c8ff05cd38491, type: 3}
     - target: {fileID: 5784825093825125987, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: background
       value: 
@@ -15182,6 +15194,14 @@ PrefabInstance:
     - target: {fileID: 5837105303697109188, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215535921090384229, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215535921090384229, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8127846923657427378, guid: ded6d11a17dc7f54ab7435eaf31b1951, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -49428,11 +49448,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel_Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 4184679235546726200, guid: 66366c9754ccf8e4d8af49fb5711a698, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1109845489131025202, guid: 66366c9754ccf8e4d8af49fb5711a698, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1924323589254492158}
   m_SourcePrefab: {fileID: 100100000, guid: 66366c9754ccf8e4d8af49fb5711a698, type: 3}
+--- !u!1 &1924323589254492157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1109845489131025202, guid: 66366c9754ccf8e4d8af49fb5711a698, type: 3}
+  m_PrefabInstance: {fileID: 1924323589254492156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924323589254492158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924323589254492157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5483d3f3099bb46af519e62247b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+  en: Controls
+  tr: "\u0422\u0443\u0440\u0435\u0446\u043A\u0438\u0439"
 --- !u!1001 &2753745715926439862
 PrefabInstance:
   m_ObjectHideFlags: 0

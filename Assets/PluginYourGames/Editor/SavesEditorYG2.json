@@ -7,14 +7,14 @@
         false,
         false
     ],
-    "idSave": 40,
+    "idSave": 51,
     "musicVolume": 0.4992179274559021,
     "sfxVolume": 1.0,
-    "playerBalance": 327,
+    "playerBalance": 27,
     "unlockedRecipes": [
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,

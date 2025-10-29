@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7334670253429009869}
   - component: {fileID: 2317157108364371400}
   - component: {fileID: 6226919131452249648}
-  - component: {fileID: 4184679235546726200}
+  - component: {fileID: 2408182569282550560}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Controls
---- !u!114 &4184679235546726200
+--- !u!114 &2408182569282550560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +89,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109845489131025202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+  ru: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+  en: Controls
 --- !u!1 &1209715387293647268
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ GameObject:
   - component: {fileID: 6541790162815479723}
   - component: {fileID: 2303633035669778224}
   - component: {fileID: 9039669326341885161}
-  - component: {fileID: 8434371177311657048}
+  - component: {fileID: 8645809264148392166}
   m_Layer: 5
   m_Name: Alternative
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: alternative
---- !u!114 &8434371177311657048
+--- !u!114 &8645809264148392166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,10 +183,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1209715387293647268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435"
+  ru: "\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435"
+  en: alternative
 --- !u!1 &1298536575711425683
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ GameObject:
   - component: {fileID: 1289811932695397458}
   - component: {fileID: 4846554206740535944}
   - component: {fileID: 6240933128671546632}
-  - component: {fileID: 695751069992084431}
+  - component: {fileID: 2216374690013356535}
   m_Layer: 5
   m_Name: Cauldron
   m_TagString: Untagged
@@ -267,7 +269,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Bring 3 ingredient to the cauldron                                  Find
     all the recipes
---- !u!114 &695751069992084431
+--- !u!114 &2216374690013356535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,12 +278,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298536575711425683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0411\u0440\u043E\u0441\u044C\u0442\u0435 \u0432 \u043A\u043E\u0442\u0435\u043B
-    3 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u0430 \u041D\u0430\u0439\u0434\u0438\u0442\u0435
-    \u0432\u0441\u0435 \u0440\u0435\u0446\u0435\u043F\u0442\u044B"
+  ru: "\u0411\u0440\u043E\u0441\u0442\u0435 \u0432 \u043A\u043E\u0442\u0435\u043B
+    3 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u0430. \u041D\u0430\u0439\u0434\u0438\u0442\u0435
+    \u0438\u043B\u0438 \u043A\u0443\u043F\u0438\u0442\u0435 \u0432\u0441\u0435 \u0440\u0435\u0446\u0435\u043F\u0442\u044B"
+  en: Bring 3 ingredient to the cauldron. Find or buy all the recipes
 --- !u!1 &1796042069213795462
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,12 +407,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CloseCurrentWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -505,7 +508,7 @@ GameObject:
   - component: {fileID: 696700359424829747}
   - component: {fileID: 435344813741891686}
   - component: {fileID: 7058621068851708298}
-  - component: {fileID: 1664469388245882690}
+  - component: {fileID: 5810256130796837072}
   m_Layer: 5
   m_Name: Cook
   m_TagString: Untagged
@@ -574,7 +577,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Use tables to prepare ingredients
---- !u!114 &1664469388245882690
+--- !u!114 &5810256130796837072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -583,11 +586,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3725998662739439204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u0442\u043E\u043B\u044B
+  ru: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u0442\u043E\u043B\u044B
     \u0434\u043B\u044F \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0438 \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u043E\u0432"
+  en: Use tables to prepare ingredients
 --- !u!1 &3751853789246315356
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +618,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3751853789246315356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
@@ -690,7 +694,7 @@ GameObject:
   - component: {fileID: 5905654899398377405}
   - component: {fileID: 6620432706991671910}
   - component: {fileID: 1648139218206759442}
-  - component: {fileID: 6784172671965398593}
+  - component: {fileID: 4468988467510485414}
   m_Layer: 5
   m_Name: Sell
   m_TagString: Untagged
@@ -759,7 +763,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Sell potions in the storage stuff
---- !u!114 &6784172671965398593
+--- !u!114 &4468988467510485414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,11 +772,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5021050528634394730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u041F\u0440\u043E\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0437\u0435\u043B\u044C\u044F
-    \u043D\u0430 \u0441\u043A\u043B\u0430\u0434"
+  ru: "\u041F\u0440\u043E\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0437\u0435\u043B\u044C\u044F
+    \u043D\u0430 \u0441\u043A\u043B\u0430\u0434\u0435"
+  en: Sell potions in the storage stuff
 --- !u!1 &5167581004691062772
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +789,7 @@ GameObject:
   - component: {fileID: 3413142552105107522}
   - component: {fileID: 4162650149424785810}
   - component: {fileID: 6410202226747681658}
-  - component: {fileID: 8884614093016655859}
+  - component: {fileID: 3803268465995335559}
   m_Layer: 5
   m_Name: Interact
   m_TagString: Untagged
@@ -853,7 +858,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: interact
---- !u!114 &8884614093016655859
+--- !u!114 &3803268465995335559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -862,10 +867,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5167581004691062772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0432\u0437\u044F\u0442\u044C/\u043F\u043E\u043B\u043E\u0436\u0438\u0442\u044C"
+  ru: "\u0432\u0437\u044F\u0442\u044C/\u043F\u043E\u043B\u043E\u0436\u0438\u0442\u044C"
+  en: interact
 --- !u!1 &5581324034173721401
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +883,7 @@ GameObject:
   - component: {fileID: 5141449820835367669}
   - component: {fileID: 8230672167956982359}
   - component: {fileID: 451004076926537486}
-  - component: {fileID: 4517827247815367137}
+  - component: {fileID: 6249300315942839343}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -946,7 +952,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: pause
---- !u!114 &4517827247815367137
+--- !u!114 &6249300315942839343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -955,10 +961,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5581324034173721401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u043F\u0430\u0443\u0437\u0430"
+  ru: "\u043F\u0430\u0443\u0437\u0430"
+  en: pause
 --- !u!1 &6951090137904892814
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +977,7 @@ GameObject:
   - component: {fileID: 5334855327002893857}
   - component: {fileID: 5757901943042169223}
   - component: {fileID: 9056990637581174782}
-  - component: {fileID: 4115241152122938307}
+  - component: {fileID: 2843918858349967663}
   m_Layer: 5
   m_Name: Move
   m_TagString: Untagged
@@ -1039,7 +1046,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: move
---- !u!114 &4115241152122938307
+--- !u!114 &2843918858349967663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1048,10 +1055,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6951090137904892814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435"
+  ru: "\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435"
+  en: move
 --- !u!1 &6970013588551271316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1071,7 @@ GameObject:
   - component: {fileID: 837498566005784373}
   - component: {fileID: 2095991905456842653}
   - component: {fileID: 5249550839850128}
-  - component: {fileID: 7178353581890782445}
+  - component: {fileID: 7669871530787933619}
   m_Layer: 5
   m_Name: Destroy
   m_TagString: Untagged
@@ -1132,7 +1140,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: destroy
---- !u!114 &7178353581890782445
+--- !u!114 &7669871530787933619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1141,10 +1149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6970013588551271316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e3917306023a649a4effa061700774, type: 3}
+  m_Script: {fileID: 11500000, guid: 968fbad544aa58a439c42957b9554438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textRU: "\u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C"
+  ru: "\u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C"
+  en: destroy
 --- !u!1 &8818203362456175514
 GameObject:
   m_ObjectHideFlags: 0

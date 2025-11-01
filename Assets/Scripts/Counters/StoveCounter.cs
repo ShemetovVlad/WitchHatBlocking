@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static CuttingCounter;
 
 public class StoveCounter : BaseCounter, IHasProgress
@@ -22,6 +23,7 @@ public class StoveCounter : BaseCounter, IHasProgress
 
     [SerializeField] private BoilRecipeSO[] boilRecipeSOArray;
     [SerializeField] private BurningRecipeSO[] burningRecipeSOArray;
+    [SerializeField] private Image burningIcon;
 
     private State state;
     private float boilTimer;
@@ -40,12 +42,12 @@ public class StoveCounter : BaseCounter, IHasProgress
             switch (state)
         {
                 case State.Idle:
-                     
+                     burningIcon.gameObject.SetActive(false);
                 break;
                 
                 case State.Boiling:
                     boilTimer += Time.deltaTime;
-                    
+                    burningIcon.gameObject.SetActive(false);
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                     {
                         progressNormalized = boilTimer / boilRecipeSO.boilTimerMax
@@ -71,7 +73,7 @@ public class StoveCounter : BaseCounter, IHasProgress
             
                 case State.Boiled:
                     burningTimer += Time.deltaTime;
-
+                    burningIcon.gameObject.SetActive(true);
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                     {
                         progressNormalized = burningTimer / burningRecipeSO.burningTimerMax
@@ -81,7 +83,7 @@ public class StoveCounter : BaseCounter, IHasProgress
                     {
                         // burn
                         GetKitchenObject().DestroySelf();
-
+                        burningIcon.gameObject.SetActive(false);
                         KitchenObject.SpawnKitchenObject(burningRecipeSO.output, this);
                         state = State.Burned;
                         OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
@@ -97,7 +99,7 @@ public class StoveCounter : BaseCounter, IHasProgress
                     break;
             
                 case State.Burned:
-                    
+                    burningIcon.gameObject.SetActive(false);
                 break;
         }
             //Debug.Log(state);

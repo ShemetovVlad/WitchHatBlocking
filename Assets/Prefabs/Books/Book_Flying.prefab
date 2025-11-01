@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 365677048395885244}
     m_Modifications:
+    - target: {fileID: -9071457384248473655, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -88,8 +92,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book_Flying
       objectReference: {fileID: 0}
+    - target: {fileID: 1901288897888730267, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2243938739552232287, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831870965243731560, guid: 0f7586ef578474c46928ea1edc7260c7, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

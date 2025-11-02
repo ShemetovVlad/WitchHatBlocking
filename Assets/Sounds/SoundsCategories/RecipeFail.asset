@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RecipeFail
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 11bf992316ba43b408220b277a4d42d5, type: 3}
+  - {fileID: 8300000, guid: 4043f0995e7e99342aa6e8bc6813f994, type: 3}
   volume: 1
   soundType: 2

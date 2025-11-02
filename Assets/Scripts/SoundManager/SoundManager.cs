@@ -21,7 +21,8 @@ public enum SoundType
     Poof,
     LabOpen,
     PageRotating,
-    Trash_Bite
+    Trash_Bite,
+    Boiling
 }
 
 public class SoundManager : MonoBehaviour
@@ -136,7 +137,7 @@ public class SoundManager : MonoBehaviour
     {
         while (true)
         {
-            PlaySound(SoundType.RecipeFail, position);
+            PlaySound(SoundType.Boiling, position);
             yield return new WaitForSeconds(1f); // интервал между звуками
         }
     }
@@ -170,7 +171,7 @@ public class SoundManager : MonoBehaviour
     }
     private void CauldronCounter_OnRecipeFailed(object sender, System.EventArgs e)
     {
-        PlaySound(SoundType.RecipeFail, Camera.main.transform.position);
+        PlaySound(SoundType.RecipeFail, cauldronCounter.transform.position);
     }
     public void PlaySound(SoundType soundType, Vector3 position, float volumeMultiplier = 1f)
     {

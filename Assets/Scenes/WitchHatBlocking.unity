@@ -7128,7 +7128,7 @@ GameObject:
   - component: {fileID: 262552926}
   - component: {fileID: 262552925}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: PotionSellEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

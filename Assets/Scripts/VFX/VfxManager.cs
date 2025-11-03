@@ -5,6 +5,19 @@ using System;
 
 public class EffectManager : MonoBehaviour
 {
+    public static EffectManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     [Header("Ссылки на игровые объекты")]
     [SerializeField] private PlayerController player;
     [SerializeField] private CauldronCounter cauldron;
@@ -12,6 +25,9 @@ public class EffectManager : MonoBehaviour
     [Header("Партикл эффекты")]
     [SerializeField] private ParticleSystem[] recipeSuccess;
     [SerializeField] private ParticleSystem[] recipeFailed;
+    [SerializeField] private ParticleSystem sellIngredient;
+    [SerializeField] private ParticleSystem sellPotionCheap;
+    [SerializeField] private ParticleSystem sellPotionExpensive;
 
     void Start()
     {
@@ -51,6 +67,27 @@ public class EffectManager : MonoBehaviour
                 if (effect != null)
                     effect.Play();
             }
+        }
+    }
+    public void SellIngredientEffect()
+    {
+        if (sellIngredient != null)
+        {
+            sellIngredient.Play();
+        }
+    }
+    public void SellPotionCheapEffect()
+    {
+        if (sellPotionCheap != null)
+        {
+            sellPotionCheap.Play();
+        }
+    }
+    public void SellPotionExpensiveEffect()
+    {
+        if (sellPotionExpensive != null)
+        {
+            sellPotionExpensive.Play();
         }
     }
 }

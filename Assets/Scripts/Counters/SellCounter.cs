@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.VFX;
 
 public class SellCounter : BaseCounter
 {
@@ -29,14 +30,17 @@ public class SellCounter : BaseCounter
 
     private void SellingIngredient()
     {
+        EffectManager.Instance.SellIngredientEffect();
         SoundManager.Instance.PlaySound(SoundType.SellingIngredient, Camera.main.transform.position);
     }
     private void SellingPotionCheap()
     {
+        EffectManager.Instance.SellPotionCheapEffect();
         SoundManager.Instance.PlaySound(SoundType.SellingPotionCheap, Camera.main.transform.position);
     }
     private void SellingPotionExpensive()
-    {
+    {   
+        EffectManager.Instance.SellPotionExpensiveEffect();
         SoundManager.Instance.PlaySound(SoundType.SellingPotionExpensive, Camera.main.transform.position);
     }
 }

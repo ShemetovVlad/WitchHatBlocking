@@ -3,6 +3,7 @@
 public class TrainingManager : MonoBehaviour
 {
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private PlayerController player;
     [SerializeField] private MovementTraining movementTraining;
     [SerializeField] private GameObject interactTraining;
     [SerializeField] private GameObject interactAlternateTraining;

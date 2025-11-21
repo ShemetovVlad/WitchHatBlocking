@@ -62643,6 +62643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolumeSlider: {fileID: 954571857}
   sfxVolumeSlider: {fileID: 1013804395}
+  russianToggle: {fileID: 1499521004}
+  englishToggle: {fileID: 1014133654}
 --- !u!1001 &1967437719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62999,7 +63001,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341f31e995335eb49bcb5f79b009a4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1954429826}
+          m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+          m_MethodName: SyncLanguageTogglesOnStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!198 &2011788727 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2216703496511203281, guid: fc36d14ef85a48e40bb7e28969485af4, type: 3}

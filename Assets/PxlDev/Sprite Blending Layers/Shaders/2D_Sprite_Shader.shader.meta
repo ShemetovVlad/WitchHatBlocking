@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9c8c68ac275084a468cdcd23360fb6cb
+AssetOrigin:
+  serializedVersion: 1
+  productId: 312704
+  packageName: 2D Sprite Blend Modes
+  packageVersion: 1.0
+  assetPath: Assets/PxlDev/Sprite Blending Layers/Shaders/2D_Sprite_Shader.shader
+  uploadId: 737191
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: cb8b87eca4970414c8a2dbdd2adab1e0, type: 3}
+  - _AlphaTex: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

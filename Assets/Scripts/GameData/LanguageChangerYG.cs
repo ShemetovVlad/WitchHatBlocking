@@ -1,40 +1,47 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace YG.Example
+public class LanguageChanger : MonoBehaviour
 {
-    public class LanguageChanger : MonoBehaviour
+    public string ru, en;
+
+    private Text textComponent;
+
+    private void Awake()
     {
-        public string ru, en;
+        textComponent = GetComponent<Text>();
+    }
 
-        private Text textComponent;
-
-        private void Awake()
+    private void OnEnable()
+    {
+        LanguageManager.OnLanguageChanged += OnLanguageChanged;
+        // Set initial language
+        if (LanguageManager.Instance != null)
         {
-            textComponent = GetComponent<Text>();
+            SetTextByLanguage(LanguageManager.Instance.GetCurrentLanguageCode());
         }
+    }
+    
+    private void OnDisable()
+    {
+        LanguageManager.OnLanguageChanged -= OnLanguageChanged;
+    }
+    
+    private void OnLanguageChanged(Language language)
+    {
+        SetTextByLanguage(LanguageManager.Instance.GetCurrentLanguageCode());
+    }
 
-        private void OnEnable()
+    private void SetTextByLanguage(string lang)
+    {
+        switch (lang)
         {
-            YG2.onSwitchLang += SwitchLanguage;
-            SwitchLanguage(YG2.lang);
-        }
-        private void OnDisable()
-        {
-            YG2.onSwitchLang -= SwitchLanguage;
-        }
-
-        public void SwitchLanguage(string lang)
-        {
-            switch (lang)
-            {
-                case "ru":
-                    textComponent.text = ru;
-                    break;
-                default:
-                    textComponent.text = en;
-                    break;
-            }
+            case "ru":
+                textComponent.text = ru;
+                break;
+            default:
+                textComponent.text = en;
+                break;
         }
     }
 }

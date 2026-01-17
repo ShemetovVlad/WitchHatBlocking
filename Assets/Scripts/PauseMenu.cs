@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using YG;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -30,19 +29,19 @@ public class PauseMenu : MonoBehaviour
         if (englishToggle != null)
             englishToggle.onValueChanged.AddListener(OnEnglishToggleChanged);
 
-        // Подписываемся на событие смены языка от Яндекс SDK
-        YG2.onSwitchLang += OnLanguageChanged;
+        // Подписываемся на событие смены языка
+        LanguageManager.OnLanguageChanged += OnLanguageChanged;
 
         // Если язык уже установлен, сразу синхронизируем тогглы
-        if (!string.IsNullOrEmpty(YG2.lang))
+        if (LanguageManager.Instance != null)
         {
-            SetToggleByLanguage(YG2.lang);
+            SetToggleByLanguage(LanguageManager.Instance.GetCurrentLanguageCode());
         }
     }
 
-    private void OnLanguageChanged(string language)
+    private void OnLanguageChanged(Language language)
     {
-        SetToggleByLanguage(language);
+        SetToggleByLanguage(language == Language.Russian ? "ru" : "en");
     }
 
     private void SetToggleByLanguage(string language)
@@ -81,7 +80,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (isOn && !isSettingToggles)
         {
-            YG2.SwitchLanguage("ru");
+            LanguageManager.Instance?.SetLanguage(Language.Russian);
         }
     }
 
@@ -89,7 +88,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (isOn && !isSettingToggles)
         {
-            YG2.SwitchLanguage("en");
+            LanguageManager.Instance?.SetLanguage(Language.English);
         }
     }
 
@@ -113,7 +112,7 @@ public class PauseMenu : MonoBehaviour
         if (englishToggle != null)
             englishToggle.onValueChanged.RemoveListener(OnEnglishToggleChanged);
 
-        // Отписываемся от события Яндекс SDK
-        YG2.onSwitchLang -= OnLanguageChanged;
+        // Отписываемся от события смены языка
+        LanguageManager.OnLanguageChanged -= OnLanguageChanged;
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
-using YG;
-using YG.Insides;
 
+// SaveManagerYG - менеджер сохранений, который теперь работает с LocalSaveManager
+// вместо Yandex SDK для обеспечения кроссплатформенности
 public class SaveManagerYG : MonoBehaviour
 {
     private bool isInitialized;
@@ -31,7 +31,7 @@ public class SaveManagerYG : MonoBehaviour
 
     private void OnEnable()
     {
-        YG2.onGetSDKData += OnSDKDataReceived;
+        // Подписываемся на изменения баланса
         PlayerWallet.OnMoneyChanged += OnMoneyChanged;
 
         // Подписываемся на изменения громкости
@@ -46,11 +46,18 @@ public class SaveManagerYG : MonoBehaviour
         {
             recipeManager.OnRecipeUnlocked += OnRecipeUnlocked;
         }
+        
+        // Инициализируем сразу, так как не зависим от Yandex SDK
+        if (!isInitialized)
+        {
+            LoadAllData();
+            isInitialized = true;
+            Debug.Log("SaveManagerYG: Initialized successfully");
+        }
     }
 
     private void OnDisable()
     {
-        YG2.onGetSDKData -= OnSDKDataReceived;
         PlayerWallet.OnMoneyChanged -= OnMoneyChanged;
 
         // Отписываемся от изменений громкости
@@ -65,46 +72,10 @@ public class SaveManagerYG : MonoBehaviour
         }
     }
 
-    private void OnSDKDataReceived()
-    {
-        if (isInitialized) return;
-
-        // Ждем пока все компоненты будут готовы
-        if (AreAllComponentsReady())
-        {
-            LoadAllData();
-            isInitialized = true;
-            Debug.Log("SaveManagerYG: Initialized successfully");
-        }
-        else
-        {
-            // Пробуем снова через кадр
-            Invoke(nameof(OnSDKDataReceived), 0.1f);
-        }
-    }
-
-    private bool AreAllComponentsReady()
-    {
-        bool ready = PlayerWallet.Instance != null &&
-                    YG2.saves != null &&
-                    SoundManager.Instance != null &&
-                    book != null;
-
-        if (!ready)
-        {
-            Debug.Log($"Components ready: PlayerWallet={PlayerWallet.Instance != null}, " +
-                     $"YG2.saves={YG2.saves != null}, " +
-                     $"SoundManager={SoundManager.Instance != null}, " +
-                     $"Book={book != null}");
-        }
-
-        return ready;
-    }
-
     // Добавляем метод для принудительной перезагрузки данных при переходе на сцену игры
     public void ReloadDataForGameScene()
     {
-        if (isInitialized && YG2.saves != null)
+        if (isInitialized)
         {
             LoadAllData();
         }
@@ -114,43 +85,27 @@ public class SaveManagerYG : MonoBehaviour
     {
         Debug.Log("SaveManagerYG: Loading all data...");
 
-        // Загружаем баланс
-        int savedBalance = YG2.saves.playerBalance;
-        if (PlayerWallet.Instance != null)
+        // Загружаем все данные через LocalSaveManager
+        if (LocalSaveManager.Instance != null)
         {
-            PlayerWallet.Instance.SetBalanceFromSave(savedBalance);
-            Debug.Log($"SaveManagerYG: Loaded balance: {savedBalance}");
+            LocalSaveManager.Instance.ReloadDataForGameScene();
         }
-
-        // Загружаем громкость в SoundManager
-        if (SoundManager.Instance != null)
+        else
         {
-            SoundManager.Instance.SetMusicVolume(YG2.saves.musicVolume);
-            SoundManager.Instance.SetSfxVolume(YG2.saves.sfxVolume);
-            Debug.Log($"SaveManagerYG: Loaded volumes - Music: {YG2.saves.musicVolume}, SFX: {YG2.saves.sfxVolume}");
+            Debug.LogWarning("SaveManagerYG: LocalSaveManager not found!");
         }
-
-        // Загружаем состояния рецептов
-        LoadRecipes();
     }
 
     private void OnMoneyChanged(int oldBalance, int newBalance)
     {
-        if (!isInitialized)
-        {
-            Debug.Log("SaveManagerYG: Not initialized, skipping save");
-            return;
-        }
-
-        YG2.saves.playerBalance = newBalance;
-        YG2.SaveProgress();
+        // Сохраняем баланс через PlayerPrefs (как в LocalSaveManager)
+        PlayerPrefs.SetInt("playerBalance", newBalance);
+        PlayerPrefs.Save();
         Debug.Log($"SaveManagerYG: Saved balance: {newBalance}");
     }
 
     private void OnVolumeChanged(float volume)
     {
-        if (!isInitialized) return;
-
         if (saveVolumeScheduled)
         {
             CancelInvoke(nameof(SaveVolumes));
@@ -162,46 +117,35 @@ public class SaveManagerYG : MonoBehaviour
 
     private void OnRecipeUnlocked(object sender, EventArgs e)
     {
-        if (!isInitialized) return;
         SaveRecipes();
     }
 
     private void SaveVolumes()
     {
-        if (SoundManager.Instance != null && YG2.saves != null)
+        if (SoundManager.Instance != null)
         {
-            YG2.saves.musicVolume = SoundManager.Instance.GetMusicVolume();
-            YG2.saves.sfxVolume = SoundManager.Instance.GetSfxVolume();
-            YG2.SaveProgress();
-            Debug.Log($"SaveManagerYG: Saved volumes - Music: {YG2.saves.musicVolume}, SFX: {YG2.saves.sfxVolume}");
+            float musicVolume = SoundManager.Instance.GetMusicVolume();
+            float sfxVolume = SoundManager.Instance.GetSfxVolume();
+            PlayerPrefs.SetFloat("musicVolume", musicVolume);
+            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+            PlayerPrefs.Save();
+            Debug.Log($"SaveManagerYG: Saved volumes - Music: {musicVolume}, SFX: {sfxVolume}");
         }
         saveVolumeScheduled = false;
     }
 
     private void SaveRecipes()
     {
-        if (recipeManager != null && YG2.saves != null && book != null)
+        if (book != null)
         {
             bool[] unlockedRecipes = book.GetUnlockedStates();
             if (unlockedRecipes != null)
             {
-                YG2.saves.unlockedRecipes = unlockedRecipes;
-                YG2.SaveProgress();
+                string recipeData = string.Join(",", unlockedRecipes);
+                PlayerPrefs.SetString("unlockedRecipes", recipeData);
+                PlayerPrefs.Save();
                 Debug.Log($"SaveManagerYG: Saved {unlockedRecipes.Length} recipes");
             }
-        }
-    }
-
-    private void LoadRecipes()
-    {
-        if (book != null && YG2.saves != null && YG2.saves.unlockedRecipes != null)
-        {
-            book.SetUnlockedStates(YG2.saves.unlockedRecipes);
-            Debug.Log($"SaveManagerYG: Loaded {YG2.saves.unlockedRecipes.Length} recipes");
-        }
-        else
-        {
-            Debug.LogWarning("SaveManagerYG: Could not load recipes - missing components or data");
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using YG;
 
 public class RewardedAdvYG : MonoBehaviour
 {
@@ -8,12 +7,12 @@ public class RewardedAdvYG : MonoBehaviour
 
     private void OnEnable()
     {
-        YG2.onRewardAdv += OnRewarded;
+        MockRewardedAd.OnRewardReceived += OnRewarded;
     }
 
     private void OnDisable()
     {
-        YG2.onRewardAdv -= OnRewarded;
+        MockRewardedAd.OnRewardReceived -= OnRewarded;
     }
 
     private void OnRewarded(string id)
@@ -28,5 +27,11 @@ public class RewardedAdvYG : MonoBehaviour
     {
         Debug.Log($"Награда получена! +{coinsReward} монет");
         PlayerWallet.Instance.AddMoney(coinsReward);
+    }
+    
+    // Method to show the rewarded ad
+    public void ShowRewardedAd()
+    {
+        MockRewardedAd.ShowRewardedAd(idAdv);
     }
 }

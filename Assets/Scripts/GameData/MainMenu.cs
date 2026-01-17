@@ -19,9 +19,9 @@ public class MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
-        if (SaveManagerYG.Instance != null)
+        if (LocalSaveManager.Instance != null)
         {
-            SaveManagerYG.Instance.ReloadDataForGameScene();
+            LocalSaveManager.Instance.ReloadDataForGameScene();
         }
     }
 }
